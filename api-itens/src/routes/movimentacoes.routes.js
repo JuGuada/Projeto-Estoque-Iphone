@@ -72,7 +72,7 @@ export const ensureMovementsTable = async () => {
         UPDATE movimentacoes m
         LEFT JOIN itens i ON i.id = m.item_id
         SET m.tipo = 'saida',
-            m.motivo = 'Produto removido do catÃ¡logo',
+            m.motivo = 'Produto removido do catálogo',
             m.responsavel = CASE WHEN m.responsavel = '' OR m.responsavel = 'sistema' THEN 'admin@estoque.com' ELSE m.responsavel END
         WHERE i.id IS NULL
           AND m.tipo = 'entrada'
@@ -92,14 +92,14 @@ const normalizeMovement = (movement) => {
         motivo: movement.motivo || "Sem motivo informado",
         responsavel: String(movement.responsavel || "Administrador").trim() || "Administrador",
         operador_tipo: movement.operador_tipo === "cliente" ? "cliente" : "administrador",
-        sku: movement.sku || movement.numero_serie || "SKU nÃ£o informado",
+        sku: movement.sku || movement.numero_serie || "SKU não informado",
         criado_em: movement.criado_em || new Date().toISOString(),
         produto_nome: movement.produto_nome || "Produto removido",
         produto_imagem: movement.produto_imagem || "",
         estoque_atual: estoqueAtual,
         estoque_minimo: estoqueMinimo,
-        status: estoqueAtual <= estoqueMinimo ? "AtenÃ§Ã£o" : "Normal",
-        descricao: `${movement.tipo === "entrada" ? "Entrada" : "SaÃ­da"} de ${Number(movement.quantidade || 0)} unidade(s) â€¢ ${movement.motivo || "Sem motivo informado"}`
+        status: estoqueAtual <= estoqueMinimo ? "Atenção" : "Normal",
+        descricao: `${movement.tipo === "entrada" ? "Entrada" : "Saída"} de ${Number(movement.quantidade || 0)} unidade(s) • ${movement.motivo || "Sem motivo informado"}`
     };
 };
 
@@ -142,7 +142,7 @@ router.post("/", async (req, res) => {
     const quantidadeMovimentada = Number(quantidade);
 
     if (!itemId || !["entrada", "saida"].includes(tipo) || !Number.isInteger(quantidadeMovimentada) || quantidadeMovimentada <= 0) {
-        return res.status(400).json({ erro: "Produto, tipo e uma quantidade inteira maior que zero sÃ£o obrigatÃ³rios." });
+        return res.status(400).json({ erro: "Produto, tipo e uma quantidade inteira maior que zero são obrigatórios." });
     }
 
     let connection;
@@ -159,7 +159,7 @@ router.post("/", async (req, res) => {
 
         if (!item) {
             await connection.rollback();
-            return res.status(404).json({ erro: "Produto nÃ£o encontrado." });
+            return res.status(404).json({ erro: "Produto não encontrado." });
         }
 
         const estoqueAtual = Number(item.quantidade || 0);
@@ -169,7 +169,7 @@ router.post("/", async (req, res) => {
 
         if (novoEstoque < 0) {
             await connection.rollback();
-            return res.status(400).json({ erro: "A saÃ­da nÃ£o pode ser maior que o estoque atual." });
+            return res.status(400).json({ erro: "A saída não pode ser maior que o estoque atual." });
         }
 
         await connection.query("UPDATE itens SET quantidade = ? WHERE id = ?", [novoEstoque, itemId]);
@@ -201,7 +201,7 @@ router.post("/", async (req, res) => {
 
         const item = await getItemForFallback(itemId);
         if (!item) {
-            return res.status(404).json({ erro: "Produto nÃ£o encontrado." });
+            return res.status(404).json({ erro: "Produto não encontrado." });
         }
 
         const estoqueAtual = Number(item.quantidade || 0);
@@ -210,7 +210,7 @@ router.post("/", async (req, res) => {
             : estoqueAtual - quantidadeMovimentada;
 
         if (novoEstoque < 0) {
-            return res.status(400).json({ erro: "A saÃ­da nÃ£o pode ser maior que o estoque atual." });
+            return res.status(400).json({ erro: "A saída não pode ser maior que o estoque atual." });
         }
 
         updateItemQuantityForFallback(itemId, novoEstoque);
@@ -236,4 +236,3 @@ router.post("/", async (req, res) => {
 });
 
 export default router;
-

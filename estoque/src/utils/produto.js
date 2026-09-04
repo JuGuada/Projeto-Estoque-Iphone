@@ -32,4 +32,3 @@ export function formatarPrecoProduto(valor) {
     minimumFractionDigits: 2,
   });
 }
-

@@ -1,4 +1,4 @@
-/* --- AnimaÃ§Ã£o de Entrada --- */
+/* --- Animação de Entrada --- */
 .fadeContainer {
   animation: fadeIn 0.3s ease-in-out;
 }
@@ -14,7 +14,7 @@
   }
 }
 
-/* --- TÃ­tulos e SubtÃ­tulos da SeÃ§Ã£o --- */
+/* --- Títulos e Subtítulos da Seção --- */
 .smallSectionTitle {
   font-size: 11px;
   font-weight: 600;
@@ -29,7 +29,7 @@
   margin: 8px 0 24px 0;
 }
 
-/* --- Card Base (Sem Padding Interno PadrÃ£o) --- */
+/* --- Card Base (Sem Padding Interno Padrão) --- */
 .cardNoPadding {
   background-color: #ffffff;
   border-radius: 16px;
@@ -38,7 +38,7 @@
   overflow: hidden;
 }
 
-/* --- CabeÃ§alho dos Itens de Regra --- */
+/* --- Cabeçalho dos Itens de Regra --- */
 .regrasHeaderItem {
   display: flex;
   justify-content: space-between;
@@ -52,7 +52,7 @@
   gap: 14px;
 }
 
-/* Caixa dos Ãcones --- */
+/* Caixa dos Ícones --- */
 .iconBox {
   width: 42px;
   height: 42px;
@@ -130,7 +130,7 @@
   font-weight: 500;
 }
 
-/* --- SeÃ§Ã£o de Exemplo de Custo e Inputs --- */
+/* --- Seção de Exemplo de Custo e Inputs --- */
 .custoExemploBox {
   padding: 20px 24px;
 }
@@ -249,7 +249,7 @@
   padding: 0 8px;
 }
 
-/* --- Lista de Estoque CrÃ­tico --- */
+/* --- Lista de Estoque Crítico --- */
 .produtosEstoqueList {
   padding: 0 24px 20px 24px;
   display: flex;
@@ -274,7 +274,7 @@
   color: #86868b;
 }
 
-/* Destaque para produtos em estado crÃ­tico */
+/* Destaque para produtos em estado crítico */
 .itemCritico {
   background-color: #ffe5e5;
   color: #ff3b30;
@@ -306,4 +306,3 @@
   color: #6e6e73;
   font-size: 13px;
 }
-

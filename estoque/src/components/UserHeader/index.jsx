@@ -204,7 +204,7 @@ function handleLogout() {
           </NavLink>
 
 
-          {/* USUÃRIO */}
+          {/* USUÁRIO */}
 
           <div
             className={styles.userArea}
@@ -214,7 +214,7 @@ function handleLogout() {
             <button
               type="button"
               className={`${styles.iconButton} ${styles.userButton}`}
-              aria-label="Abrir menu do usuÃ¡rio"
+              aria-label="Abrir menu do usuário"
               aria-expanded={menuOpen}
               onClick={() =>
                 setMenuOpen((open) => !open)
@@ -253,7 +253,7 @@ function handleLogout() {
                   </span>
 
                   <small>
-                    SessÃ£o ativa
+                    Sessão ativa
                   </small>
                 </div>
 
@@ -320,4 +320,3 @@ function handleLogout() {
     </header>
   );
 }
-

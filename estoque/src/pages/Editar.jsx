@@ -35,7 +35,7 @@ export default function Editar() {
         setErro('');
         const response = await fetch(`${API_URL}/itens/${id}`);
         const item = await response.json();
-        if (!response.ok) throw new Error(item.erro || 'Produto nÃ£o encontrado.');
+        if (!response.ok) throw new Error(item.erro || 'Produto não encontrado.');
         if (!paginaAtiva) return;
 
         setDados({
@@ -49,7 +49,7 @@ export default function Editar() {
           precoVenda: item.preco ?? '',
           estoqueInicial: item.quantidade ?? 0,
           estoqueMinimo: item.estoque_minimo ?? 5,
-          ativo: item.ativo === undefined ? item.status !== 'IndisponÃ­vel' : Boolean(Number(item.ativo)),
+          ativo: item.ativo === undefined ? item.status !== 'Indisponível' : Boolean(Number(item.ativo)),
         });
         setImagemPreview(resolverImagem(item.imagem));
       } catch (error) {
@@ -72,7 +72,7 @@ export default function Editar() {
     if (!arquivo) return;
 
     if (!arquivo.type.startsWith('image/')) {
-      setErro('Selecione um arquivo de imagem vÃ¡lido.');
+      setErro('Selecione um arquivo de imagem válido.');
       return;
     }
 
@@ -100,7 +100,7 @@ export default function Editar() {
       formData.append('quantidade', Number(dados.estoqueInicial || 0));
       formData.append('estoqueMinimo', Number(dados.estoqueMinimo || 0));
       formData.append('ativo', String(dados.ativo));
-      formData.append('status', dados.ativo ? 'DisponÃ­vel' : 'IndisponÃ­vel');
+      formData.append('status', dados.ativo ? 'Disponível' : 'Indisponível');
       formData.append('autor', usuario?.email || usuario?.nome || 'Administrador');
       if (imagemArquivo) formData.append('imagem', imagemArquivo);
 
@@ -110,7 +110,7 @@ export default function Editar() {
 
       setImagemArquivo(null);
       setImagemPreview(resolverImagem(item.imagem));
-      setSucesso('AlteraÃ§Ãµes salvas com sucesso.');
+      setSucesso('Alterações salvas com sucesso.');
       navigate('/estoque');
     } catch (error) {
       setErro(error.message);
@@ -126,37 +126,37 @@ export default function Editar() {
     <form className={styles.page} onSubmit={handleSalvar}>
       <header className={styles.introRow}>
         <div>
-          <span className={styles.introLabel}>EdiÃ§Ã£o de produto</span>
+          <span className={styles.introLabel}>Edição de produto</span>
           <h1 className={styles.introTitulo}>{dados.nome || 'Editar produto'}</h1>
         </div>
       </header>
 
       <section className={styles.card}>
-        <h2 className={styles.sectionTitle}>1. InformaÃ§Ãµes BÃ¡sicas</h2>
+        <h2 className={styles.sectionTitle}>1. Informações Básicas</h2>
         <div className={styles.grid2}>
           <label>Nome do produto<input value={dados.nome} onChange={handleChange('nome')} required /></label>
           <label>Categoria<select value={dados.categoria} onChange={handleChange('categoria')}>{CATEGORIAS.map((categoria) => <option key={categoria} value={categoria}>{categoria}</option>)}</select></label>
         </div>
         <label>Modelo<input value={dados.modelo} onChange={handleChange('modelo')} /></label>
-        <label className={styles.descricaoLabel}>DescriÃ§Ã£o<textarea value={dados.descricao} onChange={handleChange('descricao')} maxLength="500" /></label>
+        <label className={styles.descricaoLabel}>Descrição<textarea value={dados.descricao} onChange={handleChange('descricao')} maxLength="500" /></label>
       </section>
 
       <section className={styles.card}>
-        <h2 className={styles.sectionTitle}>2. EspecificaÃ§Ãµes</h2>
+        <h2 className={styles.sectionTitle}>2. Especificações</h2>
         <label>Armazenamento<input value={dados.armazenamento} onChange={handleChange('armazenamento')} /></label>
         <div className={styles.grid2}>
           <label>SKU<input value={dados.sku} onChange={handleChange('sku')} /></label>
-          <label>CÃ³digo de barras<input value={dados.codigoBarras} onChange={handleChange('codigoBarras')} /></label>
+          <label>Código de barras<input value={dados.codigoBarras} onChange={handleChange('codigoBarras')} /></label>
         </div>
       </section>
 
       <section className={styles.card}>
-        <h2 className={styles.sectionTitle}>3. PreÃ§o e Estoque</h2>
+        <h2 className={styles.sectionTitle}>3. Preço e Estoque</h2>
         <div className={styles.grid2}>
-          <label>PreÃ§o de venda (R$)<input type="number" step="0.01" min="0" value={dados.precoVenda} onChange={handleChange('precoVenda')} required /></label>
+          <label>Preço de venda (R$)<input type="number" step="0.01" min="0" value={dados.precoVenda} onChange={handleChange('precoVenda')} required /></label>
           <label>Estoque inicial<input type="number" min="0" value={dados.estoqueInicial} onChange={handleChange('estoqueInicial')} required /></label>
         </div>
-        <label>Estoque mÃ­nimo<input type="number" min="0" value={dados.estoqueMinimo} onChange={handleChange('estoqueMinimo')} required /></label>
+        <label>Estoque mínimo<input type="number" min="0" value={dados.estoqueMinimo} onChange={handleChange('estoqueMinimo')} required /></label>
         <div className={styles.ativoBox}>
           <div><strong>Produto Ativo</strong><small>Ative para disponibilizar o produto no sistema.</small></div>
           <button type="button" className={`${styles.switch} ${dados.ativo ? styles.switchAtivo : ''}`} onClick={() => setDados((atual) => ({ ...atual, ativo: !atual.ativo }))} aria-pressed={dados.ativo}><span /></button>
@@ -170,9 +170,9 @@ export default function Editar() {
           <button type="button" className={styles.uploadBox} onClick={() => inputImagemRef.current?.click()}>
             <span className={styles.uploadIcone}>+</span>
             <strong>{imagemArquivo ? 'Nova imagem selecionada' : 'Trocar imagem principal'}</strong>
-            <small>{imagemArquivo ? imagemArquivo.name : 'JPG, PNG ou WEBP â€¢ MÃ¡x. 5MB'}</small>
+            <small>{imagemArquivo ? imagemArquivo.name : 'JPG, PNG ou WEBP • Máx. 5MB'}</small>
           </button>
-          {imagemPreview && <img src={imagemPreview} alt={`PrÃ©-visualizaÃ§Ã£o de ${dados.nome}`} className={styles.previewImage} />}
+          {imagemPreview && <img src={imagemPreview} alt={`Pré-visualização de ${dados.nome}`} className={styles.previewImage} />}
         </div>
       </section>
 
@@ -180,9 +180,8 @@ export default function Editar() {
       {sucesso && <p className={styles.sucesso}>{sucesso}</p>}
       <div className={styles.botoes}>
         <button type="button" className={styles.cancelarBotao} onClick={() => navigate('/estoque')}>Cancelar</button>
-        <button type="submit" className={styles.salvarBotao} disabled={salvando}>{salvando ? 'Salvando...' : 'Salvar alteraÃ§Ãµes'}</button>
+        <button type="submit" className={styles.salvarBotao} disabled={salvando}>{salvando ? 'Salvando...' : 'Salvar alterações'}</button>
       </div>
     </form>
   );
 }
-

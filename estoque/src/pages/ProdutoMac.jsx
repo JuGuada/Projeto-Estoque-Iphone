@@ -100,7 +100,7 @@ export const macFallback = {
         "Feito para acompanhar seu ritmo.",
 
       descricao:
-        "PotÃªncia para estudar, trabalhar e criar sem interromper o que importa.",
+        "Potência para estudar, trabalhar e criar sem interromper o que importa.",
 
       imagem:
         "/imagens/destaque-estudos.jpg",
@@ -149,7 +149,7 @@ export const macFallback = {
       titulo: "Durabilidade",
 
       descricao:
-        "ConstruÃ§Ã£o leve e resistente para acompanhar vocÃª todos os dias.",
+        "Construção leve e resistente para acompanhar você todos os dias.",
     },
 
     {
@@ -158,7 +158,7 @@ export const macFallback = {
       titulo: "Tela",
 
       descricao:
-        "Uma experiÃªncia ampla e nÃ­tida para trabalhar, estudar, assistir e criar.",
+        "Uma experiência ampla e nítida para trabalhar, estudar, assistir e criar.",
     },
 
     {
@@ -167,7 +167,7 @@ export const macFallback = {
       titulo: "Teclado e trackpad",
 
       descricao:
-        "PrecisÃ£o e conforto para digitar, navegar e criar com naturalidade.",
+        "Precisão e conforto para digitar, navegar e criar com naturalidade.",
     },
 
     {
@@ -176,16 +176,16 @@ export const macFallback = {
       titulo: "Touch ID",
 
       descricao:
-        "Desbloqueie seu Mac e proteja suas informaÃ§Ãµes com apenas um toque.",
+        "Desbloqueie seu Mac e proteja suas informações com apenas um toque.",
     },
 
     {
       id: "camera",
 
-      titulo: "CÃ¢mera",
+      titulo: "Câmera",
 
       descricao:
-        "Chamadas mais claras e uma imagem mais natural para reuniÃµes e conversas.",
+        "Chamadas mais claras e uma imagem mais natural para reuniões e conversas.",
     },
 
     {
@@ -195,7 +195,7 @@ export const macFallback = {
         "Microfones e alto-falantes",
 
       descricao:
-        "Som equilibrado e vozes mais claras em chamadas, filmes e mÃºsicas.",
+        "Som equilibrado e vozes mais claras em chamadas, filmes e músicas.",
     },
 
     {
@@ -204,7 +204,7 @@ export const macFallback = {
       titulo: "Conectividade",
 
       descricao:
-        "Conecte acessÃ³rios e mantenha tudo funcionando de forma simples.",
+        "Conecte acessórios e mantenha tudo funcionando de forma simples.",
     },
   ],
 
@@ -221,10 +221,10 @@ export const macFallback = {
         "Produtividade todo dia.",
 
       titulo:
-        "FaÃ§a tudo acontecer.",
+        "Faça tudo acontecer.",
 
       descricao:
-        "Responda a e-mails, faÃ§a chamadas de vÃ­deo, navegue na internet, organize estudos e compartilhe arquivos. Com o MacBook Neo, nada fica para amanhÃ£.",
+        "Responda a e-mails, faça chamadas de vídeo, navegue na internet, organize estudos e compartilhe arquivos. Com o MacBook Neo, nada fica para amanhã.",
 
       cor: "#40a559",
 
@@ -242,7 +242,7 @@ export const macFallback = {
         "Um companheiro para estudar.",
 
       descricao:
-        "Pesquise antes das provas, resuma anotaÃ§Ãµes de aulas e transforme suas ideias em trabalhos, apresentaÃ§Ãµes e novos projetos.",
+        "Pesquise antes das provas, resuma anotações de aulas e transforme suas ideias em trabalhos, apresentações e novos projetos.",
 
       cor: "#d347c4",
 
@@ -254,13 +254,13 @@ export const macFallback = {
       id: 3,
 
       tituloColorido:
-        "VocÃª trabalha brincando.",
+        "Você trabalha brincando.",
 
       titulo:
         "Crie do seu jeito.",
 
       descricao:
-        "CriaÃ§Ã£o de planilhas, apresentaÃ§Ãµes, ediÃ§Ã£o e organizaÃ§Ã£o de projetos. Tudo de forma rÃ¡pida, fluida e visual.",
+        "Criação de planilhas, apresentações, edição e organização de projetos. Tudo de forma rápida, fluida e visual.",
 
       cor: "#4269e8",
 
@@ -272,7 +272,7 @@ export const macFallback = {
 
 
 /* =========================================================
-   NORMALIZAÃ‡ÃƒO
+   NORMALIZAÇÃO
 ========================================================= */
 
 function normalizarMac(produto) {
@@ -479,7 +479,7 @@ export default function ProdutoMac() {
 
 
   /* =========================================================
-     RESETA INTERAÃ‡Ã•ES
+     RESETA INTERAÇÕES
   ========================================================= */
 
   useEffect(() => {
@@ -494,7 +494,7 @@ export default function ProdutoMac() {
 
 
   /* =========================================================
-     MOSTRAR BARRA SÃ“ DEPOIS DO HERO
+     MOSTRAR BARRA SÓ DEPOIS DO HERO
   ========================================================= */
 
   useEffect(() => {
@@ -880,7 +880,7 @@ export default function ProdutoMac() {
                   }
                   aria-label="Destaque anterior"
                 >
-                  â€¹
+                  ‹
                 </button>
 
 
@@ -891,9 +891,9 @@ export default function ProdutoMac() {
                     carouselIndex >=
                     maxCarouselIndex
                   }
-                  aria-label="PrÃ³ximo destaque"
+                  aria-label="Próximo destaque"
                 >
-                  â€º
+                  ›
                 </button>
 
               </div>
@@ -998,12 +998,12 @@ export default function ProdutoMac() {
 
 
               <h2>
-                {produto.textosVitrine?.detalhesTitulo || "ConheÃ§a cada detalhe."}
+                {produto.textosVitrine?.detalhesTitulo || "Conheça cada detalhe."}
               </h2>
 
 
               <p>
-                {produto.textosVitrine?.detalhesDescricao || "Explore cores, tela, cÃ¢mera, teclado e tudo o que faz parte da experiÃªncia do Mac."}
+                {produto.textosVitrine?.detalhesDescricao || "Explore cores, tela, câmera, teclado e tudo o que faz parte da experiência do Mac."}
               </p>
 
             </div>
@@ -1075,7 +1075,7 @@ export default function ProdutoMac() {
                 </div>
 
 
-                {/* INFORMAÃ‡Ã•ES */}
+                {/* INFORMAÇÕES */}
 
                 {produto.detalhes.map(
                   (detalhe) => (
@@ -1110,7 +1110,7 @@ export default function ProdutoMac() {
 
                           {detalheSelecionado ===
                           detalhe.id
-                            ? "âˆ’"
+                            ? "−"
                             : "+"}
 
                         </span>
@@ -1184,12 +1184,12 @@ export default function ProdutoMac() {
 
 
               <h2>
-                {produto.textosVitrine?.extraTitulo || "Para vocÃª fazer e acontecer."}
+                {produto.textosVitrine?.extraTitulo || "Para você fazer e acontecer."}
               </h2>
 
 
               <p>
-                {produto.textosVitrine?.extraDescricao || "PotÃªncia para as tarefas do dia a dia, criatividade para transformar ideias e desempenho para acompanhar tudo o que vocÃª quiser fazer."}
+                {produto.textosVitrine?.extraDescricao || "Potência para as tarefas do dia a dia, criatividade para transformar ideias e desempenho para acompanhar tudo o que você quiser fazer."}
               </p>
 
             </header>
@@ -1290,7 +1290,7 @@ export default function ProdutoMac() {
               <span>
 
                 {corAtual?.nome
-                  ? `${corAtual.nome} Â· `
+                  ? `${corAtual.nome} · `
                   : ""}
 
                 Feito para acompanhar o seu dia.
@@ -1348,4 +1348,3 @@ export default function ProdutoMac() {
   );
 
 }
-

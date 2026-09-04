@@ -309,7 +309,7 @@
   white-space: nowrap;
 }
 
-/* BOTÃƒO FINALIZAR COMPRA */
+/* BOTÃO FINALIZAR COMPRA */
 .payButton {
   display: block;
   width: 180px;
@@ -421,4 +421,3 @@
     padding: 10px 16px;
   }
 }
-

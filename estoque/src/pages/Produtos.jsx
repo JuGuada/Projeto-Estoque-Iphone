@@ -34,41 +34,41 @@ const produtosIniciais = [
     video: "/videos/apple.mp4",
 
     descricao:
-      "Um novo iPhone pensado para oferecer desempenho, cÃ¢meras incrÃ­veis e um design ainda mais resistente.",
+      "Um novo iPhone pensado para oferecer desempenho, câmeras incríveis e um design ainda mais resistente.",
 
    destaques: [
   {
     id: 1,
-    titulo: "Nova CÃ¢mera",
+    titulo: "Nova Câmera",
     texto:
-      "Nova cÃ¢mera frontal Center Stage. Flexibilidade para enquadrar. Selfies em grupo mais inteligentes. E muito mais.",
+      "Nova câmera frontal Center Stage. Flexibilidade para enquadrar. Selfies em grupo mais inteligentes. E muito mais.",
     imagem: "/imagens/primeira.png",
   },
   {
     id: 2,
     titulo: "Sistema",
     texto:
-      "Sistema de cÃ¢mera dupla Fusion de 48 MP. De perto ou de longe, as fotos ficam incrÃ­veis.",
+      "Sistema de câmera dupla Fusion de 48 MP. De perto ou de longe, as fotos ficam incríveis.",
     imagem: "/imagens/segunda.png",
   },
 ],
 
     detalhes: {
-      titulo: "Ainda mais durÃ¡vel.",
-      subtitulo: "Ainda mais adorÃ¡vel.",
+      titulo: "Ainda mais durável.",
+      subtitulo: "Ainda mais adorável.",
     },
 
     camera: {
-      titulo: "CÃ¢mera frontal",
+      titulo: "Câmera frontal",
       subtitulo: "Center Stage de 18 MP. Uma grande virada.",
       texto:
-        "A nova cÃ¢mera frontal traz mais flexibilidade para enquadrar fotos e vÃ­deos. Toque para ampliar o campo de visÃ£o e mudar da vertical para a horizontal sem girar o iPhone.",
+        "A nova câmera frontal traz mais flexibilidade para enquadrar fotos e vídeos. Toque para ampliar o campo de visão e mudar da vertical para a horizontal sem girar o iPhone.",
       imagem: "/imagem/camera-frontal.jpg",
       tabs: [
         {
           id: 1,
-          label: "VisÃ£o geral",
-          titulo: "Uma cÃ¢mera feita para vocÃª.",
+          label: "Visão geral",
+          titulo: "Uma câmera feita para você.",
           texto: "Capture seus melhores momentos com mais detalhes, qualidade e flexibilidade.",
           imagem: "/imagem/camera-frontal.jpg",
         },
@@ -81,8 +81,8 @@ const produtosIniciais = [
         },
         {
           id: 3,
-          label: "VÃ­deo",
-          titulo: "VÃ­deos ainda mais incrÃ­veis.",
+          label: "Vídeo",
+          titulo: "Vídeos ainda mais incríveis.",
           texto: "Registre seus momentos com movimento suave e qualidade impressionante.",
           imagem: "/imagem/camera-video.jpg",
         },
@@ -108,28 +108,28 @@ const produtosIniciais = [
     destaques: [
       {
         id: 1,
-        titulo: "PotÃªncia profissional.",
+        titulo: "Potência profissional.",
         texto:
-          "Desempenho preparado para tarefas exigentes e experiÃªncias mais rÃ¡pidas.",
+          "Desempenho preparado para tarefas exigentes e experiências mais rápidas.",
       },
     ],
 
     detalhes: {
-      titulo: "Ainda mais durÃ¡vel.",
-      subtitulo: "Ainda mais adorÃ¡vel.",
+      titulo: "Ainda mais durável.",
+      subtitulo: "Ainda mais adorável.",
     },
 
     camera: {
-      titulo: "CÃ¢meras Pro",
+      titulo: "Câmeras Pro",
       subtitulo: "Detalhes em todos os momentos.",
       texto:
-        "Um sistema de cÃ¢meras desenvolvido para capturar fotos e vÃ­deos com muito mais detalhes.",
+        "Um sistema de câmeras desenvolvido para capturar fotos e vídeos com muito mais detalhes.",
       imagem: "/imagem/camera-frontal.jpg",
       tabs: [
         {
           id: 1,
-          label: "VisÃ£o geral",
-          titulo: "Uma cÃ¢mera feita para vocÃª.",
+          label: "Visão geral",
+          titulo: "Uma câmera feita para você.",
           texto: "Capture seus melhores momentos com mais detalhes, qualidade e flexibilidade.",
           imagem: "/imagens/camera1.png",
         },
@@ -142,8 +142,8 @@ const produtosIniciais = [
         },
         {
           id: 3,
-          label: "VÃ­deo",
-          titulo: "VÃ­deos ainda mais incrÃ­veis.",
+          label: "Vídeo",
+          titulo: "Vídeos ainda mais incríveis.",
           texto: "Registre seus momentos com movimento suave e qualidade impressionante.",
           imagem: "/imagens/camera3.png",
         },
@@ -164,33 +164,33 @@ const produtosIniciais = [
     video: "/videos/mac.mp4",
 
     descricao:
-      "Um computador elegante, rÃ¡pido e preparado para acompanhar sua rotina.",
+      "Um computador elegante, rápido e preparado para acompanhar sua rotina.",
 
     destaques: [
       {
         id: 1,
-        titulo: "Feito para ir alÃ©m.",
+        titulo: "Feito para ir além.",
         texto:
           "Desempenho e mobilidade em um computador pensado para todos os dias.",
       },
     ],
 
     detalhes: {
-      titulo: "Ainda mais durÃ¡vel.",
-      subtitulo: "Ainda mais adorÃ¡vel.",
+      titulo: "Ainda mais durável.",
+      subtitulo: "Ainda mais adorável.",
     },
 
     camera: {
-      titulo: "CÃ¢mera integrada",
+      titulo: "Câmera integrada",
       subtitulo: "Sua imagem com mais qualidade.",
       texto:
-        "FaÃ§a chamadas e reuniÃµes com uma experiÃªncia mais clara e natural.",
+        "Faça chamadas e reuniões com uma experiência mais clara e natural.",
       imagem: "/imagem/camera-frontal.jpg",
       tabs: [
         {
           id: 1,
-          label: "VisÃ£o geral",
-          titulo: "Uma cÃ¢mera feita para vocÃª.",
+          label: "Visão geral",
+          titulo: "Uma câmera feita para você.",
           texto: "Capture seus melhores momentos com mais detalhes, qualidade e flexibilidade.",
           imagem: "/imagem/camera-frontal.jpg",
         },
@@ -203,8 +203,8 @@ const produtosIniciais = [
         },
         {
           id: 3,
-          label: "VÃ­deo",
-          titulo: "VÃ­deos ainda mais incrÃ­veis.",
+          label: "Vídeo",
+          titulo: "Vídeos ainda mais incríveis.",
           texto: "Registre seus momentos com movimento suave e qualidade impressionante.",
           imagem: "/imagem/camera-video.jpg",
         },
@@ -223,7 +223,7 @@ const urlVideo = (caminho = "") => {
 
 const apresentacaoPorCategoria = {
   iphone: {
-    nome: "iPhone", secao: "CÃ¢meras.", classe: "previewIphone", imagem: "/imagens/camera1.png",
+    nome: "iPhone", secao: "Câmeras.", classe: "previewIphone", imagem: "/imagens/camera1.png",
     cores: [
       { id: "lavanda", nome: "Lavanda", cor: "#8c6fc7", imagem: "/imagens/iphone-lavanda.jpg" },
       { id: "verde", nome: "Verde", cor: "#a7b58b", imagem: "/imagens/iphone-verde.jpg" },
@@ -235,7 +235,7 @@ const apresentacaoPorCategoria = {
   mac: {
     nome: "Mac", secao: "Desempenho.", classe: "previewMac", imagem: "/imagens/MacBook2.png",
     cores: [
-      { id: "azul", nome: "Azul-cÃ©u", cor: "#8197ae", imagem: "/imagens/macAzul.png" },
+      { id: "azul", nome: "Azul-céu", cor: "#8197ae", imagem: "/imagens/macAzul.png" },
       { id: "amarelo", nome: "Amarelo", cor: "#ddd07b", imagem: "/imagens/macAmarelo.png" },
       { id: "rosa", nome: "Rosa", cor: "#d8b8b7", imagem: "/imagens/macRosa.png" },
       { id: "prata", nome: "Prata", cor: "#d7d7d5", imagem: "/imagens/macBranco.png" },
@@ -249,7 +249,7 @@ const apresentacaoPorCategoria = {
     ],
   },
   airpods: {
-    nome: "AirPods", secao: "ExperiÃªncia.", classe: "previewAirpods", imagem: "/imagens/airpods.png",
+    nome: "AirPods", secao: "Experiência.", classe: "previewAirpods", imagem: "/imagens/airpods.png",
     cores: [
       { id: "branco", nome: "Branco", cor: "#f4f4f2", imagem: "/imagens/airpods.png" },
       { id: "estojo", nome: "Com estojo", cor: "#dededb", imagem: "/imagens/airpods2.png" },
@@ -283,7 +283,7 @@ function criarMoldeVazio(item, categoria) {
     detalhes: { titulo: iphoneFallback.detalhes.titulo, subtitulo: iphoneFallback.detalhes.subtitulo },
     informacoes: [],
     camera: {
-      label: iphoneFallback.camera.label || "CÃ¢meras.",
+      label: iphoneFallback.camera.label || "Câmeras.",
       titulo: iphoneFallback.camera.titulo,
       subtitulo: iphoneFallback.camera.subtitulo,
       texto: "",
@@ -293,7 +293,7 @@ function criarMoldeVazio(item, categoria) {
     textosVitrine: {
       ...base.textosVitrine,
       destaquesTitulo: "Comece pelos destaques.",
-      detalhesTitulo: "ConheÃ§a cada detalhe.",
+      detalhesTitulo: "Conheça cada detalhe.",
     },
   };
   if (categoria === "mac") return { ...base, detalhesMac: [], performance: [] };
@@ -325,10 +325,10 @@ function normalizarProduto(item) {
   );
   const baseVisual = ehProdutoModelo ? fallback : criarMoldeVazio(item, categoria);
   const textosPadrao = {
-    iphone: { destaquesTitulo: "Comece pelos destaques.", detalhesTitulo: "ConheÃ§a cada detalhe.", detalhesDescricao: "Explore o design, as cores e os recursos que tornam este iPhone Ãºnico." },
-    mac: { destaquesTitulo: "Comece pelos destaques.", detalhesTitulo: "ConheÃ§a cada detalhe.", detalhesDescricao: "Explore cores, tela, cÃ¢mera, teclado e tudo o que faz parte da experiÃªncia do Mac.", extraTitulo: "Para vocÃª fazer e acontecer.", extraDescricao: "PotÃªncia para as tarefas do dia a dia, criatividade para transformar ideias e desempenho para acompanhar tudo o que vocÃª quiser fazer." },
-    ipad: { destaquesTitulo: "Comece pelos destaques.", detalhesTitulo: "Explore os detalhes.", detalhesDescricao: "ConheÃ§a de perto os elementos que tornam o iPad tÃ£o versÃ¡til.", extraTitulo: "Possibilidades em todas as frentes.", extraDescricao: "Um espaÃ§o flexÃ­vel para criar, trabalhar, estudar e transformar ideias em projetos.", overlayTitulo: "Um universo de possibilidades.", overlayDescricao: "Trabalhe com vÃ¡rios apps, crie projetos, organize ideias e transforme o iPad em um espaÃ§o para tudo o que vocÃª quiser fazer." },
-    airpods: { destaquesTitulo: "Comece pelos destaques.", detalhesTitulo: "Explore os detalhes.", detalhesDescricao: "Descubra como cada detalhe foi pensado para tornar a experiÃªncia mais confortÃ¡vel, simples e envolvente.", extraTitulo: "Magia para seus ouvidos.", extraDescricao: "Uma experiÃªncia que aproxima vocÃª da mÃºsica, das conversas e de tudo que merece ser ouvido." },
+    iphone: { destaquesTitulo: "Comece pelos destaques.", detalhesTitulo: "Conheça cada detalhe.", detalhesDescricao: "Explore o design, as cores e os recursos que tornam este iPhone único." },
+    mac: { destaquesTitulo: "Comece pelos destaques.", detalhesTitulo: "Conheça cada detalhe.", detalhesDescricao: "Explore cores, tela, câmera, teclado e tudo o que faz parte da experiência do Mac.", extraTitulo: "Para você fazer e acontecer.", extraDescricao: "Potência para as tarefas do dia a dia, criatividade para transformar ideias e desempenho para acompanhar tudo o que você quiser fazer." },
+    ipad: { destaquesTitulo: "Comece pelos destaques.", detalhesTitulo: "Explore os detalhes.", detalhesDescricao: "Conheça de perto os elementos que tornam o iPad tão versátil.", extraTitulo: "Possibilidades em todas as frentes.", extraDescricao: "Um espaço flexível para criar, trabalhar, estudar e transformar ideias em projetos.", overlayTitulo: "Um universo de possibilidades.", overlayDescricao: "Trabalhe com vários apps, crie projetos, organize ideias e transforme o iPad em um espaço para tudo o que você quiser fazer." },
+    airpods: { destaquesTitulo: "Comece pelos destaques.", detalhesTitulo: "Explore os detalhes.", detalhesDescricao: "Descubra como cada detalhe foi pensado para tornar a experiência mais confortável, simples e envolvente.", extraTitulo: "Magia para seus ouvidos.", extraDescricao: "Uma experiência que aproxima você da música, das conversas e de tudo que merece ser ouvido." },
   }[categoria];
   const chaveDestaques = categoria === "iphone" ? "destaques" : `destaques${categoria === "airpods" ? "Airpods" : categoria === "ipad" ? "Ipad" : "Mac"}`;
   const destaquesOriginais = ehProdutoModelo && !(item[chaveDestaques]?.length || item.destaques?.length)
@@ -457,7 +457,7 @@ const imagemAtual = detalheAtual?.imagem || corAtual?.imagem;
                   className={styles.detalheBotaoInfo}
                   onClick={() => setDetalheSelecionado((atual) => atual === informacao.id ? null : informacao.id)}
                 >
-                  <span className={styles.detalheMais}>{estaAberto ? "âˆ’" : "+"}</span>
+                  <span className={styles.detalheMais}>{estaAberto ? "−" : "+"}</span>
                   <strong>{informacao.nome}</strong>
                 </button>
                 {estaAberto && informacao.valor && (
@@ -497,7 +497,7 @@ function PreviewProduto({ produto }) {
         "--produto-cor": produto.cor || "#3974cc",
       }}
     >
-      {/* NAVEGAÃ‡ÃƒO DA PÃGINA DO CLIENTE */}
+      {/* NAVEGAÇÃO DA PÁGINA DO CLIENTE */}
       <nav className={styles.previewNav}>
         <div className={styles.previewBrand}>{produto.nome}</div>
 
@@ -519,7 +519,7 @@ function PreviewProduto({ produto }) {
             muted
             loop
             playsInline
-          /> : <div className={styles.emptyMedia}>Adicione o vÃ­deo principal deste produto</div>}
+          /> : <div className={styles.emptyMedia}>Adicione o vídeo principal deste produto</div>}
 
           <div className={styles.videoGradient}></div>
         </div>
@@ -529,7 +529,7 @@ function PreviewProduto({ produto }) {
 
           <h1>
             {produto.nome}
-            <strong>.<br />{config.nome} para vocÃª.</strong>
+            <strong>.<br />{config.nome} para você.</strong>
           </h1>
 
           <p>{produto.descricao}</p>
@@ -574,7 +574,7 @@ function PreviewProduto({ produto }) {
         ))}
       </section>
 
-      {/* ================= CÃ‚MERAS ================= */}
+      {/* ================= CÂMERAS ================= */}
       <section id="cameras" className={styles.previewCamera}>
         <div className={styles.cameraHeader}>
           <span>{config.secao}</span>
@@ -587,7 +587,7 @@ function PreviewProduto({ produto }) {
         </div>
 
         <div className={styles.cameraVisual}>
-  {imagemValida ? <img className={styles.cameraPhoneImage} src={urlMidia(imagemValida)} alt={config.secao} /> : <div className={styles.emptyMedia}>Adicione uma imagem para esta seÃ§Ã£o</div>}
+  {imagemValida ? <img className={styles.cameraPhoneImage} src={urlMidia(imagemValida)} alt={config.secao} /> : <div className={styles.emptyMedia}>Adicione uma imagem para esta seção</div>}
 </div>
 
         <div className={styles.cameraNavigation}>
@@ -614,10 +614,10 @@ function PreviewProduto({ produto }) {
         </div>
       </section>
 
-      {/* FINAL DA PÃGINA */}
+      {/* FINAL DA PÁGINA */}
       <div className={styles.previewFooter}>
         <strong>{produto.nome}</strong>
-        <span>ConheÃ§a todos os detalhes.</span>
+        <span>Conheça todos os detalhes.</span>
       </div>
     </div>
   );
@@ -840,8 +840,8 @@ export default function Produtos() {
       id: Date.now(),
       titulo: "Novo destaque.",
       texto:
-        "Adicione aqui uma nova informaÃ§Ã£o importante sobre o produto.",
-      descricao: "Adicione aqui uma nova informaÃ§Ã£o importante sobre o produto.",
+        "Adicione aqui uma nova informação importante sobre o produto.",
+      descricao: "Adicione aqui uma nova informação importante sobre o produto.",
       imagem: "",
     };
 
@@ -879,7 +879,7 @@ export default function Produtos() {
           break;
         }
       } catch {
-        // MantÃ©m /imagens como caminho padrÃ£o caso a verificaÃ§Ã£o nÃ£o esteja disponÃ­vel.
+        // Mantém /imagens como caminho padrão caso a verificação não esteja disponível.
       }
     }
 
@@ -970,7 +970,7 @@ export default function Produtos() {
     const molde = criarMoldeVazio(produto, categoria);
     const chave = categoria === "iphone" ? "destaques" : `destaques${categoria === "airpods" ? "Airpods" : categoria === "ipad" ? "Ipad" : "Mac"}`;
     setProdutos((atuais) => atuais.map((item) => item.id === produto.id ? { ...item, ...molde, destaques: [], [chave]: [] } : item));
-    setMensagemVitrine("ConteÃºdo limpo no editor. Clique em Salvar vitrine para confirmar.");
+    setMensagemVitrine("Conteúdo limpo no editor. Clique em Salvar vitrine para confirmar.");
   }
 
   function renderListaEditavel(chave, titulo, campos) {
@@ -979,7 +979,7 @@ export default function Produtos() {
         <div className={styles.blockTitle}>
           <div>
             <h3>{titulo}</h3>
-            <span>Edite os textos exibidos nesta seÃ§Ã£o da vitrine.</span>
+            <span>Edite os textos exibidos nesta seção da vitrine.</span>
           </div>
           <button type="button" className={styles.addButton} onClick={() => adicionarItemSecao(chave, campos)}>+ Adicionar detalhe</button>
         </div>
@@ -1009,7 +1009,7 @@ export default function Produtos() {
                   </label>
                 ))}
               </div>
-              <button type="button" className={styles.deleteButton} onClick={() => removerItemSecao(chave, item.id)}>Ã—</button>
+              <button type="button" className={styles.deleteButton} onClick={() => removerItemSecao(chave, item.id)}>×</button>
             </div>
           ))}
         </div>
@@ -1019,39 +1019,39 @@ export default function Produtos() {
 
   const categoriaEditor = obterCategoria(produto);
   const terceiraAba = {
-    iphone: "CÃ¢meras",
+    iphone: "Câmeras",
     mac: "Desempenho",
     ipad: "Detalhes",
-    airpods: "ExperiÃªncia",
+    airpods: "Experiência",
   }[categoriaEditor];
 
   return (
     <AdminLayout>
       <section className={styles.page}>
-      {/* ================= TÃTULO ================= */}
+      {/* ================= TÍTULO ================= */}
       <header className={styles.pageHeader}>
         <div>
-          <span>Franquia autorizada â€¢ Painel administrativo</span>
+          <span>Franquia autorizada • Painel administrativo</span>
 
           <h1>
-            PersonalizaÃ§Ã£o
+            Personalização
             <br />
             da vitrine.
           </h1>
 
           <p>
-            Selecione um produto e edite a pÃ¡gina que seus
-            clientes irÃ£o visualizar.
+            Selecione um produto e edite a página que seus
+            clientes irão visualizar.
           </p>
         </div>
 
         <div className={styles.saveIndicator}>
           <span></span>
-          AlteraÃ§Ãµes salvas automaticamente
+          Alterações salvas automaticamente
         </div>
       </header>
 
-      {/* ================= SELEÃ‡ÃƒO DE PRODUTO ================= */}
+      {/* ================= SELEÇÃO DE PRODUTO ================= */}
       <section className={styles.produtosCard}>
         <div className={styles.cardTop}>
           <div>
@@ -1070,7 +1070,7 @@ export default function Produtos() {
           <div className={styles.tabelaHeader}>
             <span>Produto</span>
             <span>SKU</span>
-            <span>PreÃ§o</span>
+            <span>Preço</span>
             <span>Status</span>
             <span></span>
           </div>
@@ -1115,7 +1115,7 @@ export default function Produtos() {
               </span>
 
               <span className={styles.arrow}>
-                â†’
+                →
               </span>
             </button>
           ))}
@@ -1126,8 +1126,8 @@ export default function Produtos() {
       <section className={styles.monitorSection}>
         <div className={styles.monitorTitle}>
           <div>
-            <span>PrÃ©-visualizaÃ§Ã£o</span>
-            <h2>PÃ¡gina do cliente</h2>
+            <span>Pré-visualização</span>
+            <h2>Página do cliente</h2>
           </div>
 
           <div className={styles.liveBadge}>
@@ -1166,7 +1166,7 @@ export default function Produtos() {
         key={`${urlVitrine}-${previewRevision}`}
         className={styles.storePreviewFrame}
         src={urlVitrine}
-        title={`PrÃ©-visualizaÃ§Ã£o da pÃ¡gina ${produto.nome}`}
+        title={`Pré-visualização da página ${produto.nome}`}
       />
     ) : (
       <div className={styles.previewEmpty}>Selecione um produto para visualizar.</div>
@@ -1187,7 +1187,7 @@ export default function Produtos() {
   </div>
 
 
-  {/* PÃ‰ */}
+  {/* PÉ */}
   <div className={styles.monitorStand}>
     <div className={styles.monitorStandNeck}></div>
 
@@ -1206,12 +1206,12 @@ export default function Produtos() {
             <h2>{produto.nome}</h2>
 
             <p>
-              As alteraÃ§Ãµes aparecem automaticamente no monitor.
+              As alterações aparecem automaticamente no monitor.
             </p>
           </div>
           <div className={styles.publishArea}>
             {mensagemVitrine && <span>{mensagemVitrine}</span>}
-            <button type="button" className={styles.clearTemplateButton} onClick={limparConteudoDoModelo}>Limpar conteÃºdo</button>
+            <button type="button" className={styles.clearTemplateButton} onClick={limparConteudoDoModelo}>Limpar conteúdo</button>
             <button type="button" onClick={salvarVitrine} disabled={salvandoVitrine}>
               {salvandoVitrine ? "Salvando..." : "Salvar vitrine"}
             </button>
@@ -1230,7 +1230,7 @@ export default function Produtos() {
               onClick={() => setAbaEditor("geral")}
             >
               <span>01</span>
-              InformaÃ§Ãµes gerais
+              Informações gerais
             </button>
 
             <button
@@ -1273,8 +1273,8 @@ export default function Produtos() {
               <>
                 <div className={styles.editorBlock}>
                   <div className={styles.blockTitle}>
-                    <h3>InformaÃ§Ãµes principais</h3>
-                    <span>VisÃ­veis na pÃ¡gina inicial</span>
+                    <h3>Informações principais</h3>
+                    <span>Visíveis na página inicial</span>
                   </div>
 
                   <div className={styles.formGrid}>
@@ -1335,7 +1335,7 @@ export default function Produtos() {
                   </div>
 
                   <label className={styles.fullInput}>
-                    DescriÃ§Ã£o
+                    Descrição
                     <textarea
                       value={produto.descricao}
                       onChange={(e) =>
@@ -1350,13 +1350,13 @@ export default function Produtos() {
 
                 {categoriaEditor === "iphone" && <div className={styles.editorBlock}>
                   <div className={styles.blockTitle}>
-                    <h3>SeÃ§Ã£o de cores</h3>
+                    <h3>Seção de cores</h3>
                     <span>Textos exibidos acima das cores do produto</span>
                   </div>
 
                   <div className={styles.formGrid}>
                     <label>
-                      TÃ­tulo
+                      Título
                       <input
                         value={produto.detalhes?.titulo || ""}
                         onChange={(e) => atualizarDetalhes("titulo", e.target.value)}
@@ -1364,7 +1364,7 @@ export default function Produtos() {
                     </label>
 
                     <label>
-                      SubtÃ­tulo
+                      Subtítulo
                       <input
                         value={produto.detalhes?.subtitulo || ""}
                         onChange={(e) => atualizarDetalhes("subtitulo", e.target.value)}
@@ -1373,32 +1373,32 @@ export default function Produtos() {
                   </div>
                 </div>}
 
-                {categoriaEditor === "iphone" && renderListaEditavel("informacoes", "Itens expansÃ­veis dos detalhes", [
+                {categoriaEditor === "iphone" && renderListaEditavel("informacoes", "Itens expansíveis dos detalhes", [
                   { id: "nome", label: "Nome do item" },
-                  { id: "valor", label: "DescriÃ§Ã£o", textarea: true },
+                  { id: "valor", label: "Descrição", textarea: true },
                   { id: "imagem", label: "Imagem exibida ao abrir" },
                 ])}
 
                 <div className={styles.editorBlock}>
-                  <div className={styles.blockTitle}><div><h3>Fotos e cores do produto</h3><span>Cada variaÃ§Ã£o pode ter sua prÃ³pria imagem.</span></div><button type="button" className={styles.addButton} onClick={adicionarCor}>+ Adicionar foto</button></div>
+                  <div className={styles.blockTitle}><div><h3>Fotos e cores do produto</h3><span>Cada variação pode ter sua própria imagem.</span></div><button type="button" className={styles.addButton} onClick={adicionarCor}>+ Adicionar foto</button></div>
                   <div className={styles.cameraTabsEditor}>{(produto.cores || []).map((cor, index) => <div className={styles.cameraTabEditor} key={cor.id || index}>
                     <div className={styles.cameraTabNumber}>{String(index + 1).padStart(2, "0")}</div>
                     <div className={styles.cameraTabFields}><label>Nome da cor<input value={cor.nome || ""} onChange={(e) => atualizarCor(cor.id, "nome", e.target.value)} /></label><label>Cor visual<input type="color" value={cor.cor || "#d9d9de"} onChange={(e) => atualizarCor(cor.id, "cor", e.target.value)} /></label><label>Caminho da imagem<input value={cor.imagem || ""} onChange={(e) => atualizarCor(cor.id, "imagem", e.target.value)} placeholder="/imagens/meu-produto.png" /></label><label>Escolher arquivo<input type="file" accept="image/*" onChange={(e) => lerImagem(e.target.files?.[0], (valor) => atualizarCor(cor.id, "imagem", valor))} /></label>{cor.imagem && <button type="button" className={styles.removeMediaButton} onClick={() => atualizarCor(cor.id, "imagem", "")}>Remover imagem</button>}</div>
-                    <button type="button" className={styles.deleteButton} onClick={() => removerCor(cor.id)}>Ã—</button>
+                    <button type="button" className={styles.deleteButton} onClick={() => removerCor(cor.id)}>×</button>
                   </div>)}</div>
-                  {(produto.cores || []).length === 0 && <p className={styles.emptyEditor}>Nenhuma foto cadastrada. Clique em â€œAdicionar fotoâ€.</p>}
+                  {(produto.cores || []).length === 0 && <p className={styles.emptyEditor}>Nenhuma foto cadastrada. Clique em “Adicionar foto”.</p>}
                 </div>
 
                 <div className={styles.editorBlock}>
                   <div className={styles.blockTitle}>
-                    <h3>VÃ­deo principal</h3>
+                    <h3>Vídeo principal</h3>
                     <span>
-                      Cada produto pode ter seu prÃ³prio vÃ­deo
+                      Cada produto pode ter seu próprio vídeo
                     </span>
                   </div>
 
                   <label className={styles.fullInput}>
-                    Caminho do vÃ­deo
+                    Caminho do vídeo
                     <input
                       value={produto.video}
                       onChange={(e) =>
@@ -1411,7 +1411,7 @@ export default function Produtos() {
                     />
                   </label>
 
-                  <label className={styles.fullInput}>Escolher arquivo de vÃ­deo
+                  <label className={styles.fullInput}>Escolher arquivo de vídeo
                     <input type="file" accept="video/mp4,video/webm,video/ogg" onChange={(e) => enviarVideo(e.target.files?.[0])} />
                   </label>
 
@@ -1428,25 +1428,25 @@ export default function Produtos() {
             {abaEditor === "textos" && (
                 <div className={styles.editorBlock}>
                   <div className={styles.blockTitle}>
-                    <h3>Textos das seÃ§Ãµes</h3>
-                    <span>TÃ­tulos e descriÃ§Ãµes gerais exibidos entre os conteÃºdos.</span>
+                    <h3>Textos das seções</h3>
+                    <span>Títulos e descrições gerais exibidos entre os conteúdos.</span>
                   </div>
                   <label className={styles.fullInput}>
-                    TÃ­tulo da seÃ§Ã£o de destaques
+                    Título da seção de destaques
                     <input
                       value={produto.textosVitrine?.destaquesTitulo || ""}
                       onChange={(e) => atualizarTextoVitrine("destaquesTitulo", e.target.value)}
                     />
                   </label>
                   <label className={styles.fullInput}>
-                    TÃ­tulo da seÃ§Ã£o de detalhes
+                    Título da seção de detalhes
                     <input
                       value={produto.textosVitrine?.detalhesTitulo || ""}
                       onChange={(e) => atualizarTextoVitrine("detalhesTitulo", e.target.value)}
                     />
                   </label>
                   <label className={styles.fullInput}>
-                    DescriÃ§Ã£o da seÃ§Ã£o de detalhes
+                    Descrição da seção de detalhes
                     <textarea
                       value={produto.textosVitrine?.detalhesDescricao || ""}
                       onChange={(e) => atualizarTextoVitrine("detalhesDescricao", e.target.value)}
@@ -1455,11 +1455,11 @@ export default function Produtos() {
                   {categoriaEditor !== "iphone" && (
                     <>
                       <label className={styles.fullInput}>
-                        TÃ­tulo da seÃ§Ã£o final
+                        Título da seção final
                         <input value={produto.textosVitrine?.extraTitulo || ""} onChange={(e) => atualizarTextoVitrine("extraTitulo", e.target.value)} />
                       </label>
                       <label className={styles.fullInput}>
-                        DescriÃ§Ã£o da seÃ§Ã£o final
+                        Descrição da seção final
                         <textarea value={produto.textosVitrine?.extraDescricao || ""} onChange={(e) => atualizarTextoVitrine("extraDescricao", e.target.value)} />
                       </label>
                     </>
@@ -1467,11 +1467,11 @@ export default function Produtos() {
                   {categoriaEditor === "ipad" && (
                     <>
                       <label className={styles.fullInput}>
-                        TÃ­tulo da janela de possibilidades
+                        Título da janela de possibilidades
                         <input value={produto.textosVitrine?.overlayTitulo || ""} onChange={(e) => atualizarTextoVitrine("overlayTitulo", e.target.value)} />
                       </label>
                       <label className={styles.fullInput}>
-                        DescriÃ§Ã£o da janela de possibilidades
+                        Descrição da janela de possibilidades
                         <textarea value={produto.textosVitrine?.overlayDescricao || ""} onChange={(e) => atualizarTextoVitrine("overlayDescricao", e.target.value)} />
                       </label>
                     </>
@@ -1487,7 +1487,7 @@ export default function Produtos() {
                     <div>
                       <h3>Destaques do produto</h3>
                       <span>
-                        VocÃª pode adicionar quantos destaques
+                        Você pode adicionar quantos destaques
                         quiser.
                       </span>
                     </div>
@@ -1522,7 +1522,7 @@ export default function Produtos() {
                               </label>
                             )}
                             <label>
-                              TÃ­tulo
+                              Título
                               <input
                                 value={destaque.titulo}
                                 onChange={(e) =>
@@ -1536,7 +1536,7 @@ export default function Produtos() {
                             </label>
 
                             <label>
-                              DescriÃ§Ã£o
+                              Descrição
                               <textarea
                                 value={destaque.texto}
                                 onChange={(e) =>
@@ -1570,7 +1570,7 @@ export default function Produtos() {
                               )
                             }
                           >
-                            Ã—
+                            ×
                           </button>
                         </div>
                       )
@@ -1584,16 +1584,16 @@ export default function Produtos() {
             {abaEditor === "camera" && categoriaEditor === "iphone" && (
               <div className={styles.editorBlock}>
                 <div className={styles.blockTitle}>
-                  <h3>SeÃ§Ã£o de cÃ¢meras</h3>
+                  <h3>Seção de câmeras</h3>
 
                   <span>
-                    Personalize o conteÃºdo da navegaÃ§Ã£o
+                    Personalize o conteúdo da navegação
                   </span>
                 </div>
 
                 <div className={styles.formGrid}>
                   <label>
-                    TÃ­tulo
+                    Título
                     <input
                       value={produto.camera.titulo}
                       onChange={(e) =>
@@ -1606,7 +1606,7 @@ export default function Produtos() {
                   </label>
 
                   <label>
-                    SubtÃ­tulo
+                    Subtítulo
                     <input
                       value={produto.camera.subtitulo}
                       onChange={(e) =>
@@ -1620,7 +1620,7 @@ export default function Produtos() {
                 </div>
 
                 <label className={styles.fullInput}>
-                  DescriÃ§Ã£o
+                  Descrição
                   <textarea
                     value={produto.camera.texto}
                     onChange={(e) =>
@@ -1641,21 +1641,21 @@ export default function Produtos() {
                       </div>
                       <div className={styles.cameraTabFields}>
                         <label>
-                          Texto da navegaÃ§Ã£o
+                          Texto da navegação
                           <input
                             value={tab.label}
                             onChange={(e) => atualizarCameraTab(tab.id, "label", e.target.value)}
                           />
                         </label>
                         <label>
-                          TÃ­tulo do conteÃºdo
+                          Título do conteúdo
                           <input
                             value={tab.titulo}
                             onChange={(e) => atualizarCameraTab(tab.id, "titulo", e.target.value)}
                           />
                         </label>
                         <label>
-                          Texto do conteÃºdo
+                          Texto do conteúdo
                           <textarea
                             value={tab.texto}
                             onChange={(e) => atualizarCameraTab(tab.id, "texto", e.target.value)}
@@ -1672,15 +1672,15 @@ export default function Produtos() {
                         <label>Escolher arquivo<input type="file" accept="image/*" onChange={(e) => lerImagem(e.target.files?.[0], (valor) => atualizarCameraTab(tab.id, "imagem", valor))} /></label>
                         {tab.imagem && <button type="button" className={styles.removeMediaButton} onClick={() => atualizarCameraTab(tab.id, "imagem", "")}>Remover imagem</button>}
                       </div>
-                      <button type="button" className={styles.deleteButton} onClick={() => removerCameraTab(tab.id)}>Ã—</button>
+                      <button type="button" className={styles.deleteButton} onClick={() => removerCameraTab(tab.id)}>×</button>
                     </div>
                   ))}
                 </div>
 
                 <div className={styles.cameraNotice}>
-                  <strong>NavegaÃ§Ã£o da cÃ¢mera</strong>
+                  <strong>Navegação da câmera</strong>
                   <p>
-                    Cada botÃ£o possui seu prÃ³prio texto, tÃ­tulo, descriÃ§Ã£o e imagem. Ao clicar no botÃ£o no monitor, a imagem correspondente Ã© exibida.
+                    Cada botão possui seu próprio texto, título, descrição e imagem. Ao clicar no botão no monitor, a imagem correspondente é exibida.
                   </p>
                 </div>
               </div>
@@ -1689,14 +1689,14 @@ export default function Produtos() {
             {abaEditor === "camera" && categoriaEditor === "mac" && (
               <>
                 {renderListaEditavel("detalhesMac", "Detalhes do Mac", [
-                  { id: "titulo", label: "TÃ­tulo" },
-                  { id: "descricao", label: "DescriÃ§Ã£o", textarea: true },
+                  { id: "titulo", label: "Título" },
+                  { id: "descricao", label: "Descrição", textarea: true },
                   { id: "imagem", label: "Imagem" },
                 ])}
-                {renderListaEditavel("performance", "SeÃ§Ã£o de desempenho", [
+                {renderListaEditavel("performance", "Seção de desempenho", [
                   { id: "tituloColorido", label: "Chamada colorida" },
-                  { id: "titulo", label: "TÃ­tulo" },
-                  { id: "descricao", label: "DescriÃ§Ã£o", textarea: true },
+                  { id: "titulo", label: "Título" },
+                  { id: "descricao", label: "Descrição", textarea: true },
                   { id: "imagem", label: "Imagem" },
                 ])}
               </>
@@ -1704,22 +1704,22 @@ export default function Produtos() {
 
             {abaEditor === "camera" && categoriaEditor === "ipad" &&
               renderListaEditavel("detalhesIpad", "Detalhes do iPad", [
-                { id: "titulo", label: "TÃ­tulo" },
-                { id: "descricao", label: "DescriÃ§Ã£o", textarea: true },
+                { id: "titulo", label: "Título" },
+                { id: "descricao", label: "Descrição", textarea: true },
                 { id: "imagem", label: "Imagem" },
               ])}
 
             {abaEditor === "camera" && categoriaEditor === "airpods" && (
               <>
                 {renderListaEditavel("detalhesAirpods", "Detalhes dos AirPods", [
-                  { id: "titulo", label: "TÃ­tulo" },
-                  { id: "descricao", label: "DescriÃ§Ã£o", textarea: true },
+                  { id: "titulo", label: "Título" },
+                  { id: "descricao", label: "Descrição", textarea: true },
                   { id: "imagem", label: "Imagem" },
                 ])}
-                {renderListaEditavel("experienciaAirpods", "SeÃ§Ã£o de experiÃªncia", [
-                  { id: "menu", label: "Texto da navegaÃ§Ã£o" },
-                  { id: "titulo", label: "TÃ­tulo" },
-                  { id: "descricao", label: "DescriÃ§Ã£o", textarea: true },
+                {renderListaEditavel("experienciaAirpods", "Seção de experiência", [
+                  { id: "menu", label: "Texto da navegação" },
+                  { id: "titulo", label: "Título" },
+                  { id: "descricao", label: "Descrição", textarea: true },
                   { id: "imagem", label: "Imagem" },
                 ])}
               </>
@@ -1731,4 +1731,3 @@ export default function Produtos() {
     </AdminLayout>
   );
 }
-

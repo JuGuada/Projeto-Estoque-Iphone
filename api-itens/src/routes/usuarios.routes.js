@@ -6,7 +6,7 @@ import pool from "../database.js";
 const router = express.Router();
 
 /* =====================================================
-   LISTAR TODOS OS USUÃRIOS
+   LISTAR TODOS OS USUÁRIOS
 ===================================================== */
 
 router.get("/", async (req, res) => {
@@ -28,17 +28,17 @@ router.get("/", async (req, res) => {
         return res.json(usuarios);
 
     } catch (error) {
-        console.error("Erro ao listar usuÃ¡rios:", error);
+        console.error("Erro ao listar usuários:", error);
 
         return res.status(500).json({
-            erro: "Erro ao listar usuÃ¡rios."
+            erro: "Erro ao listar usuários."
         });
     }
 });
 
 
 /* =====================================================
-   BUSCAR USUÃRIO POR ID
+   BUSCAR USUÁRIO POR ID
 ===================================================== */
 
 router.get("/:id", async (req, res) => {
@@ -61,24 +61,24 @@ router.get("/:id", async (req, res) => {
 
         if (resultado.length === 0) {
             return res.status(404).json({
-                erro: "UsuÃ¡rio nÃ£o encontrado."
+                erro: "Usuário não encontrado."
             });
         }
 
         return res.json(resultado[0]);
 
     } catch (error) {
-        console.error("Erro ao buscar usuÃ¡rio:", error);
+        console.error("Erro ao buscar usuário:", error);
 
         return res.status(500).json({
-            erro: "Erro ao buscar usuÃ¡rio."
+            erro: "Erro ao buscar usuário."
         });
     }
 });
 
 
 /* =====================================================
-   CADASTRAR USUÃRIO
+   CADASTRAR USUÁRIO
 ===================================================== */
 
 router.post("/", async (req, res) => {
@@ -91,18 +91,18 @@ router.post("/", async (req, res) => {
         } = req.body;
 
         /* -----------------------------
-           VALIDAÃ‡Ã•ES
+           VALIDAÇÕES
         ----------------------------- */
 
         if (!nome || !email || !senha) {
             return res.status(400).json({
-                erro: "Nome, email e senha sÃ£o obrigatÃ³rios."
+                erro: "Nome, email e senha são obrigatórios."
             });
         }
 
         /* 
-           Se o frontend nÃ£o enviar o tipo,
-           serÃ¡ criado como usuÃ¡rio comum.
+           Se o frontend não enviar o tipo,
+           será criado como usuário comum.
         */
     const tipoUsuario = tipo || "usuario";
 
@@ -134,7 +134,7 @@ if (!tiposPermitidos.includes(tipoUsuario)) {
 
         if (usuarioExistente.length > 0) {
             return res.status(400).json({
-                erro: "Este email jÃ¡ estÃ¡ cadastrado."
+                erro: "Este email já está cadastrado."
             });
         }
 
@@ -148,7 +148,7 @@ if (!tiposPermitidos.includes(tipoUsuario)) {
 
 
         /* -----------------------------
-           INSERIR USUÃRIO
+           INSERIR USUÁRIO
         ----------------------------- */
 
         const sql = `
@@ -174,7 +174,7 @@ if (!tiposPermitidos.includes(tipoUsuario)) {
 
 
         /* -----------------------------
-           BUSCAR USUÃRIO CRIADO
+           BUSCAR USUÁRIO CRIADO
         ----------------------------- */
 
         const [usuarioCriado] = await pool.query(
@@ -197,17 +197,17 @@ if (!tiposPermitidos.includes(tipoUsuario)) {
         );
 
     } catch (error) {
-        console.error("Erro ao cadastrar usuÃ¡rio:", error);
+        console.error("Erro ao cadastrar usuário:", error);
 
         return res.status(500).json({
-            erro: "Erro ao cadastrar usuÃ¡rio."
+            erro: "Erro ao cadastrar usuário."
         });
     }
 });
 
 
 /* =====================================================
-   ATUALIZAR USUÃRIO
+   ATUALIZAR USUÁRIO
 ===================================================== */
 
 router.put("/:id", async (req, res) => {
@@ -223,12 +223,12 @@ router.put("/:id", async (req, res) => {
 
 
         /* -----------------------------
-           VALIDAÃ‡Ã•ES
+           VALIDAÇÕES
         ----------------------------- */
 
         if (!nome || !email) {
             return res.status(400).json({
-                erro: "Nome e email sÃ£o obrigatÃ³rios."
+                erro: "Nome e email são obrigatórios."
             });
         }
 
@@ -250,7 +250,7 @@ if (
 }
 
         /* -----------------------------
-           VERIFICAR USUÃRIO
+           VERIFICAR USUÁRIO
         ----------------------------- */
 
         const [usuarioExistente] =
@@ -265,7 +265,7 @@ if (
 
         if (usuarioExistente.length === 0) {
             return res.status(404).json({
-                erro: "UsuÃ¡rio nÃ£o encontrado."
+                erro: "Usuário não encontrado."
             });
         }
 
@@ -287,7 +287,7 @@ if (
 
         if (emailExistente.length > 0) {
             return res.status(400).json({
-                erro: "Este email jÃ¡ estÃ¡ sendo usado por outro usuÃ¡rio."
+                erro: "Este email já está sendo usado por outro usuário."
             });
         }
 
@@ -348,7 +348,7 @@ if (
 
 
         /* -----------------------------
-           BUSCAR USUÃRIO ATUALIZADO
+           BUSCAR USUÁRIO ATUALIZADO
         ----------------------------- */
 
         const [usuarioAtualizado] =
@@ -372,17 +372,17 @@ if (
         );
 
     } catch (error) {
-        console.error("Erro ao atualizar usuÃ¡rio:", error);
+        console.error("Erro ao atualizar usuário:", error);
 
         return res.status(500).json({
-            erro: "Erro ao atualizar usuÃ¡rio."
+            erro: "Erro ao atualizar usuário."
         });
     }
 });
 
 
 /* =====================================================
-   DELETAR USUÃRIO
+   DELETAR USUÁRIO
 ===================================================== */
 
 router.patch("/:id/senha", async (req, res) => {
@@ -394,9 +394,9 @@ router.patch("/:id/senha", async (req, res) => {
 
         const [usuarios] = await pool.query("SELECT id, senha FROM usuarios WHERE id = ?", [id]);
         const usuario = usuarios[0];
-        if (!usuario) return res.status(404).json({ erro: "UsuÃ¡rio nÃ£o encontrado." });
+        if (!usuario) return res.status(404).json({ erro: "Usuário não encontrado." });
         const senhaCorreta = await bcrypt.compare(senhaAtual, usuario.senha);
-        if (!senhaCorreta) return res.status(400).json({ erro: "A senha atual estÃ¡ incorreta." });
+        if (!senhaCorreta) return res.status(400).json({ erro: "A senha atual está incorreta." });
         if (await bcrypt.compare(novaSenha, usuario.senha)) return res.status(400).json({ erro: "A nova senha deve ser diferente da senha atual." });
 
         const senhaCriptografada = await bcrypt.hash(novaSenha, 10);
@@ -414,7 +414,7 @@ router.delete("/:id", async (req, res) => {
 
 
         /* -----------------------------
-           VERIFICAR USUÃRIO
+           VERIFICAR USUÁRIO
         ----------------------------- */
 
         const [usuarioExistente] =
@@ -429,7 +429,7 @@ router.delete("/:id", async (req, res) => {
 
         if (usuarioExistente.length === 0) {
             return res.status(404).json({
-                erro: "UsuÃ¡rio nÃ£o encontrado."
+                erro: "Usuário não encontrado."
             });
         }
 
@@ -448,14 +448,14 @@ router.delete("/:id", async (req, res) => {
 
 
         return res.json({
-            mensagem: "UsuÃ¡rio deletado com sucesso."
+            mensagem: "Usuário deletado com sucesso."
         });
 
     } catch (error) {
-        console.error("Erro ao deletar usuÃ¡rio:", error);
+        console.error("Erro ao deletar usuário:", error);
 
         return res.status(500).json({
-            erro: "Erro ao deletar usuÃ¡rio."
+            erro: "Erro ao deletar usuário."
         });
     }
 });
@@ -475,18 +475,18 @@ router.post("/login", async (req, res) => {
 
 
         /* -----------------------------
-           VALIDAÃ‡ÃƒO
+           VALIDAÇÃO
         ----------------------------- */
 
         if (!email || !senha) {
             return res.status(400).json({
-                erro: "Email e senha sÃ£o obrigatÃ³rios."
+                erro: "Email e senha são obrigatórios."
             });
         }
 
 
         /* -----------------------------
-           BUSCAR USUÃRIO
+           BUSCAR USUÁRIO
         ----------------------------- */
 
         const [resultado] =
@@ -504,7 +504,7 @@ router.post("/login", async (req, res) => {
 
         if (!usuario) {
             return res.status(401).json({
-                erro: "Email ou senha invÃ¡lidos."
+                erro: "Email ou senha inválidos."
             });
         }
 
@@ -522,13 +522,13 @@ router.post("/login", async (req, res) => {
 
         if (!senhaValida) {
             return res.status(401).json({
-                erro: "Email ou senha invÃ¡lidos."
+                erro: "Email ou senha inválidos."
             });
         }
 
 
         /* -----------------------------
-           DADOS DO USUÃRIO
+           DADOS DO USUÁRIO
         ----------------------------- */
 
         const {
@@ -585,4 +585,3 @@ router.post("/login", async (req, res) => {
 
 
 export default router;
-

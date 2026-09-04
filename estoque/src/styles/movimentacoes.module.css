@@ -23,7 +23,7 @@
   margin: 0;
 }
 
-/* AnimaÃ§Ãµes */
+/* Animações */
 @keyframes slideUpFade {
   from {
     opacity: 0;
@@ -35,7 +35,7 @@
   }
 }
 
-/* AnimaÃ§Ã£o com duraÃ§Ã£o aumentada para 1.5s (mais lenta e suave) */
+/* Animação com duração aumentada para 1.5s (mais lenta e suave) */
 .anim1 { 
   animation: slideUpFade 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.1s; 
   opacity: 0; 
@@ -157,7 +157,7 @@
   margin-top: 30px;
 }
 
-/* MÃ©tricas */
+/* Métricas */
 .metricsGrid {
   display: flex;
   gap: 20px;
@@ -192,7 +192,7 @@
   margin-top: 2px;
 }
 
-/* SeÃ§Ã£o Inferior: FormulÃ¡rio e HistÃ³rico */
+/* Seção Inferior: Formulário e Histórico */
 .contentGrid {
   display: grid;
   grid-template-columns: 320px 1fr;
@@ -463,7 +463,7 @@
   font-size: 11px;
 }
 
-/* Novo estilo para exibir a sÃ©rie / IMEI no histÃ³rico */
+/* Novo estilo para exibir a série / IMEI no histórico */
 .skuCell code {
   background-color: #f4f4f6;
   padding: 3px 6px;
@@ -603,4 +603,3 @@
     overflow-x: auto;
   }
 }
-

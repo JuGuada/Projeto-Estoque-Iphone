@@ -7,7 +7,7 @@ export default function RotasPublicas() {
         return <p>Carregando....</p>
     }
     if (estaLogado) {
-        // redireciona conforme o tipo do usuÃ¡rio
+        // redireciona conforme o tipo do usuário
         if (usuario && usuario.tipo === 'usuario') {
             return <Navigate to="/" />
         }

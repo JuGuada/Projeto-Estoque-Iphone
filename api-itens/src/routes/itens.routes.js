@@ -29,7 +29,7 @@ const upload = multer({
             return callback(null, true);
         }
 
-        return callback(new Error("O arquivo precisa ser uma imagem ou um vÃ­deo vÃ¡lido."));
+        return callback(new Error("O arquivo precisa ser uma imagem ou um vídeo válido."));
     },
 });
 
@@ -45,7 +45,7 @@ const EXTRA_COLUMNS = {
     codigo_barras: "VARCHAR(100) DEFAULT NULL",
     categoria: "VARCHAR(100) DEFAULT NULL",
     ativo: "TINYINT(1) NOT NULL DEFAULT 1",
-    status: "VARCHAR(30) NOT NULL DEFAULT 'DisponÃ­vel'",
+    status: "VARCHAR(30) NOT NULL DEFAULT 'Disponível'",
     desconto_percentual: "DECIMAL(5,2) NOT NULL DEFAULT 0",
     vitrine_config: "LONGTEXT DEFAULT NULL",
 };
@@ -136,7 +136,7 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/upload-vitrine", upload.single("imagem"), (req, res) => {
-    if (!req.file) return res.status(400).json({ erro: "Selecione uma imagem ou vÃ­deo vÃ¡lido." });
+    if (!req.file) return res.status(400).json({ erro: "Selecione uma imagem ou vídeo válido." });
     return res.status(201).json({ url: `/uploads/${req.file.filename}` });
 });
 
@@ -157,7 +157,7 @@ router.get("/:id", async (req, res) => {
         // corrigido: lenght -> length
         if (resultado.length === 0) {
             return res.status(404).json({
-                erro: "Item nÃ£o encontrado."
+                erro: "Item não encontrado."
             });
         }
 
@@ -196,7 +196,7 @@ router.post("/", upload.single("imagem"), async (req, res) => {
 
         if (!nome || precoFinal === undefined) {
             return res.status(400).json({
-                erro: "Nome e preÃ§o sÃ£o obrigatÃ³rios."
+                erro: "Nome e preço são obrigatórios."
             });
         }
 
@@ -217,7 +217,7 @@ router.post("/", upload.single("imagem"), async (req, res) => {
             modelo || null, cor || null, armazenamento || null, memoriaRam || null, sku || null, codigoBarras || null,
             categoria || null,
             ativo === "false" || ativo === false || ativo === "0" ? 0 : 1,
-            status || (ativo === "false" || ativo === false || ativo === "0" ? "IndisponÃ­vel" : "DisponÃ­vel"), descontoPercentual || 0,
+            status || (ativo === "false" || ativo === false || ativo === "0" ? "Indisponível" : "Disponível"), descontoPercentual || 0,
         ]);
 
         if (req.file) {
@@ -270,12 +270,12 @@ router.put("/:id", upload.single("imagem"), async (req, res) => {
 
         if (!nome || preco === undefined || quantidade === undefined) {
             return res.status(400).json({
-                erro: "nome, preÃ§o e quantidade sÃ£o obrigatÃ³rios"
+                erro: "nome, preço e quantidade são obrigatórios"
             });
         }
 
         const [atuais] = await pool.query("SELECT * FROM itens WHERE id = ?", [id]);
-        if (!atuais.length) return res.status(404).json({ erro: "Item nÃ£o encontrado." });
+        if (!atuais.length) return res.status(404).json({ erro: "Item não encontrado." });
         const atual = atuais[0];
         const sql = `
         UPDATE itens
@@ -314,7 +314,7 @@ router.put("/:id", upload.single("imagem"), async (req, res) => {
 
         if (resultado.affectedRows === 0) {
             return res.status(404).json({
-                erro: "item nÃ£o encontrado",
+                erro: "item não encontrado",
             });
         }
 
@@ -355,7 +355,7 @@ router.delete("/:id", async (req, res) => {
         await ensureItemSchema();
         const [itens] = await pool.query("SELECT id, nome, sku, imagem, quantidade FROM itens WHERE id = ?", [id]);
         const item = itens[0];
-        if (!item) return res.status(404).json({ erro: "item nÃ£o encontrado" });
+        if (!item) return res.status(404).json({ erro: "item não encontrado" });
 
         await pool.query(`CREATE TABLE IF NOT EXISTS movimentacoes (
             id INT AUTO_INCREMENT PRIMARY KEY, item_id INT NOT NULL, tipo VARCHAR(20) NOT NULL,
@@ -369,7 +369,7 @@ router.delete("/:id", async (req, res) => {
         if (!nomesColunas.has('produto_nome')) await pool.query("ALTER TABLE movimentacoes ADD COLUMN produto_nome VARCHAR(180) DEFAULT ''");
         if (!nomesColunas.has('produto_imagem')) await pool.query("ALTER TABLE movimentacoes ADD COLUMN produto_imagem VARCHAR(500) DEFAULT ''");
         await pool.query(
-            "INSERT INTO movimentacoes (item_id, tipo, quantidade, motivo, numero_serie, responsavel, produto_nome, produto_imagem) VALUES (?, 'saida', ?, 'Produto removido do catÃ¡logo', ?, ?, ?, ?)",
+            "INSERT INTO movimentacoes (item_id, tipo, quantidade, motivo, numero_serie, responsavel, produto_nome, produto_imagem) VALUES (?, 'saida', ?, 'Produto removido do catálogo', ?, ?, ?, ?)",
             [id, Math.max(Number(item.quantidade || 0), 1), item.sku || "", responsavel, item.nome, item.imagem || ""]
         );
 
@@ -384,7 +384,7 @@ router.delete("/:id", async (req, res) => {
 
         if (resultado.affectedRows === 0) {
             return res.status(404).json({
-                erro: "item nÃ£o encontrado",
+                erro: "item não encontrado",
             });
         }
 
@@ -402,4 +402,3 @@ router.delete("/:id", async (req, res) => {
 });
 
 export default router;
-

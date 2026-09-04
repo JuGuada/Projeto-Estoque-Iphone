@@ -1357,7 +1357,7 @@
 }
 
 
-/* degradÃª mais leve e bem mais curto */
+/* degradê mais leve e bem mais curto */
 .experienceImage::before {
   content: "";
 
@@ -1369,7 +1369,7 @@
   right: 0;
   top: 0;
 
-  /* antes o degradÃª pegava uma parte muito grande da foto */
+  /* antes o degradê pegava uma parte muito grande da foto */
   height: 24%;
 
   pointer-events: none;
@@ -1479,7 +1479,7 @@
 
 
 /* =========================================================
-   GALERIA â€” 3 IMAGENS
+   GALERIA — 3 IMAGENS
 ========================================================= */
 
 .storyGallery {
@@ -1576,7 +1576,7 @@
 }
 
 
-/* borda quase imperceptÃ­vel para separar
+/* borda quase imperceptível para separar
    as imagens do fundo preto */
 
 .storyMainCard::after,

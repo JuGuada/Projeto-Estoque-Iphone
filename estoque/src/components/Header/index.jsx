@@ -78,7 +78,7 @@ export default function Header() {
           />
 
           <span className={styles.brandTitle}>Estoque</span>
-          <span className={styles.brandSubtitle}>GestÃ£o de InventÃ¡rio</span>
+          <span className={styles.brandSubtitle}>Gestão de Inventário</span>
         </div>
 
         <form className={styles.headerSearch} onSubmit={buscarProdutos}>
@@ -103,7 +103,7 @@ export default function Header() {
                   <img src={resolverUrlArquivo(produto.imagem) || '/imagens/produto.png'} alt="" />
                   <span>
                     <strong>{produto.nome}</strong>
-                    <small>{produto.categoria || 'Produto'}{produto.modelo ? ` Â· ${produto.modelo}` : ''}</small>
+                    <small>{produto.categoria || 'Produto'}{produto.modelo ? ` · ${produto.modelo}` : ''}</small>
                   </span>
                 </button>
               )) : <p className={styles.searchEmpty}>Nenhum produto encontrado.</p>}
@@ -112,25 +112,25 @@ export default function Header() {
         </form>
 
         <div className={styles.headerActions}>
-          <button type="button" className={styles.notificationBadge} onClick={abrirNotificacoes} aria-label="Abrir notificaÃ§Ãµes">
+          <button type="button" className={styles.notificationBadge} onClick={abrirNotificacoes} aria-label="Abrir notificações">
             <img
               src="/imagens/notificacao.png"
-              alt="NotificaÃ§Ãµes"
+              alt="Notificações"
             />
             {naoLidas > 0 && <span className={styles.notificationCount}>{Math.min(naoLidas, 9)}</span>}
           </button>
 
-          <button type="button" className={styles.userAvatar} onClick={handleAvatarClick} aria-label="Abrir menu do usuÃ¡rio">
+          <button type="button" className={styles.userAvatar} onClick={handleAvatarClick} aria-label="Abrir menu do usuário">
             <img
               src={avatarSrc}
-              alt="UsuÃ¡rio"
+              alt="Usuário"
             />
           </button>
         </div>
       </header>
       {notificacoesAbertas && <div className={styles.notificationsPanel}>
-        <div className={styles.notificationsHeader}><div><strong>NotificaÃ§Ãµes</strong><span>AtualizaÃ§Ãµes importantes da loja</span></div><button type="button" onClick={() => setNotificacoesAbertas(false)}>Ã—</button></div>
-        <div className={styles.notificationsList}>{notificacoes.length ? notificacoes.map((item) => <button type="button" key={item.id} className={styles.notificationItem} onClick={() => { setNotificacoesAbertas(false); navigate(item.destino); }}><img src={item.imagem ? resolverUrlArquivo(item.imagem) : '/imagens/notificacao.png'} alt="" /><span><strong>{item.titulo}</strong><small>{item.mensagem}</small><time>{new Date(item.criadoEm).toLocaleString('pt-BR')}</time></span></button>) : <p className={styles.notificationsEmpty}>Nenhuma notificaÃ§Ã£o importante no momento.</p>}</div>
+        <div className={styles.notificationsHeader}><div><strong>Notificações</strong><span>Atualizações importantes da loja</span></div><button type="button" onClick={() => setNotificacoesAbertas(false)}>×</button></div>
+        <div className={styles.notificationsList}>{notificacoes.length ? notificacoes.map((item) => <button type="button" key={item.id} className={styles.notificationItem} onClick={() => { setNotificacoesAbertas(false); navigate(item.destino); }}><img src={item.imagem ? resolverUrlArquivo(item.imagem) : '/imagens/notificacao.png'} alt="" /><span><strong>{item.titulo}</strong><small>{item.mensagem}</small><time>{new Date(item.criadoEm).toLocaleString('pt-BR')}</time></span></button>) : <p className={styles.notificationsEmpty}>Nenhuma notificação importante no momento.</p>}</div>
       </div>}
 
       {open && (
@@ -138,7 +138,7 @@ export default function Header() {
           <div className={styles.modalBox} onClick={(e) => e.stopPropagation()}>
             <div className={styles.modalUser}>
               <span>Conta conectada</span>
-              <strong>{usuario?.email || 'E-mail nÃ£o disponÃ­vel'}</strong>
+              <strong>{usuario?.email || 'E-mail não disponível'}</strong>
             </div>
             <p className={styles.modalText}>Deseja desconectar?</p>
             <div className={styles.modalButtons}>
@@ -151,4 +151,3 @@ export default function Header() {
     </>
   );
 }
-

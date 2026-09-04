@@ -12,8 +12,8 @@ export default function GestaoUsuarios() {
   }
 
   return <div className={styles.area}>
-    <nav className={styles.segmentedControl} aria-label="NavegaÃ§Ã£o da gestÃ£o de usuÃ¡rios">
-      <button type="button" className={aba === "usuarios" ? styles.active : ""} onClick={() => mudarAba("usuarios")}>UsuÃ¡rios</button>
+    <nav className={styles.segmentedControl} aria-label="Navegação da gestão de usuários">
+      <button type="button" className={aba === "usuarios" ? styles.active : ""} onClick={() => mudarAba("usuarios")}>Usuários</button>
       <button type="button" className={aba === "pedidos" ? styles.active : ""} onClick={() => mudarAba("pedidos")}>Pedidos</button>
     </nav>
     <div className={styles.content} key={aba}>
@@ -21,4 +21,3 @@ export default function GestaoUsuarios() {
     </div>
   </div>;
 }
-

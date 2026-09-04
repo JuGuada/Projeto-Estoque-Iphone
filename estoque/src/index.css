@@ -6,7 +6,7 @@
   font-display: swap;
 }
 
-/* Base visual compartilhada por toda a aplicaÃ§Ã£o. */
+/* Base visual compartilhada por toda a aplicação. */
 * {
   margin: 0;
   padding: 0;
@@ -31,4 +31,3 @@ h6 {
   font-weight: 750 !important;
   letter-spacing: -0.02em;
 }
-

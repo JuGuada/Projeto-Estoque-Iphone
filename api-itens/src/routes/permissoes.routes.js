@@ -26,7 +26,7 @@ router.get("/", async (_req, res) => {
     const resposta = { admin: [1, 2, 3, 4, 5, 6, 7] };
     linhas.forEach((linha) => { try { resposta[linha.cargo] = JSON.parse(linha.permissoes_json); } catch { resposta[linha.cargo] = []; } });
     return res.json(resposta);
-  } catch (error) { console.error(error); return res.status(500).json({ erro: "Erro ao carregar permissÃµes." }); }
+  } catch (error) { console.error(error); return res.status(500).json({ erro: "Erro ao carregar permissões." }); }
 });
 
 router.put("/:cargo", async (req, res) => {
@@ -34,11 +34,10 @@ router.put("/:cargo", async (req, res) => {
     await garantirTabela();
     const cargo = String(req.params.cargo || "").toLowerCase();
     const permissoes = [...new Set((req.body.permissoes || []).map(Number).filter((id) => id >= 1 && id <= 7))];
-    if (!Object.keys(padroes).includes(cargo)) return res.status(400).json({ erro: "Cargo invÃ¡lido ou nÃ£o editÃ¡vel." });
+    if (!Object.keys(padroes).includes(cargo)) return res.status(400).json({ erro: "Cargo inválido ou não editável." });
     await pool.query("INSERT INTO permissoes_cargos (cargo, permissoes_json) VALUES (?, ?) ON DUPLICATE KEY UPDATE permissoes_json = VALUES(permissoes_json)", [cargo, JSON.stringify(permissoes)]);
     return res.json({ cargo, permissoes });
-  } catch (error) { console.error(error); return res.status(500).json({ erro: "Erro ao salvar permissÃµes." }); }
+  } catch (error) { console.error(error); return res.status(500).json({ erro: "Erro ao salvar permissões." }); }
 });
 
 export default router;
-

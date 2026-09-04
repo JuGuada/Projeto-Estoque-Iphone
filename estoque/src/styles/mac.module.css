@@ -6,8 +6,8 @@
   /*
     COR BASE DO HERO.
 
-    Se ainda aparecer uma diferenÃ§a pequena
-    entre o vÃ­deo e a pÃ¡gina, mexa SÃ“ aqui.
+    Se ainda aparecer uma diferença pequena
+    entre o vídeo e a página, mexa SÓ aqui.
   */
   --hero-bg: #f4f4f6;
 
@@ -188,7 +188,7 @@
   overflow: hidden;
 
   /*
-    Essa cor Ã© bem mais prÃ³xima do fundo
+    Essa cor é bem mais próxima do fundo
     real do seu arquivo mac.mp4
   */
   background: #f3f2f5;
@@ -196,7 +196,7 @@
 
 
 /* =========================================================
-   CONTAINER DO VÃDEO
+   CONTAINER DO VÍDEO
 ========================================================= */
 
 .heroVideo {
@@ -214,7 +214,7 @@
 
 
 /* =========================================================
-   VÃDEO
+   VÍDEO
 ========================================================= */
 
 .heroVideo video {
@@ -232,7 +232,7 @@
   outline: 0;
 
   /*
-    Aqui estÃ¡ a correÃ§Ã£o principal:
+    Aqui está a correção principal:
     preenche o hero inteiro.
   */
   object-fit: cover;
@@ -240,9 +240,9 @@
   object-position: center center;
 
   /*
-    0.3% extra sÃ³ para esconder possÃ­veis
-    linhas de renderizaÃ§Ã£o do Chrome.
-    Ã‰ praticamente imperceptÃ­vel.
+    0.3% extra só para esconder possíveis
+    linhas de renderização do Chrome.
+    É praticamente imperceptível.
   */
   transform:
     translate(-50%, -50%)
@@ -805,7 +805,7 @@
 
 
 /* =========================================================
-   BOTÃ•ES DETALHES
+   BOTÕES DETALHES
 ========================================================= */
 
 .detailItem {
@@ -1759,7 +1759,7 @@
 
 }
 
-/* Resumo editorial exibido logo apÃ³s o vÃ­deo principal */
+/* Resumo editorial exibido logo após o vídeo principal */
 .productIntro {
   max-width: 1200px;
   margin: 0 auto;
@@ -1782,4 +1782,3 @@
   .productIntro p { font-size: 13px; }
   .productIntro > strong { max-width: none; font-size: 28px; text-align: left; }
 }
-

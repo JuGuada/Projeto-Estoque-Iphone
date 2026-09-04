@@ -63,4 +63,3 @@ td small { margin-top: 4px; color: #8a8a90; font-size: 8.5px; }
 .totals p:last-child { margin: 13px 0 0; padding-top: 12px; border-top: 1px solid #ddd; color: #1d1d1f; font-size: 15px; }
 @media(max-width:900px){.stats{grid-template-columns:1fr 1fr}.infoGrid{grid-template-columns:1fr 1fr}.infoGrid article:last-child{grid-column:1/-1}}
 @media(max-width:600px){.header{align-items:flex-start;flex-direction:column}.search{width:100%}.stats{grid-template-columns:1fr}.infoGrid{grid-template-columns:1fr}.infoGrid article:last-child{grid-column:auto}.statusControl{align-items:stretch;flex-direction:column}.statusControl select{width:100%}.items article{grid-template-columns:46px 1fr}.items span,.items b{grid-column:2;text-align:left}.page{padding:24px 14px 50px}}
-

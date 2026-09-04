@@ -285,7 +285,7 @@
   width: 94%;
   margin: 0 auto;
 
-  /* CINZA METÃLICO */
+  /* CINZA METÁLICO */
   background: linear-gradient(
     180deg,
     #c9c9c9 0%,
@@ -303,7 +303,7 @@
     0 28px 55px rgba(0, 0, 0, 0.18),
     0 10px 20px rgba(0, 0, 0, 0.10);
 
-  /* espaÃ§o para o pÃ© */
+  /* espaço para o pé */
   margin-bottom: 125px;
 }
 
@@ -490,7 +490,7 @@
 
 
 /* ========================================
-   PÃ‰ DO MONITOR
+   PÉ DO MONITOR
 ======================================== */
 
 .monitorStand {
@@ -517,7 +517,7 @@
 
 
 /* ========================================
-   HASTE DO PÃ‰
+   HASTE DO PÉ
 ======================================== */
 
 .monitorStandNeck {
@@ -547,7 +547,7 @@
 
 
 /* ========================================
-   BASE DO PÃ‰
+   BASE DO PÉ
 ======================================== */
 
 .monitorStandBase {
@@ -859,8 +859,8 @@
   font-size: 12px;
 }
 
-/* Cada famÃ­lia tem uma silhueta diferente. Estes ajustes usam os assets
-   reais do projeto sem forÃ§ar Mac, iPad e AirPods no recorte do iPhone. */
+/* Cada família tem uma silhueta diferente. Estes ajustes usam os assets
+   reais do projeto sem forçar Mac, iPad e AirPods no recorte do iPhone. */
 .detalhesImagem_mac .detalhesProdutoImagem {
   max-width: 540px;
   height: 330px;
@@ -1448,4 +1448,3 @@
 .openVitrine:hover {
   background: #3974cc;
 }
-

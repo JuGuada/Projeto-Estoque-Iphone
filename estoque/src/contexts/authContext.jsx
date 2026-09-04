@@ -63,7 +63,7 @@ export function AuthProvider({ children }) {
             console.error(error);
             return {
                 sucesso: false,
-                mensagem: error.message || 'Erro de comunicaÃ§Ã£o com o servidor.'
+                mensagem: error.message || 'Erro de comunicação com o servidor.'
             };
         } finally {
             setCarregando(false);
@@ -104,4 +104,3 @@ export function AuthProvider({ children }) {
 export function useAuth() {
     return useContext(AuthContext);
 }
-

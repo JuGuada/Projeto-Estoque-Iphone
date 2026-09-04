@@ -251,8 +251,8 @@ a {
   overflow: hidden;
 
   /*
-    Cor neutra igual Ã s outras telas.
-    Como o vÃ­deo ocupa toda a Ã¡rea, ela quase nÃ£o aparece.
+    Cor neutra igual às outras telas.
+    Como o vídeo ocupa toda a área, ela quase não aparece.
   */
   background: #f5f5f7;
 }
@@ -261,9 +261,9 @@ a {
 /* =========================================================
    HERO VIDEO
 
-   Sem degradÃª.
+   Sem degradê.
    Sem texto por cima.
-   Sem bloco de tÃ­tulo abaixo.
+   Sem bloco de título abaixo.
 ========================================================= */
 
 .heroVideo {
@@ -302,7 +302,7 @@ a {
 
   /*
     cover deixa o hero preenchido como
-    nas outras pÃ¡ginas.
+    nas outras páginas.
   */
   object-fit: cover;
   object-position: center;
@@ -460,7 +460,7 @@ a {
 
 
 /* =========================================================
-   OPÃ‡Ã•ES
+   OPÇÕES
 ========================================================= */
 
 .designOptions {
@@ -999,7 +999,7 @@ a {
 
 
 /* =========================================================
-   CÃ‚MERA
+   CÂMERA
 ========================================================= */
 
 .camera {
@@ -1260,7 +1260,7 @@ a {
 
 
 /* =========================================================
-   RODAPÃ‰ FIXO DE COMPRA â€” BRANCO
+   RODAPÉ FIXO DE COMPRA — BRANCO
 ========================================================= */
 
 .buyBar {
@@ -1722,7 +1722,7 @@ a {
 
 
 
-  /* RODAPÃ‰ */
+  /* RODAPÉ */
 
   .buyBar {
     min-height: 64px;
@@ -1767,7 +1767,7 @@ a {
 
 }
 
-/* Resumo editorial exibido logo apÃ³s o vÃ­deo principal */
+/* Resumo editorial exibido logo após o vídeo principal */
 .productIntro {
   max-width: 1200px;
   margin: 0 auto;
@@ -1790,4 +1790,3 @@ a {
   .productIntro p { font-size: 13px; }
   .productIntro > strong { max-width: none; font-size: 28px; text-align: left; }
 }
-

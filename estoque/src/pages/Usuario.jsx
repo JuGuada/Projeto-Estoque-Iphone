@@ -35,7 +35,7 @@ function escolherCor(id) {
 
 function formatarData(data) {
   if (!data) {
-    return "NÃ£o informado";
+    return "Não informado";
   }
 
   const dataObj = new Date(data);
@@ -53,7 +53,7 @@ function formatarData(data) {
 
 function formatarDataCompleta(data) {
   if (!data) {
-    return "NÃ£o informado";
+    return "Não informado";
   }
 
   const dataObj = new Date(data);
@@ -111,7 +111,7 @@ export default function Usuario() {
     useState(null);
 
   const [abaDetalhes, setAbaDetalhes] =
-    useState("VisÃ£o geral");
+    useState("Visão geral");
 
   const [modalAdicionar, setModalAdicionar] =
     useState(false);
@@ -164,7 +164,7 @@ export default function Usuario() {
   }
 
   /* =========================
-     CARREGAR USUÃRIOS
+     CARREGAR USUÁRIOS
   ========================= */
 
   async function carregarUsuarios() {
@@ -182,12 +182,12 @@ export default function Usuario() {
       if (!response.ok) {
         throw new Error(
           data.erro ||
-            "Erro ao carregar os usuÃ¡rios."
+            "Erro ao carregar os usuários."
         );
       }
 
       if (!Array.isArray(data)) {
-        throw new Error("A API retornou uma lista de usuÃ¡rios invÃ¡lida.");
+        throw new Error("A API retornou uma lista de usuários inválida.");
       }
 
       const usuariosFormatados = data
@@ -292,7 +292,7 @@ export default function Usuario() {
   }
 
   /* =========================
-     FORMULÃRIO
+     FORMULÁRIO
   ========================= */
 
   function alterarFormulario(event) {
@@ -305,7 +305,7 @@ export default function Usuario() {
   }
 
   /* =========================
-     ADICIONAR USUÃRIO
+     ADICIONAR USUÁRIO
   ========================= */
 
   async function adicionarUsuario(event) {
@@ -313,14 +313,14 @@ export default function Usuario() {
 
     if (!formulario.nome.trim()) {
       mostrarMensagem(
-        "Informe o nome do usuÃ¡rio."
+        "Informe o nome do usuário."
       );
       return;
     }
 
     if (!formulario.email.trim()) {
       mostrarMensagem(
-        "Informe o e-mail do usuÃ¡rio."
+        "Informe o e-mail do usuário."
       );
       return;
     }
@@ -338,7 +338,7 @@ export default function Usuario() {
       )
     ) {
       mostrarMensagem(
-        "Selecione um tipo vÃ¡lido."
+        "Selecione um tipo válido."
       );
       return;
     }
@@ -364,7 +364,7 @@ export default function Usuario() {
       if (!response.ok) {
         throw new Error(
           data.erro ||
-            "Erro ao cadastrar usuÃ¡rio."
+            "Erro ao cadastrar usuário."
         );
       }
 
@@ -379,14 +379,14 @@ export default function Usuario() {
       fecharModais();
 
       mostrarMensagem(
-        "UsuÃ¡rio cadastrado com sucesso!"
+        "Usuário cadastrado com sucesso!"
       );
     } catch (error) {
       console.error(error);
 
       mostrarMensagem(
         error.message ||
-          "Erro ao cadastrar usuÃ¡rio."
+          "Erro ao cadastrar usuário."
       );
     } finally {
       setSalvando(false);
@@ -394,7 +394,7 @@ export default function Usuario() {
   }
 
   /* =========================
-     EDITAR USUÃRIO
+     EDITAR USUÁRIO
   ========================= */
 
   async function salvarEdicao(event) {
@@ -406,14 +406,14 @@ export default function Usuario() {
 
     if (!formulario.nome.trim()) {
       mostrarMensagem(
-        "Informe o nome do usuÃ¡rio."
+        "Informe o nome do usuário."
       );
       return;
     }
 
     if (!formulario.email.trim()) {
       mostrarMensagem(
-        "Informe o e-mail do usuÃ¡rio."
+        "Informe o e-mail do usuário."
       );
       return;
     }
@@ -447,7 +447,7 @@ export default function Usuario() {
       if (!response.ok) {
         throw new Error(
           data.erro ||
-            "Erro ao atualizar usuÃ¡rio."
+            "Erro ao atualizar usuário."
         );
       }
 
@@ -476,14 +476,14 @@ export default function Usuario() {
       fecharModais();
 
       mostrarMensagem(
-        "UsuÃ¡rio atualizado com sucesso!"
+        "Usuário atualizado com sucesso!"
       );
     } catch (error) {
       console.error(error);
 
       mostrarMensagem(
         error.message ||
-          "Erro ao atualizar usuÃ¡rio."
+          "Erro ao atualizar usuário."
       );
     } finally {
       setSalvando(false);
@@ -497,7 +497,7 @@ export default function Usuario() {
   function abrirDetalhes(usuario) {
     setUsuarioDetalhes(usuario);
 
-    setAbaDetalhes("VisÃ£o geral");
+    setAbaDetalhes("Visão geral");
 
     setMenuAberto(null);
   }
@@ -596,7 +596,7 @@ export default function Usuario() {
       if (!response.ok) {
         throw new Error(
           data.erro ||
-            "Erro ao excluir usuÃ¡rio."
+            "Erro ao excluir usuário."
         );
       }
 
@@ -615,14 +615,14 @@ export default function Usuario() {
       }
 
       mostrarMensagem(
-        "UsuÃ¡rio excluÃ­do com sucesso."
+        "Usuário excluído com sucesso."
       );
     } catch (error) {
       console.error(error);
 
       mostrarMensagem(
         error.message ||
-          "Erro ao excluir usuÃ¡rio."
+          "Erro ao excluir usuário."
       );
     }
   }
@@ -658,10 +658,10 @@ export default function Usuario() {
       <section className={styles.topo}>
         <div>
           <span className={styles.breadcrumb}>
-            AdministraÃ§Ã£o
+            Administração
           </span>
 
-          <h1>UsuÃ¡rios</h1>
+          <h1>Usuários</h1>
 
           <p>
             Consulte e atualize os dados das contas cadastradas.
@@ -675,7 +675,7 @@ export default function Usuario() {
 
       <section className={styles.cards}>
         <div className={styles.card}>
-          <span>Total de usuÃ¡rios</span>
+          <span>Total de usuários</span>
 
           <strong>
             {totalUsuarios}
@@ -695,7 +695,7 @@ export default function Usuario() {
             </strong>
 
             <span className={styles.badgeVerde}>
-              Ãºltimos 7 dias
+              últimos 7 dias
             </span>
           </div>
 
@@ -718,7 +718,7 @@ export default function Usuario() {
           </div>
 
           <small>
-            Nos Ãºltimos 7 dias
+            Nos últimos 7 dias
           </small>
         </div>
       </section>
@@ -750,17 +750,17 @@ export default function Usuario() {
         <div className={styles.contador}>
           {carregando
             ? "Carregando..."
-            : `${usuariosFiltrados.length} usuÃ¡rios`}
+            : `${usuariosFiltrados.length} usuários`}
         </div>
 
         <div className={styles.tabelaWrapper}>
           <table className={styles.tabela}>
             <thead>
               <tr>
-                <th>UsuÃ¡rio</th>
+                <th>Usuário</th>
                 <th>Cadastro</th>
                 <th>Atualizado</th>
-                <th>AÃ§Ãµes</th>
+                <th>Ações</th>
               </tr>
             </thead>
 
@@ -769,7 +769,7 @@ export default function Usuario() {
                 usuariosFiltrados.map(
                   (usuario) => (
                     <tr key={usuario.id}>
-                      {/* USUÃRIO */}
+                      {/* USUÁRIO */}
 
                       <td>
                         <button
@@ -839,7 +839,7 @@ export default function Usuario() {
                         </div>
                       </td>
 
-                      {/* AÃ‡Ã•ES */}
+                      {/* AÇÕES */}
 
                       <td
                         className={
@@ -875,7 +875,7 @@ export default function Usuario() {
                             }
                           >
                             <span>
-                              AÃ§Ãµes rÃ¡pidas
+                              Ações rápidas
                             </span>
 
                             <button
@@ -926,7 +926,7 @@ export default function Usuario() {
                                 alt=""
                               />
 
-                              Excluir usuÃ¡rio
+                              Excluir usuário
                             </button>
                           </div>
                         )}
@@ -945,7 +945,7 @@ export default function Usuario() {
                   styles.semResultados
                 }
               >
-                Nenhum usuÃ¡rio encontrado.
+                Nenhum usuário encontrado.
               </div>
             )}
 
@@ -955,7 +955,7 @@ export default function Usuario() {
                 styles.semResultados
               }
             >
-              Carregando usuÃ¡rios...
+              Carregando usuários...
             </div>
           )}
         </div>
@@ -983,11 +983,11 @@ export default function Usuario() {
             >
               <div>
                 <h2>
-                  Adicionar usuÃ¡rio
+                  Adicionar usuário
                 </h2>
 
                 <p>
-                  Cadastre um novo usuÃ¡rio
+                  Cadastre um novo usuário
                   na plataforma.
                 </p>
               </div>
@@ -1057,12 +1057,12 @@ export default function Usuario() {
                     onChange={
                       alterarFormulario
                     }
-                    placeholder="MÃ­nimo de 6 caracteres"
+                    placeholder="Mínimo de 6 caracteres"
                   />
                 </label>
 
                 <label>
-                  Tipo de usuÃ¡rio
+                  Tipo de usuário
 
                   <select
                     name="tipo"
@@ -1074,7 +1074,7 @@ export default function Usuario() {
                     }
                   >
                     <option value="usuario">
-                      UsuÃ¡rio
+                      Usuário
                     </option>
 
                     <option value="admin">
@@ -1109,7 +1109,7 @@ export default function Usuario() {
                 >
                   {salvando
                     ? "Cadastrando..."
-                    : "Adicionar usuÃ¡rio"}
+                    : "Adicionar usuário"}
                 </button>
               </div>
             </form>
@@ -1139,11 +1139,11 @@ export default function Usuario() {
             >
               <div>
                 <h2>
-                  Editar usuÃ¡rio
+                  Editar usuário
                 </h2>
 
                 <p>
-                  Atualize os dados da conta do usuÃ¡rio.
+                  Atualize os dados da conta do usuário.
                 </p>
               </div>
 
@@ -1240,7 +1240,7 @@ export default function Usuario() {
                 >
                   {salvando
                     ? "Salvando..."
-                    : "Salvar alteraÃ§Ãµes"}
+                    : "Salvar alterações"}
                 </button>
               </div>
             </form>
@@ -1314,7 +1314,7 @@ export default function Usuario() {
                     {usuarioDetalhes.tipo ===
                     "admin"
                       ? "Administrador"
-                      : "UsuÃ¡rio"}
+                      : "Usuário"}
                   </span>
                 </div>
               </div>
@@ -1372,18 +1372,18 @@ export default function Usuario() {
               <button
                 className={
                   abaDetalhes ===
-                  "VisÃ£o geral"
+                  "Visão geral"
                     ? styles.abaAtiva
                     : ""
                 }
                 onClick={() =>
                   setAbaDetalhes(
-                    "VisÃ£o geral"
+                    "Visão geral"
                   )
                 }
                 type="button"
               >
-                VisÃ£o geral
+                Visão geral
               </button>
 
               <button
@@ -1404,10 +1404,10 @@ export default function Usuario() {
               </button>
             </div>
 
-            {/* VISÃƒO GERAL */}
+            {/* VISÃO GERAL */}
 
             {abaDetalhes ===
-              "VisÃ£o geral" && (
+              "Visão geral" && (
               <div
                 className={
                   styles.detalhesLista
@@ -1444,7 +1444,7 @@ export default function Usuario() {
                     {usuarioDetalhes.tipo ===
                     "admin"
                       ? "Administrador"
-                      : "UsuÃ¡rio"}
+                      : "Usuário"}
                   </strong>
                 </div>
 
@@ -1472,7 +1472,7 @@ export default function Usuario() {
                   />
 
                   <span>
-                    Ãšltima atualizaÃ§Ã£o
+                    Última atualização
                   </span>
 
                   <strong>
@@ -1515,7 +1515,7 @@ export default function Usuario() {
                     </strong>
 
                     <p>
-                      ID do usuÃ¡rio:{" "}
+                      ID do usuário:{" "}
                       {
                         usuarioDetalhes.id
                       }
@@ -1538,4 +1538,3 @@ export default function Usuario() {
     </main>
   );
 }
-

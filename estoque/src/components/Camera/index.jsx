@@ -6,25 +6,25 @@ const recursos = [
     id: 1,
     titulo: "Center Stage",
     descricao:
-      "Enquadre automaticamente as pessoas na cena. O enquadramento acompanha o grupo para que ninguÃ©m fique de fora.",
+      "Enquadre automaticamente as pessoas na cena. O enquadramento acompanha o grupo para que ninguém fique de fora.",
   },
   {
     id: 2,
     titulo: "Captura Dupla",
     descricao:
-      "Grave usando a cÃ¢mera frontal e traseira ao mesmo tempo para registrar diferentes perspectivas.",
+      "Grave usando a câmera frontal e traseira ao mesmo tempo para registrar diferentes perspectivas.",
   },
   {
     id: 3,
-    titulo: "VÃ­deo",
+    titulo: "Vídeo",
     descricao:
-      "Grave vÃ­deos com mais estabilidade e qualidade, mesmo quando vocÃª estiver se movimentando.",
+      "Grave vídeos com mais estabilidade e qualidade, mesmo quando você estiver se movimentando.",
   },
   {
     id: 4,
     titulo: "Chamadas",
     descricao:
-      "Durante chamadas de vÃ­deo, o enquadramento acompanha automaticamente quem estÃ¡ falando.",
+      "Durante chamadas de vídeo, o enquadramento acompanha automaticamente quem está falando.",
   },
 ];
 
@@ -39,17 +39,17 @@ export default function Camera() {
     <section className={styles.camera} id="camera">
 
       {/* =========================
-          TÃTULO
+          TÍTULO
       ========================= */}
 
       <div className={styles.conteudo}>
 
         <span className={styles.overline}>
-          CÃ¢meras.
+          Câmeras.
         </span>
 
         <h2 className={styles.titulo}>
-          CÃ¢mera frontal
+          Câmera frontal
           <br />
 
           <span>Center Stage de 18 MP.</span>
@@ -60,12 +60,12 @@ export default function Camera() {
         </h2>
 
         <p className={styles.texto}>
-          A nova cÃ¢mera frontal traz mais flexibilidade para
-          enquadrar fotos e vÃ­deos, entre outros recursos.
-          Toque para ampliar o campo de visÃ£o e mudar da
+          A nova câmera frontal traz mais flexibilidade para
+          enquadrar fotos e vídeos, entre outros recursos.
+          Toque para ampliar o campo de visão e mudar da
           vertical para a horizontal sem girar o iPhone.
           E, quando mais gente entra na cena, o enquadramento
-          se ajusta para ninguÃ©m ficar de fora.
+          se ajusta para ninguém ficar de fora.
         </p>
 
       </div>
@@ -79,14 +79,14 @@ export default function Camera() {
 
         <img
           src="/img/iphone-camera.png"
-          alt="iPhone demonstrando a cÃ¢mera frontal"
+          alt="iPhone demonstrando a câmera frontal"
         />
 
       </div>
 
 
       {/* =========================
-          NAVEGAÃ‡ÃƒO
+          NAVEGAÇÃO
       ========================= */}
 
       <div className={styles.navegacao}>
@@ -105,7 +105,7 @@ export default function Camera() {
           >
 
             <span className={styles.icone}>
-              {recursoAtivo === item.id ? "â—" : "+"}
+              {recursoAtivo === item.id ? "●" : "+"}
             </span>
 
             <span className={styles.nome}>
@@ -120,7 +120,7 @@ export default function Camera() {
 
 
       {/* =========================
-          DESCRIÃ‡ÃƒO DA OPÃ‡ÃƒO
+          DESCRIÇÃO DA OPÇÃO
       ========================= */}
 
       <div className={styles.descricao}>

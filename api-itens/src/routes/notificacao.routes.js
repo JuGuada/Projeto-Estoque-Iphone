@@ -32,7 +32,7 @@ router.get("/feed", async (_req, res) => {
         }
         if (config.novas_entradas) {
             const [movimentos] = await pool.query("SELECT m.id, m.tipo, m.motivo, m.quantidade, m.criado_em, COALESCE(NULLIF(m.produto_nome,''),i.nome) produto_nome, COALESCE(NULLIF(m.produto_imagem,''),i.imagem) imagem FROM movimentacoes m LEFT JOIN itens i ON i.id=m.item_id ORDER BY m.criado_em DESC LIMIT 6");
-            movimentos.forEach((item) => notificacoes.push({ id: `mov-${item.id}`, tipo: item.tipo === "entrada" ? "entrada" : "venda", titulo: item.tipo === "entrada" ? "Nova entrada de estoque" : "Nova saÃ­da ou venda", mensagem: `${item.produto_nome || "Produto"}: ${item.quantidade} unidade(s)`, imagem: item.imagem, criadoEm: item.criado_em, destino: "/movimentacoes" }));
+            movimentos.forEach((item) => notificacoes.push({ id: `mov-${item.id}`, tipo: item.tipo === "entrada" ? "entrada" : "venda", titulo: item.tipo === "entrada" ? "Nova entrada de estoque" : "Nova saída ou venda", mensagem: `${item.produto_nome || "Produto"}: ${item.quantidade} unidade(s)`, imagem: item.imagem, criadoEm: item.criado_em, destino: "/movimentacoes" }));
             movimentos.forEach((movimento) => {
                 if (movimento.tipo === "entrada") return;
                 const notificacao = notificacoes.find((item) => item.id === `mov-${movimento.id}`);
@@ -40,26 +40,26 @@ router.get("/feed", async (_req, res) => {
 
                 const produtoRemovido = String(movimento.motivo || "").toLowerCase().includes("produto removido");
                 notificacao.tipo = produtoRemovido ? "removido" : "venda";
-                notificacao.titulo = produtoRemovido ? "Produto removido do catÃ¡logo" : "Produto vendido";
+                notificacao.titulo = produtoRemovido ? "Produto removido do catálogo" : "Produto vendido";
                 notificacao.imagem = produtoRemovido ? "/imagens/lixeira.png" : "/imagens/correto.png";
             });
         }
         try {
             const [pedidos] = await pool.query("SELECT id, usuario_nome, total, criado_em FROM pedidos WHERE status <> 'Cancelado' ORDER BY criado_em DESC LIMIT 5");
-            pedidos.forEach((pedido) => notificacoes.push({ id: `pedido-${pedido.id}`, tipo: "venda", titulo: `Nova venda â€¢ Pedido #${pedido.id}`, mensagem: `${pedido.usuario_nome || "Cliente"} â€¢ R$ ${Number(pedido.total).toLocaleString("pt-BR", { minimumFractionDigits: 2 })}`, criadoEm: pedido.criado_em, destino: "/dashboard" }));
-        } catch { /* ainda nÃ£o hÃ¡ tabela de pedidos */ }
+            pedidos.forEach((pedido) => notificacoes.push({ id: `pedido-${pedido.id}`, tipo: "venda", titulo: `Nova venda • Pedido #${pedido.id}`, mensagem: `${pedido.usuario_nome || "Cliente"} • R$ ${Number(pedido.total).toLocaleString("pt-BR", { minimumFractionDigits: 2 })}`, criadoEm: pedido.criado_em, destino: "/dashboard" }));
+        } catch { /* ainda não há tabela de pedidos */ }
         notificacoes.forEach((notificacao) => {
             if (notificacao.tipo === "venda") notificacao.imagem = "/imagens/correto.png";
             if (notificacao.tipo === "removido") notificacao.imagem = "/imagens/lixeira.png";
         });
         notificacoes.sort((a, b) => new Date(b.criadoEm) - new Date(a.criadoEm));
         return res.json(notificacoes.slice(0, 12));
-    } catch (error) { console.error(error); return res.status(500).json({ erro: "Erro ao carregar notificaÃ§Ãµes." }); }
+    } catch (error) { console.error(error); return res.status(500).json({ erro: "Erro ao carregar notificações." }); }
 });
 
 
 /* =====================================================
-   BUSCAR CONFIGURAÃ‡Ã•ES DE NOTIFICAÃ‡Ã•ES
+   BUSCAR CONFIGURAÇÕES DE NOTIFICAÇÕES
 ===================================================== */
 
 router.get("/", async (req, res) => {
@@ -84,7 +84,7 @@ router.get("/", async (req, res) => {
 
         if (resultado.length === 0) {
             return res.status(404).json({
-                erro: "ConfiguraÃ§Ãµes de notificaÃ§Ãµes nÃ£o encontradas."
+                erro: "Configurações de notificações não encontradas."
             });
         }
 
@@ -93,12 +93,12 @@ router.get("/", async (req, res) => {
     } catch (error) {
 
         console.error(
-            "Erro ao buscar configuraÃ§Ãµes de notificaÃ§Ãµes:",
+            "Erro ao buscar configurações de notificações:",
             error
         );
 
         return res.status(500).json({
-            erro: "Erro ao buscar configuraÃ§Ãµes de notificaÃ§Ãµes."
+            erro: "Erro ao buscar configurações de notificações."
         });
     }
 });
@@ -114,11 +114,10 @@ router.put("/", async (req, res) => {
         const [resultado] = await pool.query("SELECT * FROM notificacoes WHERE id = 1");
         return res.json(resultado[0]);
     } catch (error) {
-        console.error("Erro ao salvar configuraÃ§Ãµes de notificaÃ§Ãµes:", error);
-        return res.status(500).json({ erro: "Erro ao salvar configuraÃ§Ãµes de notificaÃ§Ãµes." });
+        console.error("Erro ao salvar configurações de notificações:", error);
+        return res.status(500).json({ erro: "Erro ao salvar configurações de notificações." });
     }
 });
 
 
 export default router;
-

@@ -33,7 +33,7 @@ export const airpodsFallback = {
   video: "/videos/airpods.mp4",
 
   descricao:
-    "Som envolvente, conforto e tecnologia para transformar tudo o que vocÃª ouve.",
+    "Som envolvente, conforto e tecnologia para transformar tudo o que você ouve.",
 
 
   /* =======================================================
@@ -47,10 +47,10 @@ export const airpodsFallback = {
       tag: "SOM",
 
       titulo:
-        "Uma experiÃªncia que envolve vocÃª.",
+        "Uma experiência que envolve você.",
 
       descricao:
-        "Ãudio rico em detalhes para deixar mÃºsicas, filmes e chamadas ainda mais imersivos.",
+        "Áudio rico em detalhes para deixar músicas, filmes e chamadas ainda mais imersivos.",
 
       imagem:
         "/imagens/som.png",
@@ -59,13 +59,13 @@ export const airpodsFallback = {
     {
       id: 2,
 
-      tag: "SAÃšDE",
+      tag: "SAÚDE",
 
       titulo:
-        "Mais informaÃ§Ã£o durante o seu dia.",
+        "Mais informação durante o seu dia.",
 
       descricao:
-        "Recursos inteligentes ajudam vocÃª a acompanhar informaÃ§Ãµes importantes enquanto continua ouvindo.",
+        "Recursos inteligentes ajudam você a acompanhar informações importantes enquanto continua ouvindo.",
 
       imagem:
         "/imagens/conforto.png",
@@ -77,10 +77,10 @@ export const airpodsFallback = {
       tag: "CONFORTO",
 
       titulo:
-        "Feitos para acompanhar vocÃª.",
+        "Feitos para acompanhar você.",
 
       descricao:
-        "Um design pensado para oferecer conforto em mÃºsicas, chamadas e momentos de concentraÃ§Ã£o.",
+        "Um design pensado para oferecer conforto em músicas, chamadas e momentos de concentração.",
 
       imagem:
         "/imagens/frequencia.png",
@@ -89,7 +89,7 @@ export const airpodsFallback = {
     {
       id: 4,
 
-      tag: "CONEXÃƒO",
+      tag: "CONEXÃO",
 
       titulo:
         "Tudo simplesmente se conecta.",
@@ -106,8 +106,8 @@ export const airpodsFallback = {
   /* =======================================================
      DETALHES
 
-     Cada opÃ§Ã£o troca a imagem.
-     NÃ£o existe seleÃ§Ã£o por cor.
+     Cada opção troca a imagem.
+     Não existe seleção por cor.
   ======================================================= */
 
   detalhes: [
@@ -118,7 +118,7 @@ export const airpodsFallback = {
         "Qualidade de som",
 
       descricao:
-        "Ãudio equilibrado e definido para mÃºsicas, vÃ­deos, chamadas e tudo o que vocÃª quiser ouvir.",
+        "Áudio equilibrado e definido para músicas, vídeos, chamadas e tudo o que você quiser ouvir.",
 
       imagem:
         "/imagens/som.png",
@@ -131,7 +131,7 @@ export const airpodsFallback = {
         "Ajuste e conforto",
 
       descricao:
-        "Um design pensado para oferecer encaixe confortÃ¡vel e estabilidade durante diferentes momentos do dia.",
+        "Um design pensado para oferecer encaixe confortável e estabilidade durante diferentes momentos do dia.",
 
       imagem:
         "/imagens/conforto.png",
@@ -141,10 +141,10 @@ export const airpodsFallback = {
       id: "frequencia",
 
       titulo:
-        "MediÃ§Ã£o de frequÃªncia cardÃ­aca",
+        "Medição de frequência cardíaca",
 
       descricao:
-        "Um sensor compacto acompanha suas mÃ©tricas durante exercÃ­cios, treinos e outras atividades.",
+        "Um sensor compacto acompanha suas métricas durante exercícios, treinos e outras atividades.",
 
       imagem:
         "/imagens/frequencia.png",
@@ -154,10 +154,10 @@ export const airpodsFallback = {
       id: "resistencia",
 
       titulo:
-        "ResistÃªncia a poeira e Ã¡gua",
+        "Resistência a poeira e água",
 
       descricao:
-        "Projetados para acompanhar diferentes momentos da rotina, inclusive exercÃ­cios e atividades mais intensas.",
+        "Projetados para acompanhar diferentes momentos da rotina, inclusive exercícios e atividades mais intensas.",
 
       imagem:
         "/imagens/resistencia.png",
@@ -170,7 +170,7 @@ export const airpodsFallback = {
         "Controles por toque",
 
       descricao:
-        "Controle mÃºsicas, chamadas e outros recursos de maneira simples sem precisar pegar o iPhone.",
+        "Controle músicas, chamadas e outros recursos de maneira simples sem precisar pegar o iPhone.",
 
       imagem:
         "/imagens/toque.png",
@@ -183,7 +183,7 @@ export const airpodsFallback = {
         "Estojo de recarga",
 
       descricao:
-        "Leve seus AirPods com seguranÃ§a e tenha energia extra sempre por perto.",
+        "Leve seus AirPods com segurança e tenha energia extra sempre por perto.",
 
       imagem:
         "/imagens/carregar.png",
@@ -192,7 +192,7 @@ export const airpodsFallback = {
 
 
   /* =======================================================
-     EXPERIÃŠNCIAS
+     EXPERIÊNCIAS
   ======================================================= */
 
   experiencia: [
@@ -200,7 +200,7 @@ export const airpodsFallback = {
       id: "geral",
 
       menu:
-        "VisÃ£o geral",
+        "Visão geral",
 
       indice:
         "01",
@@ -209,7 +209,7 @@ export const airpodsFallback = {
         "Som que parece estar ao seu redor.",
 
       descricao:
-        "Uma experiÃªncia criada para aproximar vocÃª de cada detalhe das mÃºsicas, filmes e conversas.",
+        "Uma experiência criada para aproximar você de cada detalhe das músicas, filmes e conversas.",
 
       imagem:
         "/imagens/musica.jpg",
@@ -225,10 +225,10 @@ export const airpodsFallback = {
         "02",
 
       titulo:
-        "Menos ruÃ­do. Mais do que vocÃª quer ouvir.",
+        "Menos ruído. Mais do que você quer ouvir.",
 
       descricao:
-        "Reduza distraÃ§Ãµes ao seu redor e mergulhe na sua mÃºsica, nos estudos ou no trabalho.",
+        "Reduza distrações ao seu redor e mergulhe na sua música, nos estudos ou no trabalho.",
 
       imagem:
         "/imagens/escuta.jpg",
@@ -238,13 +238,13 @@ export const airpodsFallback = {
       id: "transparencia",
 
       menu:
-        "TransparÃªncia",
+        "Transparência",
 
       indice:
         "03",
 
       titulo:
-        "OuÃ§a o mundo quando quiser.",
+        "Ouça o mundo quando quiser.",
 
       descricao:
         "Alterne para um modo mais aberto e mantenha contato com o ambiente sem tirar os AirPods.",
@@ -257,13 +257,13 @@ export const airpodsFallback = {
       id: "conexao",
 
       menu:
-        "ConexÃ£o",
+        "Conexão",
 
       indice:
         "04",
 
       titulo:
-        "Do iPhone para o Mac. Sem complicaÃ§Ã£o.",
+        "Do iPhone para o Mac. Sem complicação.",
 
       descricao:
         "Continue ouvindo e alterne entre seus dispositivos de forma natural durante o dia.",
@@ -276,7 +276,7 @@ export const airpodsFallback = {
 
 
 /* =========================================================
-   NORMALIZAÃ‡ÃƒO
+   NORMALIZAÇÃO
 ========================================================= */
 
 function normalizarAirpods(produto) {
@@ -309,9 +309,9 @@ function normalizarAirpods(produto) {
 
 
     /*
-      ProteÃ§Ã£o igual Ã  pÃ¡gina do Mac.
+      Proteção igual à página do Mac.
 
-      SÃ³ aceita um vÃ­deo salvo se ele
+      Só aceita um vídeo salvo se ele
       realmente parecer ser do AirPods.
     */
     video:
@@ -396,7 +396,7 @@ export default function ProdutoAirpods() {
   /*
     Guarda qual imagem deve continuar
     aparecendo mesmo depois de fechar
-    a descriÃ§Ã£o.
+    a descrição.
   */
   const [
     ultimoDetalheSelecionado,
@@ -520,7 +520,7 @@ export default function ProdutoAirpods() {
      BARRA DE COMPRA
 
      Aparece somente depois que o hero
-     jÃ¡ saiu da tela.
+     já saiu da tela.
   ========================================================= */
 
   useEffect(() => {
@@ -615,7 +615,7 @@ export default function ProdutoAirpods() {
 
 
   /* =========================================================
-     EXPERIÃŠNCIA ATUAL
+     EXPERIÊNCIA ATUAL
   ========================================================= */
 
   const experienciaAtual =
@@ -696,7 +696,7 @@ export default function ProdutoAirpods() {
 
     /*
       Clicar duas vezes no mesmo
-      fecha a descriÃ§Ã£o.
+      fecha a descrição.
     */
     setDetalheSelecionado(
       (atual) =>
@@ -913,7 +913,7 @@ export default function ProdutoAirpods() {
         {/* =====================================================
             HERO
 
-            VÃ­deo local:
+            Vídeo local:
             public/videos/airpods.mp4
         ===================================================== */}
 
@@ -1010,7 +1010,7 @@ export default function ProdutoAirpods() {
                   }
                   aria-label="Destaque anterior"
                 >
-                  â€¹
+                  ‹
                 </button>
 
 
@@ -1023,9 +1023,9 @@ export default function ProdutoAirpods() {
                     carouselIndex >=
                     maxCarouselIndex
                   }
-                  aria-label="PrÃ³ximo destaque"
+                  aria-label="Próximo destaque"
                 >
-                  â€º
+                  ›
                 </button>
 
               </div>
@@ -1175,7 +1175,7 @@ export default function ProdutoAirpods() {
 
 
               <p>
-                {produto.textosVitrine?.detalhesDescricao || "Descubra como cada detalhe foi pensado para tornar a experiÃªncia mais confortÃ¡vel, simples e envolvente."}
+                {produto.textosVitrine?.detalhesDescricao || "Descubra como cada detalhe foi pensado para tornar a experiência mais confortável, simples e envolvente."}
               </p>
 
             </header>
@@ -1241,7 +1241,7 @@ export default function ProdutoAirpods() {
                           >
 
                             {aberto
-                              ? "âˆ’"
+                              ? "−"
                               : "+"}
 
                           </span>
@@ -1341,7 +1341,7 @@ export default function ProdutoAirpods() {
 
 
         {/* =====================================================
-            EXPERIÃŠNCIA
+            EXPERIÊNCIA
         ===================================================== */}
 
         <section
@@ -1364,7 +1364,7 @@ export default function ProdutoAirpods() {
             >
 
               <span>
-                EXPERIÃŠNCIA
+                EXPERIÊNCIA
               </span>
 
 
@@ -1374,7 +1374,7 @@ export default function ProdutoAirpods() {
 
 
               <p>
-                {produto.textosVitrine?.extraDescricao || "Uma experiÃªncia que aproxima vocÃª da mÃºsica, das conversas e de tudo que merece ser ouvido."}
+                {produto.textosVitrine?.extraDescricao || "Uma experiência que aproxima você da música, das conversas e de tudo que merece ser ouvido."}
               </p>
 
             </header>
@@ -1410,7 +1410,7 @@ export default function ProdutoAirpods() {
 
 
             {/* ===============================================
-                NAVEGAÃ‡ÃƒO LOCAL
+                NAVEGAÇÃO LOCAL
             =============================================== */}
 
             <div
@@ -1494,7 +1494,7 @@ export default function ProdutoAirpods() {
       {/* =====================================================
           BARRA FIXA DE COMPRA
 
-          SÃ³ aparece depois do hero.
+          Só aparece depois do hero.
       ===================================================== */}
 
       <div
@@ -1583,4 +1583,3 @@ export default function ProdutoAirpods() {
   );
 
 }
-

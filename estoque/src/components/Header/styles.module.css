@@ -195,7 +195,7 @@
 }
 
 /* ===========================
-   AÃ§Ãµes
+   Ações
 =========================== */
 
 .headerActions {
@@ -284,7 +284,7 @@
   outline-offset: 2px;
 }
 
-/* Modal de desconexÃ£o */
+/* Modal de desconexão */
 .modalOverlay {
   position: fixed;
   inset: 0;
@@ -355,7 +355,7 @@
   cursor: pointer;
 }
 
-/* Ãcones de confirmaÃ§Ã£o e remoÃ§Ã£o ocupam menos espaÃ§o que as miniaturas de produto. */
+/* Ícones de confirmação e remoção ocupam menos espaço que as miniaturas de produto. */
 .notificationItem img[src$='correto.png'],
 .notificationItem img[src$='lixeira.png'] {
   width: 28px;
@@ -363,4 +363,3 @@
   margin: 7px;
   border-radius: 7px;
 }
-

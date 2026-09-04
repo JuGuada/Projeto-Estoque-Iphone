@@ -71,7 +71,7 @@ export function AppRoutes() {
     <Routes>
 
       {/* ================================
-          ROTAS PÃšBLICAS
+          ROTAS PÚBLICAS
       ================================= */}
 
       <Route element={<RotasPublicas />}>
@@ -180,7 +180,7 @@ export function AppRoutes() {
         path="*"
         element={
           <h1>
-            PÃ¡gina nÃ£o encontrada
+            Página não encontrada
           </h1>
         }
       />
@@ -190,4 +190,3 @@ export function AppRoutes() {
   );
 
 }
-

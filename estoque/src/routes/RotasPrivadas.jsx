@@ -24,7 +24,7 @@ export default function RotasPrivadas() {
 
 
   /* =========================================================
-     CARREGANDO AUTENTICAÃ‡ÃƒO
+     CARREGANDO AUTENTICAÇÃO
   ========================================================= */
 
   if (carregando) {
@@ -33,7 +33,7 @@ export default function RotasPrivadas() {
 
 
   /* =========================================================
-     NÃƒO ESTÃ LOGADO
+     NÃO ESTÁ LOGADO
   ========================================================= */
 
   if (!estaLogado) {
@@ -45,7 +45,7 @@ export default function RotasPrivadas() {
     );
   }
 
-  /* As vitrines possuem o prÃ³prio UserHeader e devem manter o mesmo
+  /* As vitrines possuem o próprio UserHeader e devem manter o mesmo
      layout para clientes, administradores e para o monitor de preview. */
   const ehPaginaProduto = location.pathname.startsWith("/produto/");
 
@@ -59,7 +59,7 @@ export default function RotasPrivadas() {
 
 
   /* =========================================================
-     USUÃRIO COMUM
+     USUÁRIO COMUM
   ========================================================= */
 
   if (
@@ -123,9 +123,9 @@ export default function RotasPrivadas() {
 
 
     /*
-      Carrinho e pÃ¡ginas de produto
-      usam o prÃ³prio UserHeader,
-      entÃ£o NÃƒO colocamos Header/Menu
+      Carrinho e páginas de produto
+      usam o próprio UserHeader,
+      então NÃO colocamos Header/Menu
       administrativos aqui.
     */
 
@@ -138,12 +138,12 @@ export default function RotasPrivadas() {
   }
 
   if (usuario?.tipo !== 'admin') {
-    if (permissoes === null) return <p>Carregando permissÃµes...</p>;
+    if (permissoes === null) return <p>Carregando permissões...</p>;
     const necessaria = idPermissaoDaRota(location.pathname);
     if (!permissoes.includes(necessaria)) {
       const destinos = [[1, '/dashboard'], [2, '/estoque'], [3, '/produtos'], [4, '/movimentacoes'], [5, '/cadastro'], [6, '/usuario'], [7, '/configuracoes']];
       const destino = destinos.find(([id]) => permissoes.includes(id))?.[1];
-      return destino ? <Navigate to={destino} replace /> : <div style={{ padding: 40 }}>Seu cargo ainda nÃ£o possui Ã¡reas liberadas. Solicite acesso ao administrador.</div>;
+      return destino ? <Navigate to={destino} replace /> : <div style={{ padding: 40 }}>Seu cargo ainda não possui áreas liberadas. Solicite acesso ao administrador.</div>;
     }
   }
 
@@ -165,4 +165,3 @@ export default function RotasPrivadas() {
   );
 
 }
-

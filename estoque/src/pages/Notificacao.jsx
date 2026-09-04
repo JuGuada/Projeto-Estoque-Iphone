@@ -27,7 +27,7 @@ export default function Notificacao() {
         estoque_baixo: notificacoes.estoqueBaixo, novas_entradas: notificacoes.novasEntradas,
         alertas_criticos: notificacoes.alertasCriticos, resumo_diario: notificacoes.resumoDiario,
         email_notificacao: emailNotificacao }) });
-      setMensagem('ConfiguraÃ§Ãµes salvas com sucesso.');
+      setMensagem('Configurações salvas com sucesso.');
     } catch (error) { setMensagem(error.message); }
   }
 
@@ -40,7 +40,7 @@ export default function Notificacao() {
 
   return (
     <div className={styles.fadeContainer}>
-      {/* SeÃ§Ã£o 1: Alertas do Sistema */}
+      {/* Seção 1: Alertas do Sistema */}
       <div className={styles.card}>
         <div className={styles.cardHeader}>
           <div className={`${styles.iconBadge} ${styles.blueBadge}`}>
@@ -66,7 +66,7 @@ export default function Notificacao() {
             <div className={styles.itemText}>
               <p className={styles.title}>Alerta de estoque baixo</p>
               <p className={styles.description}>
-                Notificar quando produtos atingirem estoque mÃ­nimo.
+                Notificar quando produtos atingirem estoque mínimo.
               </p>
             </div>
             <label className={styles.switch}>
@@ -98,9 +98,9 @@ export default function Notificacao() {
 
           <div className={styles.item}>
             <div className={styles.itemText}>
-              <p className={styles.title}>Alertas crÃ­ticos</p>
+              <p className={styles.title}>Alertas críticos</p>
               <p className={styles.description}>
-                NotificaÃ§Ãµes urgentes de sem estoque
+                Notificações urgentes de sem estoque
               </p>
             </div>
             <label className={styles.switch}>
@@ -115,7 +115,7 @@ export default function Notificacao() {
         </div>
       </div>
 
-      {/* SeÃ§Ã£o 2: NotificaÃ§Ãµes por Email */}
+      {/* Seção 2: Notificações por Email */}
       <div className={styles.card}>
         <div className={styles.cardHeader}>
           <div className={`${styles.iconBadge} ${styles.greenBadge}`}>
@@ -133,15 +133,15 @@ export default function Notificacao() {
               <polyline points="22,6 12,13 2,6" />
             </svg>
           </div>
-          <h3>NotificaÃ§Ãµes por Email</h3>
+          <h3>Notificações por Email</h3>
         </div>
 
         <div className={styles.itemList}>
           <div className={styles.item}>
             <div className={styles.itemText}>
-              <p className={styles.title}>Resumo diÃ¡rio por email</p>
+              <p className={styles.title}>Resumo diário por email</p>
               <p className={styles.description}>
-                Receber relatÃ³rio diÃ¡rio de movimentaÃ§Ãµes
+                Receber relatório diário de movimentações
               </p>
             </div>
             <label className={styles.switch}>
@@ -155,7 +155,7 @@ export default function Notificacao() {
           </div>
 
           <div className={styles.inputSection}>
-            <p className={styles.title}>Email para notificaÃ§Ãµes</p>
+            <p className={styles.title}>Email para notificações</p>
             <input
               type="email"
               className={styles.emailInput}
@@ -167,14 +167,13 @@ export default function Notificacao() {
       </div>
       <div className={styles.saveArea}>
         <button type="button" className={styles.saveButton} onClick={salvar}>
-          Salvar alteraÃ§Ãµes
+          Salvar alterações
         </button>
         <p className={styles.saveHint}>
-          Suas preferÃªncias serÃ£o aplicadas aos prÃ³ximos alertas enviados pelo sistema.
+          Suas preferências serão aplicadas aos próximos alertas enviados pelo sistema.
         </p>
         {mensagem && <p className={styles.saveFeedback} role="status">{mensagem}</p>}
       </div>
     </div>
   );
 }
-

@@ -15,7 +15,7 @@ let ultimoLoginComHero = null;
 
 
 /* =========================================================
-   ÃCONES DOS FILTROS
+   ÍCONES DOS FILTROS
 ========================================================= */
 
 function MacIcon() {
@@ -188,7 +188,7 @@ const familiaInicial = [
       "Desempenho profissional para transformar grandes ideias em realidade.",
 
     preco:
-      "A partir de R$ 1.416,58/mÃªs",
+      "A partir de R$ 1.416,58/mês",
 
     total:
       "ou R$ 16.999**",
@@ -207,10 +207,10 @@ const familiaInicial = [
     categoria: "mac",
 
     descricao:
-      "Leve, rÃ¡pido e poderoso para acompanhar vocÃª durante todo o dia.",
+      "Leve, rápido e poderoso para acompanhar você durante todo o dia.",
 
     preco:
-      "A partir de R$ 833,25/mÃªs",
+      "A partir de R$ 833,25/mês",
 
     total:
       "ou R$ 9.999**",
@@ -223,11 +223,11 @@ const familiaInicial = [
 
   {
     /*
-      Esse id 2 Ã© o id que aparece no seu
+      Esse id 2 é o id que aparece no seu
       cadastro administrativo do iPhone 16 Pro.
 
       Quando ligarmos o Carrinho diretamente
-      Ã  API, nÃ£o serÃ¡ necessÃ¡rio manter isso
+      à API, não será necessário manter isso
       manualmente.
     */
 
@@ -238,10 +238,10 @@ const familiaInicial = [
     categoria: "iphone",
 
     descricao:
-      "Tecnologia avanÃ§ada, cÃ¢mera poderosa e desempenho extraordinÃ¡rio.",
+      "Tecnologia avançada, câmera poderosa e desempenho extraordinário.",
 
     preco:
-      "A partir de R$ 833,25/mÃªs",
+      "A partir de R$ 833,25/mês",
 
     total:
       "ou R$ 9.999**",
@@ -260,10 +260,10 @@ const familiaInicial = [
     categoria: "iphone",
 
     descricao:
-      "Uma experiÃªncia completa em um design moderno e elegante.",
+      "Uma experiência completa em um design moderno e elegante.",
 
     preco:
-      "A partir de R$ 666,58/mÃªs",
+      "A partir de R$ 666,58/mês",
 
     total:
       "ou R$ 7.999**",
@@ -282,10 +282,10 @@ const familiaInicial = [
     categoria: "ipad",
 
     descricao:
-      "A experiÃªncia definitiva em iPad com a mais avanÃ§ada tecnologia.",
+      "A experiência definitiva em iPad com a mais avançada tecnologia.",
 
     preco:
-      "A partir de R$ 1.416,58/mÃªs",
+      "A partir de R$ 1.416,58/mês",
 
     total:
       "ou R$ 16.999**",
@@ -304,10 +304,10 @@ const familiaInicial = [
     categoria: "ipad",
 
     descricao:
-      "Desempenho poderoso em um design fino, leve e versÃ¡til.",
+      "Desempenho poderoso em um design fino, leve e versátil.",
 
     preco:
-      "A partir de R$ 833,25/mÃªs",
+      "A partir de R$ 833,25/mês",
 
     total:
       "ou R$ 9.999**",
@@ -326,10 +326,10 @@ const familiaInicial = [
     categoria: "airpods",
 
     descricao:
-      "Som envolvente e cancelamento de ruÃ­do para ouvir cada detalhe.",
+      "Som envolvente e cancelamento de ruído para ouvir cada detalhe.",
 
     preco:
-      "A partir de R$ 208,25/mÃªs",
+      "A partir de R$ 208,25/mês",
 
     total:
       "ou R$ 2.499**",
@@ -348,10 +348,10 @@ const familiaInicial = [
     categoria: "airpods",
 
     descricao:
-      "Ãudio incrÃ­vel e conexÃ£o simples para acompanhar todos os momentos.",
+      "Áudio incrível e conexão simples para acompanhar todos os momentos.",
 
     preco:
-      "A partir de R$ 133,25/mÃªs",
+      "A partir de R$ 133,25/mês",
 
     total:
       "ou R$ 1.599**",
@@ -394,11 +394,11 @@ function normalizarProduto(produto, index) {
     produto = {
       ...produto,
       ...configuracao,
-      // A imagem atual do estoque deve prevalecer sobre uma configuraÃ§Ã£o antiga da vitrine.
+      // A imagem atual do estoque deve prevalecer sobre uma configuração antiga da vitrine.
       imagem: imagemDoEstoque || configuracao.imagem,
     };
   } catch {
-    // MantÃ©m os dados principais quando uma configuraÃ§Ã£o antiga estiver invÃ¡lida.
+    // Mantém os dados principais quando uma configuração antiga estiver inválida.
   }
   const preco = normalizarPreco(produto.preco ?? produto.precoVenda);
   const categoria = normalizarCategoria(produto.categoria);
@@ -412,16 +412,16 @@ function normalizarProduto(produto, index) {
     ...produto,
     id: produto.id ?? index + 1,
     categoria,
-    preco: typeof produto.preco === "string" ? produto.preco : `A partir de ${precoFormatado}/mÃªs`,
+    preco: typeof produto.preco === "string" ? produto.preco : `A partir de ${precoFormatado}/mês`,
     total: produto.total || `ou ${precoFormatado}`,
-    descricao: produto.descricao || "ConheÃ§a todos os detalhes deste produto.",
+    descricao: produto.descricao || "Conheça todos os detalhes deste produto.",
     imagem: resolverUrlArquivo(imagem),
   };
 }
 
 
 /* =========================================================
-   EXPERIÃŠNCIAS
+   EXPERIÊNCIAS
 ========================================================= */
 
 const experiencias = [
@@ -432,7 +432,7 @@ const experiencias = [
       "Ideias ganham forma.",
 
     descricao:
-      "Crie, desenhe e transforme inspiraÃ§Ã£o em algo sÃ³ seu.",
+      "Crie, desenhe e transforme inspiração em algo só seu.",
 
     imagem:
       "/imagens/pintura.avif",
@@ -458,23 +458,23 @@ const experiencias = [
   },
 
   {
-    categoria: "MÃšSICA",
+    categoria: "MÚSICA",
 
     titulo:
       "No seu ritmo.",
 
     descricao:
-      "Sua mÃºsica com vocÃª, da concentraÃ§Ã£o aos momentos de pausa.",
+      "Sua música com você, da concentração aos momentos de pausa.",
 
     imagem:
       "/imagens/escuta.jpg",
 
     alt:
-      "Pessoa ouvindo mÃºsica com AirPods",
+      "Pessoa ouvindo música com AirPods",
   },
 
   {
-    categoria: "CONEXÃƒO",
+    categoria: "CONEXÃO",
 
     titulo:
       "Perto, mesmo de longe.",
@@ -496,7 +496,7 @@ const experiencias = [
       "Um novo olhar.",
 
     descricao:
-      "Registre detalhes e transforme momentos em lembranÃ§as.",
+      "Registre detalhes e transforme momentos em lembranças.",
 
     imagem:
       "/imagens/foto.avif",
@@ -537,7 +537,7 @@ export default function Carrinho() {
     async function carregarProdutos() {
       try {
         const resposta = await fetch(`${API_URL}/itens`);
-        if (!resposta.ok) throw new Error("NÃ£o foi possÃ­vel carregar o catÃ¡logo.");
+        if (!resposta.ok) throw new Error("Não foi possível carregar o catálogo.");
 
         const itens = await resposta.json();
         const salvos = JSON.parse(localStorage.getItem("produtos-personalizados") || "[]");
@@ -559,7 +559,7 @@ export default function Carrinho() {
             return {
               ...item,
               ...configuracao,
-              // MantÃ©m a imagem que acabou de vir da API, mesmo com uma vitrine antiga salva.
+              // Mantém a imagem que acabou de vir da API, mesmo com uma vitrine antiga salva.
               imagem: item.imagem || configuracao.imagem,
             };
           } catch {
@@ -631,7 +631,7 @@ export default function Carrinho() {
   /* =========================================================
      ABRIR DETALHES
 
-     ESSA Ã‰ A PARTE NOVA.
+     ESSA É A PARTE NOVA.
   ========================================================= */
 
   function abrirDetalhesProduto(produto) {
@@ -835,7 +835,7 @@ export default function Carrinho() {
           <div className={styles.heroDescription}>
 
             <p>
-              Descubra produtos, ideias e experiÃªncias feitas
+              Descubra produtos, ideias e experiências feitas
               para transformar a sua forma de criar.
             </p>
 
@@ -877,14 +877,14 @@ export default function Carrinho() {
               <br />
 
               <span>
-                comprar o que vocÃª ama.
+                comprar o que você ama.
               </span>
             </h2>
 
 
             <p>
               Escolha uma categoria para encontrar
-              o produto ideal para vocÃª.
+              o produto ideal para você.
             </p>
 
           </div>
@@ -977,8 +977,8 @@ export default function Carrinho() {
                 <h2>
 
                   {categoriaSelecionada
-                    ? `ConheÃ§a ${nomeCategoriaSelecionada}.`
-                    : "ConheÃ§a a famÃ­lia."}
+                    ? `Conheça ${nomeCategoriaSelecionada}.`
+                    : "Conheça a família."}
 
                 </h2>
 
@@ -1008,7 +1008,7 @@ export default function Carrinho() {
                     Ver todos
 
                     <span>
-                      Ã—
+                      ×
                     </span>
 
                   </button>
@@ -1092,7 +1092,7 @@ export default function Carrinho() {
 
 
                       {/* =====================================
-                          INFORMAÃ‡Ã•ES
+                          INFORMAÇÕES
                       ===================================== */}
 
                       <h3>
@@ -1125,7 +1125,7 @@ export default function Carrinho() {
 
 
                       {/* =====================================
-                          AÃ‡Ã•ES
+                          AÇÕES
                       ===================================== */}
 
                       <div
@@ -1135,7 +1135,7 @@ export default function Carrinho() {
                       >
 
 
-                        {/* NOVO BOTÃƒO */}
+                        {/* NOVO BOTÃO */}
 
                         <button
                           type="button"
@@ -1159,7 +1159,7 @@ export default function Carrinho() {
                             styles.buyLink
                           }
                         >
-                          Comprar â€º
+                          Comprar ›
                         </button>
 
                       </div>
@@ -1192,7 +1192,7 @@ export default function Carrinho() {
                 }
                 aria-label="Produto anterior"
               >
-                â€¹
+                ‹
               </button>
 
 
@@ -1203,9 +1203,9 @@ export default function Carrinho() {
                   carouselIndex >=
                   maxCarouselIndex
                 }
-                aria-label="PrÃ³ximo produto"
+                aria-label="Próximo produto"
               >
-                â€º
+                ›
               </button>
 
             </div>
@@ -1216,7 +1216,7 @@ export default function Carrinho() {
 
 
         {/* =====================================================
-            EXPERIÃŠNCIAS
+            EXPERIÊNCIAS
         ===================================================== */}
 
         <section
@@ -1235,7 +1235,7 @@ export default function Carrinho() {
                     styles.sectionEyebrow
                   }
                 >
-                  EXPERIÃŠNCIAS
+                  EXPERIÊNCIAS
                 </span>
 
 
@@ -1254,10 +1254,10 @@ export default function Carrinho() {
                     styles.communityDescription
                   }
                 >
-                  Tecnologia Ã© sÃ³ o comeÃ§o.
+                  Tecnologia é só o começo.
                   Ela acompanha suas ideias,
                   sua rotina e os momentos
-                  que fazem parte de vocÃª.
+                  que fazem parte de você.
                 </p>
 
               </div>
@@ -1368,8 +1368,8 @@ export default function Carrinho() {
 
 
               <p>
-                A melhor experiÃªncia vai alÃ©m do produto.
-                EstÃ¡ no que vocÃª cria, descobre e vive
+                A melhor experiência vai além do produto.
+                Está no que você cria, descobre e vive
                 com ele todos os dias.
               </p>
 
@@ -1421,7 +1421,7 @@ export default function Carrinho() {
 
                   <img
                     src="/imagens/musica.jpg"
-                    alt="MÃºsica fazendo parte do dia"
+                    alt="Música fazendo parte do dia"
                   />
 
                 </div>
@@ -1436,7 +1436,7 @@ export default function Carrinho() {
 
 
         {/* =====================================================
-            DIFERENCIAL / HISTÃ“RIA
+            DIFERENCIAL / HISTÓRIA
         ===================================================== */}
 
         <section className={styles.difference}>
@@ -1449,7 +1449,7 @@ export default function Carrinho() {
 
             <img
               src="/imagens/historia.png"
-              alt="Nossa histÃ³ria"
+              alt="Nossa história"
               className={
                 styles.differenceImage
               }
@@ -1465,7 +1465,7 @@ export default function Carrinho() {
           >
 
             <span>
-              NOSSA HISTÃ“RIA
+              NOSSA HISTÓRIA
             </span>
 
 
@@ -1487,11 +1487,11 @@ export default function Carrinho() {
 
 
             <p>
-              ComeÃ§amos com a vontade de criar algo
-              simples, cuidadoso e prÃ³ximo das pessoas.
+              Começamos com a vontade de criar algo
+              simples, cuidadoso e próximo das pessoas.
               Aos poucos, cada detalhe encontrou seu
               lugar e transformou uma ideia em uma
-              experiÃªncia que continua crescendo.
+              experiência que continua crescendo.
             </p>
 
           </div>
@@ -1508,4 +1508,3 @@ export default function Carrinho() {
   );
 
 }
-

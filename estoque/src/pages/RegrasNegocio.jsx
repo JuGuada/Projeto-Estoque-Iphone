@@ -40,7 +40,7 @@ export default function RegrasNegocio() {
             </div>
             <div>
               <p className={styles.ruleTitle}>Produtos com estoque baixo</p>
-              <p className={styles.ruleDesc}>Acompanhamento em tempo real conforme o estoque mÃ­nimo de cada produto.</p>
+              <p className={styles.ruleDesc}>Acompanhamento em tempo real conforme o estoque mínimo de cada produto.</p>
             </div>
           </div>
           {!carregando && <span className={styles.alertCount}>{produtosEstoque.length}</span>}
@@ -50,20 +50,19 @@ export default function RegrasNegocio() {
           {carregando && <p className={styles.emptyState}>Carregando estoque...</p>}
           {!carregando && mensagem && <p className={styles.emptyState} role="alert">{mensagem}</p>}
           {!carregando && !mensagem && produtosEstoque.length === 0 && (
-            <p className={styles.emptyState}>Nenhum produto precisa de reposiÃ§Ã£o no momento.</p>
+            <p className={styles.emptyState}>Nenhum produto precisa de reposição no momento.</p>
           )}
           {!carregando && !mensagem && produtosEstoque.map((produto) => (
             <div key={produto.id} className={`${styles.produtoEstoqueItem} ${styles.itemCritico}`}>
               <span>{produto.nome}</span>
-              <span className={styles.quantidadeTag}>{produto.quantidade} un Â· mÃ­nimo: {produto.minimo}</span>
+              <span className={styles.quantidadeTag}>{produto.quantidade} un · mínimo: {produto.minimo}</span>
             </div>
           ))}
         </div>
       </div>
       <p className={styles.helperText}>
-        Os alertas usam o estoque mÃ­nimo definido no cadastro de cada produto.
+        Os alertas usam o estoque mínimo definido no cadastro de cada produto.
       </p>
     </div>
   );
 }
-

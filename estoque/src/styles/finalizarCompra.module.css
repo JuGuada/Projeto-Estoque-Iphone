@@ -60,7 +60,7 @@
 .page .pixOverlay .pixLoading,.page .pixOverlay .pixConfirmed{min-height:350px;padding:38px 28px;text-align:center}
 .page .pixOverlay .pixLoading h2,.page .pixOverlay .pixLoading p,.page .pixOverlay .pixConfirmed h2,.page .pixOverlay .pixConfirmed p,.page .pixOverlay .pixConfirmed small{width:100%;margin-left:auto;margin-right:auto;text-align:center}
 @media(max-width:520px){.page .pixOverlay .pixModal{width:min(390px,100%)}.page .pixOverlay .pixModalBody .qrCode{width:170px;min-width:170px}.page .pixOverlay .pixModalHeader{padding:22px 20px 17px}.page .pixOverlay .pixModalBody{padding:19px 20px 22px}}
-/* Layout definitivo do modal Pix: neutraliza as versÃµes anteriores. */
+/* Layout definitivo do modal Pix: neutraliza as versões anteriores. */
 .page .pixOverlay{display:grid!important;place-items:center!important;padding:16px!important}
 .page .pixOverlay .pixModal{width:420px!important;max-width:calc(100vw - 32px)!important;min-height:0!important;display:block!important;margin:0!important;border-radius:22px!important}
 .page .pixOverlay .pixModalHeader{width:100%!important;display:grid!important;justify-items:center!important;padding:23px 28px 18px!important;text-align:center!important}
@@ -82,4 +82,3 @@
 .page .pixOverlay .pixLoading,.page .pixOverlay .pixConfirmed{width:100%!important;min-height:350px!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:38px 28px!important;text-align:center!important}
 .page .pixOverlay .pixLoading>*,.page .pixOverlay .pixConfirmed>*{margin-left:auto!important;margin-right:auto!important;text-align:center!important}
 @media(max-width:460px){.page .pixOverlay .pixModalHeader{padding:21px 20px 16px!important}.page .pixOverlay .pixModalBody{padding:18px 20px 22px!important}.page .pixOverlay .pixModalBody .qrCode{width:170px!important;min-width:170px!important;height:170px!important}.page .pixOverlay .pixModalBody .qrCode svg{width:146px!important;height:146px!important}}
-

@@ -85,14 +85,14 @@ router.get("/", async (req, res) => {
 });
 
 router.patch("/:id/status", async (req, res) => {
-  const permitidos = ["Pedido realizado", "Em separaÃ§Ã£o", "Preparando envio", "Em transporte", "Entregue", "Cancelado"];
+  const permitidos = ["Pedido realizado", "Em separação", "Preparando envio", "Em transporte", "Entregue", "Cancelado"];
   const id = Number(req.params.id);
   const { status } = req.body;
-  if (!Number.isInteger(id) || id <= 0 || !permitidos.includes(status)) return res.status(400).json({ erro: "Pedido ou status invÃ¡lido." });
+  if (!Number.isInteger(id) || id <= 0 || !permitidos.includes(status)) return res.status(400).json({ erro: "Pedido ou status inválido." });
   try {
     await ensurePedidosTables();
     const [resultado] = await pool.query("UPDATE pedidos SET status = ? WHERE id = ?", [status, id]);
-    if (!resultado.affectedRows) return res.status(404).json({ erro: "Pedido nÃ£o encontrado." });
+    if (!resultado.affectedRows) return res.status(404).json({ erro: "Pedido não encontrado." });
     return res.json({ id, status });
   } catch (error) {
     console.error("Erro ao atualizar status do pedido:", error);
@@ -103,7 +103,7 @@ router.patch("/:id/status", async (req, res) => {
 router.post("/", async (req, res) => {
   const { usuarioId, usuarioNome, usuarioEmail, itens, formaPagamento, parcelas, endereco, cupom } = req.body;
   if (!usuarioId || !Array.isArray(itens) || !itens.length || !formaPagamento || !endereco?.cep || !endereco?.logradouro) {
-    return res.status(400).json({ erro: "Cliente, itens, pagamento e endereÃ§o completo sÃ£o obrigatÃ³rios." });
+    return res.status(400).json({ erro: "Cliente, itens, pagamento e endereço completo são obrigatórios." });
   }
 
   let connection;
@@ -117,7 +117,7 @@ router.post("/", async (req, res) => {
       const quantidade = Number(itemSolicitado.quantidade || 1);
       const [resultado] = await connection.query("SELECT id, nome, categoria, preco, quantidade, imagem FROM itens WHERE id = ? FOR UPDATE", [itemSolicitado.id]);
       const item = resultado[0];
-      if (!item) throw new Error(`Produto ${itemSolicitado.nome || itemSolicitado.id} nÃ£o encontrado.`);
+      if (!item) throw new Error(`Produto ${itemSolicitado.nome || itemSolicitado.id} não encontrado.`);
       if (!Number.isInteger(quantidade) || quantidade <= 0 || Number(item.quantidade) < quantidade) {
         throw new Error(`Estoque insuficiente para ${item.nome}.`);
       }
@@ -146,7 +146,7 @@ router.post("/", async (req, res) => {
       await connection.query("UPDATE itens SET quantidade = quantidade - ? WHERE id = ?", [item.quantidadeCompra, item.id]);
       await connection.query(
         "INSERT INTO movimentacoes (item_id, tipo, quantidade, motivo, numero_serie, responsavel, operador_tipo) SELECT ?, 'saida', ?, ?, COALESCE(sku, ''), ?, 'cliente' FROM itens WHERE id = ?",
-        [item.id, item.quantidadeCompra, `Venda online â€¢ Pedido #${pedidoResult.insertId}`, usuarioNome || usuarioEmail || "Cliente", item.id]
+        [item.id, item.quantidadeCompra, `Venda online • Pedido #${pedidoResult.insertId}`, usuarioNome || usuarioEmail || "Cliente", item.id]
       );
     }
 
@@ -162,4 +162,3 @@ router.post("/", async (req, res) => {
 });
 
 export default router;
-

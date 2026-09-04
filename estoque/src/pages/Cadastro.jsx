@@ -153,17 +153,17 @@ export default function Cadastro({
         <div className={styles.heroConteudo}>
 
           <h1>
-            Cadastre com precisÃ£o.
+            Cadastre com precisão.
           </h1>
 
 
           <h2>
-            Organize seu estoque com eficiÃªncia.
+            Organize seu estoque com eficiência.
           </h2>
 
 
           <p>
-            Mantenha as informaÃ§Ãµes dos seus produtos
+            Mantenha as informações dos seus produtos
             <br />
             sempre atualizadas e padronizadas.
           </p>
@@ -211,7 +211,7 @@ export default function Cadastro({
                 </strong>
 
                 <small>
-                  Mais precisÃ£o
+                  Mais precisão
                 </small>
 
               </div>
@@ -233,11 +233,11 @@ export default function Cadastro({
               <div>
 
                 <strong>
-                  Cadastro rÃ¡pido
+                  Cadastro rápido
                 </strong>
 
                 <small>
-                  Mais eficiÃªncia
+                  Mais eficiência
                 </small>
 
               </div>
@@ -265,7 +265,7 @@ export default function Cadastro({
 
 
       {/* =========================================
-          TÃTULO
+          TÍTULO
       ========================================= */}
 
       <h1 className={styles.title}>
@@ -275,7 +275,7 @@ export default function Cadastro({
 
 
       {/* =========================================
-          FORMULÃRIO
+          FORMULÁRIO
       ========================================= */}
 
       <form
@@ -286,13 +286,13 @@ export default function Cadastro({
 
 
         {/* =========================================
-            SEÃ‡ÃƒO 1
+            SEÇÃO 1
         ========================================= */}
 
         <div className={styles.card}>
 
           <h2 className={styles.sectionTitle}>
-            1. InformaÃ§Ãµes BÃ¡sicas
+            1. Informações Básicas
           </h2>
 
 
@@ -360,17 +360,17 @@ export default function Cadastro({
 
 
 
-          {/* DESCRIÃ‡ÃƒO */}
+          {/* DESCRIÇÃO */}
 
           <label>
 
-            DescriÃ§Ã£o
+            Descrição
 
             <textarea
               value={cadastroData.descricao}
               onChange={handleChange('descricao')}
               maxLength={500}
-              placeholder="Descreva as principais caracterÃ­sticas do produto."
+              placeholder="Descreva as principais características do produto."
             />
 
             <span className={styles.charCount}>
@@ -385,13 +385,13 @@ export default function Cadastro({
 
 
         {/* =========================================
-            SEÃ‡ÃƒO 2
+            SEÇÃO 2
         ========================================= */}
 
         <div className={styles.card}>
 
           <h2 className={styles.sectionTitle}>
-            2. EspecificaÃ§Ãµes
+            2. Especificações
           </h2>
 
 
@@ -417,7 +417,7 @@ export default function Cadastro({
 
 
 
-          {/* SKU / CÃ“DIGO DE BARRAS */}
+          {/* SKU / CÓDIGO DE BARRAS */}
 
           <div className={styles.grid2}>
 
@@ -436,7 +436,7 @@ export default function Cadastro({
 
             <label>
 
-              CÃ³digo de barras
+              Código de barras
 
               <input
                 type="text"
@@ -455,13 +455,13 @@ export default function Cadastro({
 
 
         {/* =========================================
-            SEÃ‡ÃƒO 3
+            SEÇÃO 3
         ========================================= */}
 
         <div className={styles.card}>
 
           <h2 className={styles.sectionTitle}>
-            3. PreÃ§o e Estoque
+            3. Preço e Estoque
           </h2>
 
 
@@ -471,7 +471,7 @@ export default function Cadastro({
 
             <label>
 
-              PreÃ§o de venda (R$)
+              Preço de venda (R$)
 
               <input
                 type="number"
@@ -508,7 +508,7 @@ export default function Cadastro({
 
             <label>
 
-              Estoque mÃ­nimo
+              Estoque mínimo
 
               <input
                 type="number"
@@ -567,7 +567,7 @@ export default function Cadastro({
 
 
         {/* =========================================
-            SEÃ‡ÃƒO 4
+            SEÇÃO 4
         ========================================= */}
 
         <div className={styles.card}>
@@ -620,7 +620,7 @@ export default function Cadastro({
 
 
                 <small>
-                  JPG, PNG, WEBP â€¢ MÃ¡x. 5MB
+                  JPG, PNG, WEBP • Máx. 5MB
                 </small>
 
               </div>
@@ -629,13 +629,13 @@ export default function Cadastro({
 
 
 
-            {/* PRÃ‰-VISUALIZAÃ‡ÃƒO */}
+            {/* PRÉ-VISUALIZAÇÃO */}
 
             {imagemPreview && (
 
               <img
                 src={imagemPreview}
-                alt="PrÃ©-visualizaÃ§Ã£o"
+                alt="Pré-visualização"
                 className={styles.previewImage}
               />
 
@@ -649,7 +649,7 @@ export default function Cadastro({
 
 
         {/* =========================================
-            BOTÃ•ES
+            BOTÕES
         ========================================= */}
 
         <div className={styles.formButtons}>
@@ -697,4 +697,3 @@ export default function Cadastro({
 
   );
 }
-

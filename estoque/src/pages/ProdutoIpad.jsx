@@ -31,14 +31,14 @@ export const ipadFallback = {
   preco: "R$ 16.999,00",
 
   /*
-    VÃDEO DO HERO
+    VÍDEO DO HERO
 
     public/videos/ipad.mp4
   */
   video: "/videos/ipad.mp4",
 
   descricao:
-    "PotÃªncia, precisÃ£o e liberdade para criar, estudar e trabalhar de novas formas.",
+    "Potência, precisão e liberdade para criar, estudar e trabalhar de novas formas.",
 
 
   /* =======================================================
@@ -89,10 +89,10 @@ export const ipadFallback = {
         "M5",
 
       titulo:
-        "PotÃªncia para ir ainda mais longe.",
+        "Potência para ir ainda mais longe.",
 
       descricao:
-        "Desempenho para criaÃ§Ã£o, estudos, ediÃ§Ã£o e projetos que exigem muito mais.",
+        "Desempenho para criação, estudos, edição e projetos que exigem muito mais.",
 
       imagem:
         "/imagens/ipad/destaque-m5.jpg",
@@ -105,7 +105,7 @@ export const ipadFallback = {
         "IPADOS",
 
       titulo:
-        "Mais espaÃ§o para fazer acontecer.",
+        "Mais espaço para fazer acontecer.",
 
       descricao:
         "Organize janelas, alterne entre tarefas e mantenha seus projetos sempre ao alcance.",
@@ -124,7 +124,7 @@ export const ipadFallback = {
         "Tudo fica mais impressionante.",
 
       descricao:
-        "Uma experiÃªncia visual ampla e precisa para trabalhar, assistir, desenhar e criar.",
+        "Uma experiência visual ampla e precisa para trabalhar, assistir, desenhar e criar.",
 
       imagem:
         "/imagens/ipad/destaque-tela.jpg",
@@ -140,7 +140,7 @@ export const ipadFallback = {
         "Fino. Leve. Pronto para ir.",
 
       descricao:
-        "Toda essa potÃªncia em um design portÃ¡til que acompanha vocÃª em qualquer lugar.",
+        "Toda essa potência em um design portátil que acompanha você em qualquer lugar.",
 
       imagem:
         "/imagens/ipad/destaque-design.jpg",
@@ -153,10 +153,10 @@ export const ipadFallback = {
         "APPLE PENCIL",
 
       titulo:
-        "Suas ideias ganham mais precisÃ£o.",
+        "Suas ideias ganham mais precisão.",
 
       descricao:
-        "Escreva, desenhe e transforme uma ideia rÃ¡pida em algo muito maior.",
+        "Escreva, desenhe e transforme uma ideia rápida em algo muito maior.",
 
       imagem:
         "/imagens/ipad/destaque-pencil.jpg",
@@ -177,7 +177,7 @@ export const ipadFallback = {
         "Design",
 
       descricao:
-        "Fino de impressionar. PotÃªncia e portabilidade se encontram em um design leve, elegante e feito para acompanhar vocÃª.",
+        "Fino de impressionar. Potência e portabilidade se encontram em um design leve, elegante e feito para acompanhar você.",
 
       /*
         public/imagens/expesura.png
@@ -194,7 +194,7 @@ export const ipadFallback = {
         "Tela Ultra Retina XDR",
 
       descricao:
-        "Tudo ganha outra dimensÃ£o. Uma tela de alto contraste, brilho intenso e movimentos extremamente fluidos.",
+        "Tudo ganha outra dimensão. Uma tela de alto contraste, brilho intenso e movimentos extremamente fluidos.",
 
       /*
         public/imagens/tela.png
@@ -211,7 +211,7 @@ export const ipadFallback = {
         "Chip M5",
 
       descricao:
-        "PotÃªncia para criar, editar, estudar e trabalhar com vÃ¡rios projetos sem perder o ritmo.",
+        "Potência para criar, editar, estudar e trabalhar com vários projetos sem perder o ritmo.",
 
       /*
         public/imagens/abas.png
@@ -228,7 +228,7 @@ export const ipadFallback = {
         "Apple Pencil Pro",
 
       descricao:
-        "PrecisÃ£o para desenhar, escrever, marcar e transformar uma ideia rÃ¡pida em um projeto completo.",
+        "Precisão para desenhar, escrever, marcar e transformar uma ideia rápida em um projeto completo.",
 
       /*
         public/imagens/pencil1.png
@@ -241,7 +241,7 @@ export const ipadFallback = {
 
 
 /* =========================================================
-   NORMALIZAÃ‡ÃƒO
+   NORMALIZAÇÃO
 ========================================================= */
 
 function normalizarIpad(produto) {
@@ -274,7 +274,7 @@ function normalizarIpad(produto) {
 
 
     /* =====================================================
-       PROTEÃ‡ÃƒO DO VÃDEO
+       PROTEÇÃO DO VÍDEO
     ===================================================== */
 
     video:
@@ -357,10 +357,10 @@ export default function ProdutoIpad() {
 
 
   /*
-    NÃƒO EXISTE MAIS possibilitiesVisible.
+    NÃO EXISTE MAIS possibilitiesVisible.
 
-    A imagem Groupo45.png ficarÃ¡ sempre
-    visÃ­vel e parada.
+    A imagem Groupo45.png ficará sempre
+    visível e parada.
   */
 
   const [
@@ -1085,7 +1085,7 @@ export default function ProdutoIpad() {
                   }
                   aria-label="Anterior"
                 >
-                  â€¹
+                  ‹
                 </button>
 
 
@@ -1098,9 +1098,9 @@ export default function ProdutoIpad() {
                     carouselIndex >=
                     maxCarouselIndex
                   }
-                  aria-label="PrÃ³ximo"
+                  aria-label="Próximo"
                 >
-                  â€º
+                  ›
                 </button>
 
               </div>
@@ -1252,7 +1252,7 @@ export default function ProdutoIpad() {
 
 
               <p>
-                {produto.textosVitrine?.detalhesDescricao || "ConheÃ§a de perto os elementos que tornam o iPad tÃ£o versÃ¡til."}
+                {produto.textosVitrine?.detalhesDescricao || "Conheça de perto os elementos que tornam o iPad tão versátil."}
               </p>
 
             </header>
@@ -1410,7 +1410,7 @@ export default function ProdutoIpad() {
                           >
 
                             {aberto
-                              ? "âˆ’"
+                              ? "−"
                               : "+"}
 
                           </span>
@@ -1579,7 +1579,7 @@ export default function ProdutoIpad() {
 
 
               <p>
-                {produto.textosVitrine?.extraDescricao || "Um espaÃ§o flexÃ­vel para criar, trabalhar, estudar e transformar ideias em projetos."}
+                {produto.textosVitrine?.extraDescricao || "Um espaço flexível para criar, trabalhar, estudar e transformar ideias em projetos."}
               </p>
 
             </header>
@@ -1607,7 +1607,7 @@ export default function ProdutoIpad() {
 
 
               {/* =============================================
-                  BOTÃƒO
+                  BOTÃO
 
                   AGORA SEMPRE APARECE.
               ============================================= */}
@@ -1669,7 +1669,7 @@ export default function ProdutoIpad() {
 
 
             {/* ===============================================
-                CABEÃ‡ALHO
+                CABEÇALHO
             =============================================== */}
 
             <header
@@ -1689,7 +1689,7 @@ export default function ProdutoIpad() {
 
 
               <p>
-                {produto.textosVitrine?.overlayDescricao || "Trabalhe com vÃ¡rios apps, crie projetos, organize ideias e transforme o iPad em um espaÃ§o para tudo o que vocÃª quiser fazer."}
+                {produto.textosVitrine?.overlayDescricao || "Trabalhe com vários apps, crie projetos, organize ideias e transforme o iPad em um espaço para tudo o que você quiser fazer."}
               </p>
 
             </header>
@@ -1733,7 +1733,7 @@ export default function ProdutoIpad() {
                   }
                 />
                  
-                 <p className={styles.paragrafo} >O iPadOS 26 deixa o iPad Pro ainda mais intuitivo e eficiente. Com um sistema de janelas novo e poderoso, vocÃª controla, organiza e gerencia seus fluxos de trabalho como nunca. E, com a Apple Intelligence integrada aos seus apps e experiÃªncias do dia a dia, vocÃª se comunica, cria e faz de tudo sem esforÃ§o.</p>
+                 <p className={styles.paragrafo} >O iPadOS 26 deixa o iPad Pro ainda mais intuitivo e eficiente. Com um sistema de janelas novo e poderoso, você controla, organiza e gerencia seus fluxos de trabalho como nunca. E, com a Apple Intelligence integrada aos seus apps e experiências do dia a dia, você se comunica, cria e faz de tudo sem esforço.</p>
 
               </div>
 
@@ -1772,7 +1772,7 @@ export default function ProdutoIpad() {
 
                 <p>
                    maravilhas.
-Os apps profissionais revelam a capacidade extraordinÃ¡ria do iPad Pro. E os mais de um milhÃ£o de apps da App Store desenvolvidos para os recursos Ãºnicos do iPad fazem do iPadOS a plataforma ideal para trabalhar, criar e se divertir.
+Os apps profissionais revelam a capacidade extraordinária do iPad Pro. E os mais de um milhão de apps da App Store desenvolvidos para os recursos únicos do iPad fazem do iPadOS a plataforma ideal para trabalhar, criar e se divertir.
                 </p>
 
               </div>
@@ -1786,7 +1786,7 @@ Os apps profissionais revelam a capacidade extraordinÃ¡ria do iPad Pro. E os m
 
                 <img
                   src="/imagens/varios.png"
-                  alt="VÃ¡rios aplicativos no iPad"
+                  alt="Vários aplicativos no iPad"
                   className={
                     styles.overlayVariosImage
                   }
@@ -1816,7 +1816,7 @@ Os apps profissionais revelam a capacidade extraordinÃ¡ria do iPad Pro. E os m
             }
             aria-label="Fechar"
           >
-            Ã—
+            ×
           </button>
 
         </div>
@@ -1889,4 +1889,3 @@ Os apps profissionais revelam a capacidade extraordinÃ¡ria do iPad Pro. E os m
   );
 
 }
-

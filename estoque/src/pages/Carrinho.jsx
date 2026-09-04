@@ -93,7 +93,7 @@ export default function Carrinho() {
                   {Array.isArray(item.cores) && item.cores.length > 0 ? (
                     <div className={styles.colorSelector}>
                       <div className={styles.colorHeading}><span>Escolha a cor</span><strong>{item.cor || item.cores[0]?.nome}</strong></div>
-                      <div className={styles.colorOptions} role="radiogroup" aria-label={`Cores disponÃ­veis para ${item.nome}`}>
+                      <div className={styles.colorOptions} role="radiogroup" aria-label={`Cores disponíveis para ${item.nome}`}>
                         {item.cores.map((cor, indice) => {
                           const selecionada = (item.cor || item.cores[0]?.nome) === cor.nome;
                           return <button
@@ -123,16 +123,15 @@ export default function Carrinho() {
                 </button>
               </div>
             ))}
-            <div className={styles.shipping}><span className={styles.shippingIcon}>â–£</span><strong>Em estoque, pronto para envio</strong></div>
-            <div className={styles.summary}><p><span>Subtotal</span><strong>{formatarPreco(subtotal)}</strong></p><p><span>Envio</span><strong className={styles.free}>GrÃ¡tis</strong></p></div>
-            <div className={styles.total}><div><h2>Total</h2><p>Pagamento em atÃ© 12 vezes no cartÃ£o</p><span>Ou 3% de desconto pagando com Pix</span></div><strong>{formatarPreco(total)}</strong></div>
+            <div className={styles.shipping}><span className={styles.shippingIcon}>▣</span><strong>Em estoque, pronto para envio</strong></div>
+            <div className={styles.summary}><p><span>Subtotal</span><strong>{formatarPreco(subtotal)}</strong></p><p><span>Envio</span><strong className={styles.free}>Grátis</strong></p></div>
+            <div className={styles.total}><div><h2>Total</h2><p>Pagamento em até 12 vezes no cartão</p><span>Ou 3% de desconto pagando com Pix</span></div><strong>{formatarPreco(total)}</strong></div>
             <button type="button" className={styles.payButton} onClick={pagar}>Finalizar compra</button>
           </section>
         ) : (
-          <section className={styles.empty}><h2>Seu carrinho estÃ¡ vazio</h2><button type="button" onClick={() => navigate("/")}>Explorar produtos</button></section>
+          <section className={styles.empty}><h2>Seu carrinho está vazio</h2><button type="button" onClick={() => navigate("/")}>Explorar produtos</button></section>
         )}
       </main>
     </div>
   );
 }
-

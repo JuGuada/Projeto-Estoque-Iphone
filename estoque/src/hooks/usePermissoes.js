@@ -20,4 +20,3 @@ export function idPermissaoDaRota(pathname) {
   const entrada = Object.entries(permissaoPorRota).find(([rota]) => pathname === rota || pathname.startsWith(`${rota}/`));
   return entrada?.[1] || 1;
 }
-

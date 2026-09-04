@@ -10,13 +10,13 @@ export default function Menu() {
   const permissoes = usePermissoes(usuario);
 
   const menuItems = [
-    { name: 'VisÃ£o Geral', path: '/dashboard', icon: '/imagens/visao.png', activeIcon: '/imagens/visao-branco.png' },
-    { name: 'PersonalizaÃ§Ã£o de vitrine', path: '/produtos', icon: '/imagens/produto.png', activeIcon: '/imagens/produto-branco.png' },
+    { name: 'Visão Geral', path: '/dashboard', icon: '/imagens/visao.png', activeIcon: '/imagens/visao-branco.png' },
+    { name: 'Personalização de vitrine', path: '/produtos', icon: '/imagens/produto.png', activeIcon: '/imagens/produto-branco.png' },
     { name: 'Estoque', path: '/estoque', icon: '/imagens/estoque.png', activeIcon: '/imagens/estoque-branco.png' },
-    { name: 'MovimentaÃ§Ãµes', path: '/movimentacoes', icon: '/imagens/movimentacoes.png', activeIcon: '/imagens/movimentacoes-branco.png' },
+    { name: 'Movimentações', path: '/movimentacoes', icon: '/imagens/movimentacoes.png', activeIcon: '/imagens/movimentacoes-branco.png' },
     { name: 'Cadastro', path: '/cadastro', icon: '/imagens/cadastro.png', activeIcon: '/imagens/cadastro-branco.png' },
-    { name: 'ConfiguraÃ§Ãµes', path: '/configuracoes', icon: '/imagens/configuracao.png', activeIcon: '/imagens/configuracao-branca.png' },
-    { name: 'UsuÃ¡rio', path: '/usuario', icon: '/imagens/usuario.png', activeIcon: '/imagens/usuario-branco.png' },
+    { name: 'Configurações', path: '/configuracoes', icon: '/imagens/configuracao.png', activeIcon: '/imagens/configuracao-branca.png' },
+    { name: 'Usuário', path: '/usuario', icon: '/imagens/usuario.png', activeIcon: '/imagens/usuario-branco.png' },
   ];
   
   return (  
@@ -31,7 +31,7 @@ export default function Menu() {
             <button
               key={item.name}
               className={`${styles.navItem} ${isActive ? styles.active : ''}`}
-              onClick={() => navigate(item.path)} // ðŸ‘ˆ Navega ao clicar!
+              onClick={() => navigate(item.path)} // 👈 Navega ao clicar!
               type="button"
             >
               <img
@@ -47,4 +47,3 @@ export default function Menu() {
     </aside>
   );
 }
-

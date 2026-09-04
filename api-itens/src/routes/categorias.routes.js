@@ -39,7 +39,7 @@ router.get("/:id", async (req, res) => {
 
         if (resultado.length === 0) {
             return res.status(404).json({
-                erro: "Categoria nÃ£o encontrada."
+                erro: "Categoria não encontrada."
             });
         }
 

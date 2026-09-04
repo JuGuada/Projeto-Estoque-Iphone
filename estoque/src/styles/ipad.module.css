@@ -196,7 +196,7 @@
 
   /*
     DIMINUI OU AUMENTA A LARGURA
-    DO VÃDEO AQUI.
+    DO VÍDEO AQUI.
   */
 
   width: 90%;
@@ -891,7 +891,7 @@
 
 
 /* =========================================================
-   DESCRIÃ‡ÃƒO
+   DESCRIÇÃO
 ========================================================= */
 
 .detailDescription {
@@ -1184,7 +1184,7 @@
 /* =========================================================
    GROUPo45.PNG
 
-   SEM ANIMAÃ‡ÃƒO.
+   SEM ANIMAÇÃO.
    SEM OPACITY.
    SEM TRANSFORM.
 ========================================================= */
@@ -1256,7 +1256,7 @@
 
 
 /* =========================================================
-   BOTÃƒO SOBRE GROUPo45.PNG
+   BOTÃO SOBRE GROUPo45.PNG
 ========================================================= */
 
 .exploreAppsButton {
@@ -1312,7 +1312,7 @@
   cursor: pointer;
 
   /*
-    SEMPRE VISÃVEL
+    SEMPRE VISÍVEL
   */
 
   opacity: 1;
@@ -1371,11 +1371,11 @@
 ========================================================= */
 
 /* =========================================================
-   OVERLAY â€” FUNDO ATRÃS DA PÃGINA FLUTUANTE
+   OVERLAY — FUNDO ATRÁS DA PÁGINA FLUTUANTE
 ========================================================= */
 
 /* =========================================================
-   OVERLAY â€” FUNDO ATRÃS
+   OVERLAY — FUNDO ATRÁS
 ========================================================= */
 
 .appsOverlay {
@@ -1427,7 +1427,7 @@
   overflow-x: hidden;
 
   /*
-    Preto levemente azulado como a referÃªncia.
+    Preto levemente azulado como a referência.
   */
   background:
     radial-gradient(
@@ -1492,7 +1492,7 @@
 
 
 /* =========================================================
-   CABEÃ‡ALHO
+   CABEÇALHO
 ========================================================= */
 
 .appsOverlayHeader {
@@ -1562,7 +1562,7 @@
 
 
 /* =========================================================
-   PRIMEIRA PARTE â€” TABLET
+   PRIMEIRA PARTE — TABLET
 ========================================================= */
 
 .overlayTabletSection {
@@ -1754,8 +1754,8 @@
   justify-content: center;
 
   /*
-    Separa visualmente as duas experiÃªncias,
-    como no site da referÃªncia.
+    Separa visualmente as duas experiências,
+    como no site da referência.
   */
   border-top:
     1px solid
@@ -1874,7 +1874,7 @@
 
 
 /* =========================================================
-   BOTÃƒO FECHAR
+   BOTÃO FECHAR
 ========================================================= */
 
 .appsOverlayClose {
@@ -2125,7 +2125,7 @@
 
 
 /* =========================================================
-   RODAPÃ‰ FIXO DE COMPRA â€” BRANCO
+   RODAPÉ FIXO DE COMPRA — BRANCO
 ========================================================= */
 
 .buyBar {
@@ -2156,7 +2156,7 @@
   backdrop-filter: blur(22px);
   -webkit-backdrop-filter: blur(22px);
 
-  /* comeÃ§a escondido */
+  /* começa escondido */
   opacity: 0;
   visibility: hidden;
 
@@ -2185,7 +2185,7 @@
 
 
 /* =========================================================
-   CONTEÃšDO DO RODAPÃ‰
+   CONTEÚDO DO RODAPÉ
 ========================================================= */
 
 .buyBarContainer {
@@ -2253,7 +2253,7 @@
 
 
 /* =========================================================
-   PREÃ‡O + BOTÃ•ES
+   PREÇO + BOTÕES
 ========================================================= */
 
 .buyBarActions {
@@ -2281,7 +2281,7 @@
 
 
 /* =========================================================
-   BOTÃƒO ADICIONAR AO CARRINHO
+   BOTÃO ADICIONAR AO CARRINHO
 ========================================================= */
 
 .addCartButton {
@@ -2334,7 +2334,7 @@
 
 
 /* =========================================================
-   BOTÃƒO COMPRAR
+   BOTÃO COMPRAR
 ========================================================= */
 
 .buyNowButton {
@@ -2434,7 +2434,7 @@
 
 }
 
-/* Resumo editorial exibido logo apÃ³s o vÃ­deo principal */
+/* Resumo editorial exibido logo após o vídeo principal */
 .productIntro {
   max-width: 1200px;
   margin: 0 auto;
@@ -2457,4 +2457,3 @@
   .productIntro p { font-size: 13px; }
   .productIntro > strong { max-width: none; font-size: 28px; text-align: left; }
 }
-

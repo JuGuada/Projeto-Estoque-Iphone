@@ -112,7 +112,7 @@
 .green { color: #10b981; }
 .orange { color: #f97316; }
 
-/* GrÃ¡fico de Linha */
+/* Gráfico de Linha */
 .cardLarge {
   background: #ffffff;
   border-radius: 16px;
@@ -306,7 +306,7 @@
   gap: 20px;
 }
 
-/* --- Lista de MovimentaÃ§Ãµes (Ajustada) --- */
+/* --- Lista de Movimentações (Ajustada) --- */
 .movementList {
   display: flex;
   flex-direction: column;
@@ -531,7 +531,7 @@
   gap: 12px;
 }
 
-/* Container de Thumbnails com dimensÃ£o garantida */
+/* Container de Thumbnails com dimensão garantida */
 .alertThumb {
   width: 42px;
   height: 42px;
@@ -645,4 +645,3 @@
   .movementItem { grid-template-columns: 24px 36px minmax(0, 1fr) auto; }
   .movementDate { display: none; }
 }
-

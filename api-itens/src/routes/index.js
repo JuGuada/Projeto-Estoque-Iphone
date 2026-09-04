@@ -26,4 +26,3 @@ routes.use("/pedidos", pedidosRoutes);
 routes.use("/permissoes", permissoesRoutes);
 
 export default routes;
-

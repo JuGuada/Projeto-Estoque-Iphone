@@ -939,7 +939,7 @@
   width: 100%;
   height: clamp(220px, 31vh, 300px);
 
-  /* Imagens PNG transparentes nÃ£o devem herdar o fundo branco do card. */
+  /* Imagens PNG transparentes não devem herdar o fundo branco do card. */
   background: #f1f2f4;
 
   display: flex;
@@ -1390,7 +1390,7 @@
 }
 
 
-/* degradÃª mais leve e bem mais curto */
+/* degradê mais leve e bem mais curto */
 .experienceImage::before {
   content: "";
 
@@ -1506,7 +1506,7 @@
 
 
 /* =========================================================
-   GALERIA â€” 3 IMAGENS
+   GALERIA — 3 IMAGENS
 ========================================================= */
 
 .storyGallery {
@@ -1603,7 +1603,7 @@
 }
 
 
-/* borda quase imperceptÃ­vel para separar
+/* borda quase imperceptível para separar
    as imagens do fundo preto */
 
 .storyMainCard::after,
@@ -1972,4 +1972,3 @@
   }
 
 }
-

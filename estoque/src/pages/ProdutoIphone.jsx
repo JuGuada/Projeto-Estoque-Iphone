@@ -28,7 +28,7 @@ const urlVideo = (caminho = "") => {
 /* =========================================================
    FALLBACK
 
-   Esse produto aparece caso ainda nÃ£o exista
+   Esse produto aparece caso ainda não exista
    produto salvo no localStorage.
 
    Depois podemos trocar por fetch da API.
@@ -50,11 +50,11 @@ export const iphoneFallback = {
   video: "/videos/apple.mp4",
 
   descricao:
-    "Um novo iPhone pensado para oferecer desempenho, cÃ¢meras incrÃ­veis e um design ainda mais resistente.",
+    "Um novo iPhone pensado para oferecer desempenho, câmeras incríveis e um design ainda mais resistente.",
 
   detalhes: {
-    titulo: "Ainda mais durÃ¡vel.",
-    subtitulo: "Ainda mais adorÃ¡vel.",
+    titulo: "Ainda mais durável.",
+    subtitulo: "Ainda mais adorável.",
   },
 
   cores: [
@@ -108,7 +108,7 @@ export const iphoneFallback = {
     },
     {
       id: 4,
-      nome: "MemÃ³ria RAM",
+      nome: "Memória RAM",
       valor: "8 GB",
     },
   ],
@@ -117,15 +117,15 @@ export const iphoneFallback = {
     {
       id: 1,
       label: "iPhone",
-      titulo: "Ainda mais durÃ¡vel.",
+      titulo: "Ainda mais durável.",
       texto:
-        "Um design resistente e elegante para acompanhar vocÃª em todos os momentos.",
+        "Um design resistente e elegante para acompanhar você em todos os momentos.",
       imagem: "/imagens/primeira.png",
     },
     {
       id: 2,
       label: "iPhone",
-      titulo: "Ainda mais adorÃ¡vel.",
+      titulo: "Ainda mais adorável.",
       texto:
         "Detalhes cuidadosamente desenvolvidos para deixar o iPhone ainda mais bonito.",
       imagem: "/imagens/segunda.png",
@@ -133,21 +133,21 @@ export const iphoneFallback = {
   ],
 
   camera: {
-    label: "CÃ¢meras.",
+    label: "Câmeras.",
 
-    titulo: "CÃ¢mera frontal",
+    titulo: "Câmera frontal",
 
     subtitulo:
       "Center Stage de 18 MP. Uma grande virada.",
 
     texto:
-      "A nova cÃ¢mera frontal traz mais flexibilidade para enquadrar fotos e vÃ­deos. Toque para ampliar o campo de visÃ£o e mudar da vertical para a horizontal sem girar o iPhone.",
+      "A nova câmera frontal traz mais flexibilidade para enquadrar fotos e vídeos. Toque para ampliar o campo de visão e mudar da vertical para a horizontal sem girar o iPhone.",
 
     tabs: [
       {
         id: 1,
-        label: "VisÃ£o geral",
-        titulo: "Uma cÃ¢mera feita para vocÃª.",
+        label: "Visão geral",
+        titulo: "Uma câmera feita para você.",
         texto:
           "Capture seus melhores momentos com mais detalhes, qualidade e flexibilidade.",
         imagem: "/imagens/camera1.png",
@@ -162,8 +162,8 @@ export const iphoneFallback = {
       },
       {
         id: 3,
-        label: "VÃ­deo",
-        titulo: "VÃ­deos ainda mais incrÃ­veis.",
+        label: "Vídeo",
+        titulo: "Vídeos ainda mais incríveis.",
         texto:
           "Registre seus momentos com movimento suave e qualidade impressionante.",
         imagem: "/imagens/camera3.png",
@@ -176,8 +176,8 @@ export const iphoneFallback = {
 /* =========================================================
    NORMALIZA O PRODUTO
 
-   Serve para garantir que a pÃ¡gina continue funcionando
-   mesmo se algum campo nÃ£o estiver salvo ainda.
+   Serve para garantir que a página continue funcionando
+   mesmo se algum campo não estiver salvo ainda.
 ========================================================= */
 
 function normalizarProduto(produto) {
@@ -219,7 +219,7 @@ function normalizarProduto(produto) {
     informacoes: Array.isArray(produto?.informacoes) ? produto.informacoes : [],
     destaques: Array.isArray(produto?.destaques) ? produto.destaques : [],
     camera: {
-      label: iphoneFallback.camera.label || "CÃ¢meras.",
+      label: iphoneFallback.camera.label || "Câmeras.",
       texto: "", imagem: "", tabs: [],
       ...(produto?.camera || {}),
       titulo: produto?.camera?.titulo || iphoneFallback.camera.titulo,
@@ -231,7 +231,7 @@ function normalizarProduto(produto) {
 
 
 /* =========================================================
-   PÃGINA
+   PÁGINA
 ========================================================= */
 
 export default function ProdutoIphone() {
@@ -352,7 +352,7 @@ export default function ProdutoIphone() {
 
 
   /* =========================================================
-     REINICIA INTERAÃ‡Ã•ES
+     REINICIA INTERAÇÕES
   ========================================================= */
 
   useEffect(() => {
@@ -396,7 +396,7 @@ export default function ProdutoIphone() {
 
 
   /* =========================================================
-     CÃ‚MERA ATUAL
+     CÂMERA ATUAL
   ========================================================= */
 
   const cameraAtual =
@@ -704,7 +704,7 @@ export default function ProdutoIphone() {
               loop
               playsInline
               preload="auto"
-            /> : <div className={styles.emptyMedia}>Adicione o vÃ­deo principal deste produto</div>}
+            /> : <div className={styles.emptyMedia}>Adicione o vídeo principal deste produto</div>}
 
           </div>
 
@@ -754,7 +754,7 @@ export default function ProdutoIphone() {
                   disabled={destaqueIndex === 0}
                   aria-label="Destaque anterior"
                 >
-                  â€¹
+                  ‹
                 </button>
 
                 <button
@@ -764,9 +764,9 @@ export default function ProdutoIphone() {
                     destaqueIndex >=
                     maxDestaqueIndex
                   }
-                  aria-label="PrÃ³ximo destaque"
+                  aria-label="Próximo destaque"
                 >
-                  â€º
+                  ›
                 </button>
 
               </div>
@@ -885,7 +885,7 @@ export default function ProdutoIphone() {
 
 
             {/* ===============================================
-                CARD DE CONFIGURAÃ‡ÃƒO
+                CARD DE CONFIGURAÇÃO
             =============================================== */}
 
             <div
@@ -975,7 +975,7 @@ export default function ProdutoIphone() {
                 </div>
 
 
-                {/* INFORMAÃ‡Ã•ES */}
+                {/* INFORMAÇÕES */}
 
                 {produto.informacoes.map(
                   (informacao) => (
@@ -1010,7 +1010,7 @@ export default function ProdutoIphone() {
                         >
                           {infoAberta ===
                           informacao.id
-                            ? "âˆ’"
+                            ? "−"
                             : "+"}
                         </span>
 
@@ -1073,7 +1073,7 @@ export default function ProdutoIphone() {
 
 
         {/* =====================================================
-            CÃ‚MERAS
+            CÂMERAS
         ===================================================== */}
 
         <section
@@ -1087,7 +1087,7 @@ export default function ProdutoIphone() {
             }
           >
 
-            {/* CABEÃ‡ALHO */}
+            {/* CABEÇALHO */}
 
             <div
               className={
@@ -1097,7 +1097,7 @@ export default function ProdutoIphone() {
 
               <span>
                 {produto.camera.label ||
-                  "CÃ¢meras."}
+                  "Câmeras."}
               </span>
 
 
@@ -1224,7 +1224,7 @@ export default function ProdutoIphone() {
 
 
       {/* =====================================================
-          RODAPÃ‰ FIXO DE COMPRA
+          RODAPÉ FIXO DE COMPRA
       ===================================================== */}
 
       <div
@@ -1289,4 +1289,3 @@ export default function ProdutoIphone() {
 
   );
 }
-

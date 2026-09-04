@@ -73,8 +73,8 @@ export default function VisaoGeral() {
     const registro = monthlyRaw.find((item) => String(item.mes || '').slice(0, 7) === chave);
     return { mes: data.toLocaleDateString('pt-BR', { month: 'short' }).replace('.', ''), saidas: Number(registro?.saidas || 0), entradas: Number(registro?.entradas || 0) };
   });
-  // SÃ©rie demonstrativa usada exclusivamente no grÃ¡fico da VisÃ£o Geral.
-  // Os cards, estoque, movimentaÃ§Ãµes e rankings continuam exibindo dados reais.
+  // Série demonstrativa usada exclusivamente no gráfico da Visão Geral.
+  // Os cards, estoque, movimentações e rankings continuam exibindo dados reais.
   const vendasDemonstracao = [24, 58, 31, 76, 43, 89, 52, 97, 68, 112, 74, 126];
   const colors = ['#84cc16', '#f97316', '#c026d3', '#ef4444', '#eab308', '#6366f1'];
 
@@ -144,8 +144,8 @@ export default function VisaoGeral() {
         {/* Header */}
         <div className={styles.header}>
         <div>
-          <h1 className={styles.title}>VisÃ£o Geral do Estoque</h1>
-          <p className={styles.subtitle}>Acompanhe mÃ©tricas, tendÃªncias e alertas em tempo real</p>
+          <h1 className={styles.title}>Visão Geral do Estoque</h1>
+          <p className={styles.subtitle}>Acompanhe métricas, tendências e alertas em tempo real</p>
         </div>
       </div>
       {erro && <p role="alert">{erro}</p>}
@@ -157,7 +157,7 @@ export default function VisaoGeral() {
           <div className={styles.cardValue}>{summary.totalProdutos || 0}</div>
           <span className={styles.cardSubtext}>{summary.totalUnidades || 0} unidades</span>
           <div className={`${styles.cardTrend} ${styles.green}`}>
-            <img src="/imagens/trend-up.png" className={styles.trendIcon} alt="" /> + 12 este mÃªs
+            <img src="/imagens/trend-up.png" className={styles.trendIcon} alt="" /> + 12 este mês
           </div>
         </div>
 
@@ -166,7 +166,7 @@ export default function VisaoGeral() {
           <div className={styles.cardValue}>{Number(summary.valorEstoque || 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</div>
           <span className={styles.cardSubtext}>Valor calculado pelo estoque atual</span>
           <div className={`${styles.cardTrend} ${styles.green}`}>
-            <img src="/imagens/trend-up.png" className={styles.trendIcon} alt="" /> + 12.5% este mÃªs
+            <img src="/imagens/trend-up.png" className={styles.trendIcon} alt="" /> + 12.5% este mês
           </div>
         </div>
 
@@ -192,13 +192,13 @@ export default function VisaoGeral() {
       {/* Grid de Cards 2 */}
       <div className={styles.cardsGrid3}>
         <div className={styles.card}>
-          <span className={styles.cardLabel}>MOVIMENTAÃ‡Ã•ES</span>
+          <span className={styles.cardLabel}>MOVIMENTAÇÕES</span>
           <div className={styles.cardValue}>{movements.length}</div>
           <span className={styles.cardSubtext}>Registros recentes carregados</span>
         </div>
 
         <div className={styles.card}>
-          <span className={styles.cardLabel}>ENTRADAS NO PERÃODO</span>
+          <span className={styles.cardLabel}>ENTRADAS NO PERÍODO</span>
           <div className={styles.cardValue}>{monthly.reduce((total, item) => total + Number(item.entradas || 0), 0)}</div>
           <div className={`${styles.cardTrend} ${styles.green}`}>
             Unidades abastecidas
@@ -206,19 +206,19 @@ export default function VisaoGeral() {
         </div>
 
         <div className={styles.card}>
-          <span className={styles.cardLabel}>PREÃ‡O MÃ‰DIO</span>
+          <span className={styles.cardLabel}>PREÇO MÉDIO</span>
           <div className={styles.cardValue}>{summary.totalUnidades ? (Number(summary.valorEstoque || 0) / Number(summary.totalUnidades)).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) : 'R$ 0,00'}</div>
           <div className={`${styles.cardTrend} ${styles.green}`}>
-            Valor mÃ©dio por unidade
+            Valor médio por unidade
           </div>
         </div>
       </div>
 
-      {/* GrÃ¡fico Principal */}
+      {/* Gráfico Principal */}
       <div className={styles.cardLarge}>
         <div className={styles.chartHeader}>
-          <h3>HISTÃ“RICO DE VENDAS</h3>
-          <span>SimulaÃ§Ã£o mensal para apresentaÃ§Ã£o da VisÃ£o Geral</span>
+          <h3>HISTÓRICO DE VENDAS</h3>
+          <span>Simulação mensal para apresentação da Visão Geral</span>
         </div>
         <div className={styles.lineChartContainer}>
           <Line data={lineChartData} options={lineChartOptions} />
@@ -230,9 +230,9 @@ export default function VisaoGeral() {
 
       {/* Grid 3 Colunas */}
       <div className={styles.grid3Cols}>
-        {/* DistribuiÃ§Ã£o */}
+        {/* Distribuição */}
         <div className={styles.card}>
-          <h3 className={styles.sectionTitle}>DistribuiÃ§Ã£o por Categorias</h3>
+          <h3 className={styles.sectionTitle}>Distribuição por Categorias</h3>
           <div className={styles.doughnutContainer}>
             <Doughnut data={doughnutData} options={doughnutOptions} />
           </div>
@@ -250,7 +250,7 @@ export default function VisaoGeral() {
             {categories.map((item, index) => (
               <div key={item.nome} className={styles.progressItem}>
                 <div className={styles.progressHeader}>
-                  <span style={{ color: colors[index % colors.length] }}>â— {item.nome}</span>
+                  <span style={{ color: colors[index % colors.length] }}>● {item.nome}</span>
                 </div>
                 <div className={styles.progressBar}>
                   <div style={{ width: `${Math.min(Number(item.total || 0) * 20, 100)}%`, background: colors[index % colors.length] }}></div>
@@ -271,7 +271,7 @@ export default function VisaoGeral() {
                 </div>
                 <div className={styles.productInfo}>
                   <strong>{produto.nome}</strong>
-                  <span className={styles.badgeGray}>{produto.vendas} saÃ­das</span>
+                  <span className={styles.badgeGray}>{produto.vendas} saídas</span>
                 </div>
                 <div className={styles.productPrice}>
                   <strong>{Number(produto.preco || 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</strong>
@@ -285,11 +285,11 @@ export default function VisaoGeral() {
 
         {/* Grid Inferior (2 Colunas) */}
         <div className={styles.grid2Cols}>
-          {/* Ãšltimas MovimentaÃ§Ãµes */}
+          {/* Últimas Movimentações */}
 
           <div className={`${styles.card} ${styles.movementsCard}`}>
   <div className={styles.movementHeader}>
-    <div><h3 className={styles.sectionTitle}>Ãšltimas MovimentaÃ§Ãµes</h3><p>Acompanhe as entradas e saÃ­das mais recentes</p></div>
+    <div><h3 className={styles.sectionTitle}>Últimas Movimentações</h3><p>Acompanhe as entradas e saídas mais recentes</p></div>
     <span>{movementsOrdered.length} registros</span>
   </div>
   <div className={styles.movementList}>
@@ -306,16 +306,16 @@ export default function VisaoGeral() {
         <div className={styles.movementContent}>
           <div>
             <strong>{movement.produto_nome || 'Produto removido'}</strong>
-            <p>{movement.motivo || 'Sem motivo informado'} â€¢ {movement.quantidade} unidade(s)</p>
+            <p>{movement.motivo || 'Sem motivo informado'} • {movement.quantidade} unidade(s)</p>
           </div>
         </div>
         <span className={`${styles.tag} ${movement.tipo === 'entrada' ? styles.tagGreen : styles.tagRed}`}>
-          {movement.tipo === 'entrada' ? 'Entrada' : 'SaÃ­da'}
+          {movement.tipo === 'entrada' ? 'Entrada' : 'Saída'}
         </span>
         <time className={styles.movementDate}>{movement.criado_em ? new Date(movement.criado_em).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' }) : ''}</time>
       </div>
     ))}
-    {movements.length === 0 && <p>Nenhuma movimentaÃ§Ã£o registrada.</p>}
+    {movements.length === 0 && <p>Nenhuma movimentação registrada.</p>}
 
   </div>
 </div>
@@ -338,8 +338,8 @@ export default function VisaoGeral() {
     {alerts.filter((item) => Number(item.quantidade) === 0).map((item) => (
       <div key={item.id} className={styles.alertRedCard}>
         <div className={styles.alertThumb}><img src={imagemProduto(item.imagem)} alt={item.nome} /></div>
-        <div className={styles.alertInfo}><strong>{item.nome}</strong><p>{item.descricao || 'Sem descriÃ§Ã£o'}</p></div>
-        <button className={styles.btnRepor} onClick={() => alert('Registre uma entrada em MovimentaÃ§Ãµes')}>Repor</button>
+        <div className={styles.alertInfo}><strong>{item.nome}</strong><p>{item.descricao || 'Sem descrição'}</p></div>
+        <button className={styles.btnRepor} onClick={() => alert('Registre uma entrada em Movimentações')}>Repor</button>
       </div>
     ))}
   </div>
@@ -359,7 +359,7 @@ export default function VisaoGeral() {
             </div>
             <div className={styles.alertInfo}>
               <strong>{item.nome}</strong>
-              <p>{item.descricao || 'Sem descriÃ§Ã£o'}</p>
+              <p>{item.descricao || 'Sem descrição'}</p>
             </div>
             <div className={styles.alertCountBox}>
               <span className={styles.alertCountValue}>{item.quantidade}</span>
@@ -380,4 +380,3 @@ export default function VisaoGeral() {
     </AdminLayout>
   );
 }
-

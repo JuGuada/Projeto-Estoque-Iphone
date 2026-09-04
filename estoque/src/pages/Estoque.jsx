@@ -46,7 +46,7 @@ export default function Estoque({
       memoriaRam: produto.memoria_ram || '',
       sku: produto.sku || '',
       categoria: produto.categoria || '',
-      status: produto.status || 'DisponÃ­vel',
+      status: produto.status || 'Disponível',
       descontoPercentual: produto.desconto_percentual ?? 0
     });
     setErroEdicao('');
@@ -111,7 +111,7 @@ export default function Estoque({
         localStorage.getItem('produtos-personalizados') || '[]'
       ).filter((item) => Number(item.id) !== Number(produto.id));
       localStorage.setItem('produtos-personalizados', JSON.stringify(produtosLocais));
-      setMensagemAcao(`Produto ${produto.nome} excluÃ­do com sucesso.`);
+      setMensagemAcao(`Produto ${produto.nome} excluído com sucesso.`);
       setProdutoParaExcluir(null);
     } catch (error) {
       setErro(error.message);
@@ -232,7 +232,7 @@ export default function Estoque({
     <div className={styles.page}>
       <header className={styles.header}>
         <div>
-          <h1>InventÃ¡rio</h1>
+          <h1>Inventário</h1>
 
           <p>
             Controle de estoque em tempo real
@@ -374,7 +374,7 @@ export default function Estoque({
           </div>
 
           <div className={styles.statInfo}>
-            <span>VENDAS (MÃŠS)</span>
+            <span>VENDAS (MÊS)</span>
             <strong>{vendasTotal}</strong>
             <small>unidades</small>
           </div>
@@ -383,7 +383,7 @@ export default function Estoque({
 
       <div className={styles.stockHeader}>
         <h2>
-          VisÃ£o rÃ¡pida do estoque
+          Visão rápida do estoque
         </h2>
 
         <div className={styles.sortArea}>
@@ -464,8 +464,8 @@ export default function Estoque({
 
                     <p>
                       {produto.categoria || 'Produto'}
-                      {' â€¢ '}
-                      {produto.descricao || 'Sem descriÃ§Ã£o'}
+                      {' • '}
+                      {produto.descricao || 'Sem descrição'}
                     </p>
 
                     <div className={styles.skuRow}>
@@ -528,7 +528,7 @@ export default function Estoque({
 
                   <div>
                     <span>
-                      PreÃ§o
+                      Preço
                     </span>
 
                     <strong>
@@ -592,7 +592,7 @@ export default function Estoque({
                 <span>EDITAR PRODUTO</span>
                 <h2 id="titulo-edicao-produto">{produtoEditando.nome}</h2>
               </div>
-              <button type="button" onClick={fecharEdicao} aria-label="Fechar modal">Ã—</button>
+              <button type="button" onClick={fecharEdicao} aria-label="Fechar modal">×</button>
             </div>
 
             <div className={styles.modalGrid}>
@@ -610,15 +610,15 @@ export default function Estoque({
               </label>
               <label>Status
                 <select value={dadosEdicao.status} onChange={alterarEdicao('status')}>
-                  <option value="DisponÃ­vel">DisponÃ­vel</option>
-                  <option value="IndisponÃ­vel">IndisponÃ­vel</option>
+                  <option value="Disponível">Disponível</option>
+                  <option value="Indisponível">Indisponível</option>
                   <option value="Descontinuado">Descontinuado</option>
                 </select>
               </label>
-              <label>PreÃ§o de venda
+              <label>Preço de venda
                 <input type="number" min="0" step="0.01" value={dadosEdicao.preco} onChange={alterarEdicao('preco')} required />
               </label>
-              <label>PreÃ§o de custo
+              <label>Preço de custo
                 <input type="number" min="0" step="0.01" value={dadosEdicao.precoCusto} onChange={alterarEdicao('precoCusto')} />
               </label>
               <label>Quantidade
@@ -633,10 +633,10 @@ export default function Estoque({
               <label>Armazenamento
                 <input value={dadosEdicao.armazenamento} onChange={alterarEdicao('armazenamento')} />
               </label>
-              <label>MemÃ³ria RAM
+              <label>Memória RAM
                 <input value={dadosEdicao.memoriaRam} onChange={alterarEdicao('memoriaRam')} />
               </label>
-              <label className={styles.fieldWide}>DescriÃ§Ã£o
+              <label className={styles.fieldWide}>Descrição
                 <textarea rows="3" value={dadosEdicao.descricao} onChange={alterarEdicao('descricao')} />
               </label>
             </div>
@@ -646,7 +646,7 @@ export default function Estoque({
             <div className={styles.modalActions}>
               <button type="button" className={styles.cancelButton} onClick={fecharEdicao}>Cancelar</button>
               <button type="submit" className={styles.saveButton} disabled={salvandoEdicao}>
-                {salvandoEdicao ? 'Salvando...' : 'Salvar alteraÃ§Ãµes'}
+                {salvandoEdicao ? 'Salvando...' : 'Salvar alterações'}
               </button>
             </div>
           </form>
@@ -667,10 +667,10 @@ export default function Estoque({
             onMouseDown={(event) => event.stopPropagation()}
           >
             <div className={styles.confirmContent}>
-              <span>Confirmar exclusÃ£o</span>
+              <span>Confirmar exclusão</span>
               <h2 id="titulo-confirmar-exclusao">Tem certeza que deseja excluir?</h2>
               <p id="descricao-confirmar-exclusao">
-                <strong>{produtoParaExcluir.nome}</strong> serÃ¡ removido do estoque, da pÃ¡gina de produtos e da loja do usuÃ¡rio. Esta aÃ§Ã£o nÃ£o poderÃ¡ ser desfeita.
+                <strong>{produtoParaExcluir.nome}</strong> será removido do estoque, da página de produtos e da loja do usuário. Esta ação não poderá ser desfeita.
               </p>
             </div>
 
@@ -699,4 +699,3 @@ export default function Estoque({
     </div>
   );
 }
-

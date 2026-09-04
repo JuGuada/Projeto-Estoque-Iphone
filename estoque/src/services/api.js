@@ -19,7 +19,7 @@ export async function apiRequest(caminho, opcoes = {}) {
   try {
     response = await fetch(`${API_URL}${caminho}`, { ...opcoes, headers });
   } catch {
-    throw new Error('NÃ£o foi possÃ­vel conectar ao servidor. Verifique se a API estÃ¡ ativa.');
+    throw new Error('Não foi possível conectar ao servidor. Verifique se a API está ativa.');
   }
 
   const contentType = response.headers.get('content-type') || '';
@@ -27,4 +27,3 @@ export async function apiRequest(caminho, opcoes = {}) {
   if (!response.ok) throw new Error(data?.erro || data?.mensagem || `Erro ${response.status}.`);
   return data;
 }
-
