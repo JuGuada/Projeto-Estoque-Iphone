@@ -1,0 +1,366 @@
+.topHeader {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 64px;
+
+  background-color: #ffffff;
+
+  border-bottom: 1px solid #e5e5e7;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 24px;
+
+  z-index: 1000;
+}
+/* ===========================
+   Logo
+=========================== */
+
+.headerBrand {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  flex-shrink: 0;
+}
+
+.brandLogo {
+  width: 29px;
+  height: 29px;
+  object-fit: contain;
+}
+
+.brandTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1d1d1f;
+}
+
+.brandSubtitle {
+  font-size: 14px;
+  color: #86868b;
+  font-weight: 500;
+
+  margin-top: 4px;
+}
+
+/* ===========================
+   Pesquisa
+=========================== */
+
+.headerSearch {
+  position: relative;
+  width: 450px;
+
+ 
+  margin-right: 40px;
+}
+
+.headerSearch input {
+  width: 100%;
+  height: 38px;
+
+  background-color: #f2f2f4;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 0 12px 0 40px;
+
+  font-size: 13px;
+
+  outline: none;
+  color: #1d1d1f;
+
+  transition: all 0.2s ease;
+}
+
+.headerSearch input:focus {
+  background-color: #ffffff;
+
+  box-shadow: 0 0 0 2px #0071e3;
+}
+
+.headerSearch input::placeholder {
+  color: #86868b;
+}
+
+.searchIcon {
+  position: absolute;
+
+  width: 16px;
+  height: 16px;
+
+  left: 12px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  object-fit: contain;
+
+  pointer-events: none;
+}
+
+.searchSubmit {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 38px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.searchSubmit:hover .searchIcon {
+  opacity: 0.7;
+}
+
+.searchResults {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 1100;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #e1e4e8;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.14);
+}
+
+.searchResult {
+  width: 100%;
+  min-height: 56px;
+  padding: 8px 12px;
+  border: 0;
+  border-bottom: 1px solid #f0f1f3;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.searchResult:last-child {
+  border-bottom: 0;
+}
+
+.searchResult:hover {
+  background: #f6f8fa;
+}
+
+.searchResult img {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: #f2f3f5;
+  object-fit: contain;
+}
+
+.searchResult span,
+.searchResult strong,
+.searchResult small {
+  display: block;
+}
+
+.searchResult strong {
+  color: #25282c;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.searchResult small {
+  margin-top: 3px;
+  color: #7a7f85;
+  font-size: 10px;
+}
+
+.searchEmpty {
+  margin: 0;
+  padding: 16px;
+  color: #747980;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* ===========================
+   AÃ§Ãµes
+=========================== */
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  flex-shrink: 0;
+}
+
+.notificationBadge {
+  position: relative;
+
+  width: 22px;
+  height: 22px;
+
+  cursor: pointer;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.notificationBadge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.notificationCount {
+  position: absolute;
+
+  top: -2px;
+  right: -2px;
+
+  min-width: 16px;
+  height: 16px;
+
+  background-color: #ff3b30;
+
+  border-radius: 50%;
+
+  border: 2px solid #ffffff;
+  color: #fff;
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 12px;
+  text-align: center;
+}
+
+.notificationsPanel { position: fixed; z-index: 1500; top: 57px; right: 64px; width: min(390px,calc(100vw - 28px)); overflow: hidden; border: 1px solid #e2e2e5; border-radius: 16px; background: #fff; box-shadow: 0 20px 60px rgba(0,0,0,.16); }
+.notificationsHeader { display: flex; justify-content: space-between; padding: 17px 18px; border-bottom: 1px solid #ededf0; }.notificationsHeader strong,.notificationsHeader span { display: block; }.notificationsHeader strong { font-size: 14px; }.notificationsHeader span { margin-top: 3px; color: #888; font-size: 9px; }.notificationsHeader button { border: 0; background: transparent; cursor: pointer; font-size: 20px; }
+.notificationsList { max-height: 430px; overflow-y: auto; }.notificationItem { width: 100%; display: grid; grid-template-columns: 43px 1fr; gap: 11px; padding: 13px 17px; border: 0; border-bottom: 1px solid #f0f0f2; background: #fff; cursor: pointer; text-align: left; }.notificationItem:hover { background: #f7f8fa; }.notificationItem img { width: 42px; height: 42px; border-radius: 9px; background: #f4f4f6; object-fit: contain; }.notificationItem span,.notificationItem strong,.notificationItem small,.notificationItem time { display: block; }.notificationItem strong { font-size: 10px; }.notificationItem small { margin-top: 3px; color: #666; font-size: 9px; }.notificationItem time { margin-top: 5px; color: #999; font-size: 8px; }.notificationsEmpty { padding: 35px 20px; color: #888; font-size: 10px; text-align: center; }
+
+/* ===========================
+   Avatar
+=========================== */
+
+.userAvatar {
+  width: 34px;
+  height: 34px;
+
+  position: relative;
+  padding: 0;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  cursor: pointer;
+
+  border: 2px solid #111111;
+  background: #111111;
+}
+
+.userAvatar img {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+.userAvatar:focus-visible {
+  outline: 3px solid #8ab8ef;
+  outline-offset: 2px;
+}
+
+/* Modal de desconexÃ£o */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modalBox {
+  background: #fff;
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  min-width: 260px;
+}
+
+.modalUser {
+  margin-bottom: 16px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #e9e9ec;
+}
+
+.modalUser span,
+.modalUser strong {
+  display: block;
+}
+
+.modalUser span {
+  color: #86868b;
+  font-size: 11px;
+}
+
+.modalUser strong {
+  margin-top: 4px;
+  color: #1d1d1f;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.modalText {
+  margin: 0 0 12px 0;
+  color: #1d1d1f;
+  font-weight: 600;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.cancelBtn {
+  background: transparent;
+  border: 1px solid #d1d1d6;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logoutBtn {
+  background: #ff3b30;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Ãcones de confirmaÃ§Ã£o e remoÃ§Ã£o ocupam menos espaÃ§o que as miniaturas de produto. */
+.notificationItem img[src$='correto.png'],
+.notificationItem img[src$='lixeira.png'] {
+  width: 28px;
+  height: 28px;
+  margin: 7px;
+  border-radius: 7px;
+}
+

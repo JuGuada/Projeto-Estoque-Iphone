@@ -1,0 +1,32 @@
+.checkoutCepField {
+  display: flex;
+  gap: 7px;
+}
+
+.checkoutCepField input {
+  min-width: 0;
+  flex: 1;
+}
+
+.checkoutCepField button {
+  padding: 0 12px;
+  border: 0;
+  border-radius: 9px;
+  background: #1d1d1f;
+  color: #fff;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.checkoutCepField button:disabled {
+  opacity: .55;
+  cursor: wait;
+}
+
+.checkoutCepError {
+  color: #c52c38;
+  font-size: 9px;
+  font-weight: 500;
+}
+

@@ -1,0 +1,61 @@
+/* src/styles/App.css */
+
+.appLayout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.mainContainer {
+  display: flex;
+  width: 100%;
+  flex: 1;
+}
+
+.contentArea {
+  flex: 1;
+  padding: 32px;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background-color: #f5f5f7;
+}
+
+.privateContent {
+  width: calc(100% - 275px);
+  min-height: 100vh;
+
+  margin-left: 275px;
+  padding-top: 64px;
+}
+
+/* =========================================================
+   LAYOUT EXCLUSIVO DO CARRINHO
+   UsuÃ¡rio comum nÃ£o possui Menu lateral
+========================================================= */
+
+.cartContent {
+  width: 100%;
+  min-width: 0;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  background: #fff;
+}

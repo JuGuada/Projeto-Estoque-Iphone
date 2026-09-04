@@ -1,0 +1,1815 @@
+.page {
+  --black: #1d1d1f;
+  --gray: #6e6e73;
+  --muted: #86868b;
+  --light: #f5f5f7;
+
+  width: 100%;
+  min-height: 100vh;
+
+  margin: 0;
+
+  padding-bottom: 72px;
+
+  overflow-x: hidden;
+
+  background: #fff;
+
+  color: var(--black);
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    "SF Pro Text",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+}
+
+
+.page *,
+.page *::before,
+.page *::after {
+  box-sizing: border-box;
+}
+
+
+.page img {
+  display: block;
+
+  max-width: 100%;
+}
+
+
+.page button {
+  font-family: inherit;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.loading {
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #86868b;
+}
+
+
+/* =========================================================
+   VOLTAR
+========================================================= */
+
+.backButton {
+  position: fixed;
+
+  z-index: 950;
+
+  top: 72px;
+  left: 24px;
+
+  height: 36px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  padding:
+    0
+    14px
+    0
+    9px;
+
+  border:
+    1px solid
+    rgba(0, 0, 0, .055);
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 255, 255, .88);
+
+  color: #1d1d1f;
+
+  box-shadow:
+    0 5px 18px
+    rgba(0, 0, 0, .055);
+
+  backdrop-filter:
+    blur(18px);
+
+  -webkit-backdrop-filter:
+    blur(18px);
+
+  cursor: pointer;
+
+  transition:
+    background .2s ease,
+    transform .2s ease;
+}
+
+
+.backButton:hover {
+  background: #fff;
+
+  transform:
+    translateY(-1px);
+}
+
+
+.backButton svg {
+  width: 15px;
+  height: 15px;
+
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+.backButton span {
+  font-size: 11px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   HERO AIRPODS
+========================================================= */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+
+  /*
+    Mesma estratÃ©gia do Mac:
+    ocupa a tela abaixo do header.
+  */
+  height:
+    calc(100vh - 52px);
+
+  min-height: 0;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  background: #f5f5f7;
+}
+
+
+/* =========================================================
+   VÃDEO LOCAL
+========================================================= */
+
+.heroVideo {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  background: #f5f5f7;
+}
+
+
+.heroVideo video {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  outline: 0;
+
+  /*
+    Igual ao Mac.
+
+    Preenche completamente o hero.
+    Isso evita faixas laterais/inferiores.
+  */
+  object-fit: cover;
+
+  object-position:
+    center center;
+
+  transform:
+    translate(-50%, -50%)
+    scale(1.002);
+
+  background: #f5f5f7;
+
+  pointer-events: none;
+
+  user-select: none;
+
+  -webkit-user-select: none;
+}
+
+
+/* =========================================================
+   DESTAQUES
+========================================================= */
+
+.highlights {
+  width: 100%;
+
+  overflow: hidden;
+
+  background: #fff;
+}
+
+
+.highlightsContainer {
+  width: 100%;
+
+  padding:
+    105px
+    0
+    100px;
+}
+
+
+.highlightsTop {
+  width:
+    min(
+      1180px,
+      calc(100% - 70px)
+    );
+
+  margin:
+    0
+    auto
+    40px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+}
+
+
+.highlightsTop > div:first-child > span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #86868b;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.4px;
+}
+
+
+.highlightsTop h2 {
+  margin: 0;
+
+  color: #1d1d1f;
+
+  font-size:
+    clamp(
+      38px,
+      4.5vw,
+      58px
+    );
+
+  line-height: .96;
+
+  letter-spacing: -3.3px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   SETAS
+========================================================= */
+
+.carouselButtons {
+  display: flex;
+
+  gap: 9px;
+}
+
+
+.carouselButtons button {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: #eeeeef;
+
+  color: #515154;
+
+  font-size: 26px;
+
+  cursor: pointer;
+
+  transition:
+    transform .2s ease,
+    opacity .2s ease;
+}
+
+
+.carouselButtons button:hover:not(:disabled) {
+  transform:
+    scale(1.05);
+}
+
+
+.carouselButtons button:disabled {
+  opacity: .3;
+
+  cursor: default;
+}
+
+
+/* =========================================================
+   CARROSSEL
+========================================================= */
+
+.carouselViewport {
+  width: 100%;
+
+  overflow: hidden;
+}
+
+
+.highlightTrack {
+  display: flex;
+
+  gap: 18px;
+
+  width: max-content;
+
+  padding:
+    0
+    17vw;
+
+  transition:
+    transform .8s
+    cubic-bezier(.22, .8, .2, 1);
+
+  will-change:
+    transform;
+}
+
+
+.highlightCard {
+  position: relative;
+
+  width: 66vw;
+
+  max-width: 880px;
+
+  height: 500px;
+
+  flex: 0 0 auto;
+
+  overflow: hidden;
+
+  border-radius: 27px;
+
+  background: #f5f5f7;
+}
+
+
+.highlightCard img {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+.highlightCard::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  background: linear-gradient(112deg, rgba(0, 0, 0, .72) 0%, rgba(0, 0, 0, .42) 44%, rgba(0, 0, 0, .06) 76%, transparent 100%);
+}
+
+
+.highlightCopy {
+  position: relative;
+
+  z-index: 5;
+
+  max-width: 410px;
+
+  padding:
+    38px
+    40px;
+}
+
+
+.highlightCopy span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: rgba(255, 255, 255, .78);
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+
+.highlightCopy h3 {
+  margin: 0;
+
+  color: #fff;
+
+  font-size:
+    clamp(
+      34px,
+      3.7vw,
+      54px
+    );
+
+  line-height: .98;
+
+  letter-spacing: -2.2px;
+}
+
+
+.highlightCopy p {
+  max-width: 340px;
+
+  margin:
+    15px
+    0
+    0;
+
+  color: rgba(255, 255, 255, .88);
+
+  font-size: clamp(15px, 1.2vw, 18px);
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   DOTS
+========================================================= */
+
+.carouselDots {
+  margin-top: 27px;
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 7px;
+}
+
+
+.carouselDots button {
+  width: 6px;
+  height: 6px;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 999px;
+
+  background: #c7c7cc;
+
+  cursor: pointer;
+
+  transition:
+    width .3s ease,
+    background .3s ease;
+}
+
+
+.carouselDots
+.carouselDotActive {
+  width: 20px;
+
+  background: #1d1d1f;
+}
+
+
+/* =========================================================
+   DETALHES
+========================================================= */
+
+.details {
+  width: 100%;
+
+  background: #f5f5f7;
+}
+
+
+.detailsContainer {
+  width:
+    min(
+      1080px,
+      calc(100% - 70px)
+    );
+
+  margin: 0 auto;
+
+  padding:
+    110px
+    0
+    125px;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.detailsIntro {
+  margin-bottom: 48px;
+}
+
+
+.detailsIntro > span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #1d1d1f;
+
+  font-size: 15px;
+
+  font-weight: 650;
+}
+
+
+.detailsIntro h2 {
+  margin: 0;
+
+  color: #1d1d1f;
+
+  font-size:
+    clamp(
+      45px,
+      5vw,
+      64px
+    );
+
+  line-height: .94;
+
+  letter-spacing: -3.6px;
+}
+
+
+.detailsIntro p {
+  max-width: 680px;
+
+  margin:
+    22px
+    0
+    0;
+
+  color: #6e6e73;
+
+  font-size: 15px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.detailsCard {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 570px;
+
+  display: grid;
+
+  grid-template-columns:
+    285px
+    1fr;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  border-radius: 42px;
+
+  background: #fff;
+
+  box-shadow:
+    0 3px 5px
+    rgba(0, 0, 0, .10);
+}
+
+
+/* =========================================================
+   MENU MINIMALISTA
+========================================================= */
+
+.detailsMenu {
+  position: relative;
+
+  z-index: 5;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  padding:
+    42px
+    0
+    42px
+    42px;
+}
+
+
+/* =========================================================
+   ITEM
+========================================================= */
+
+.detailItem {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+
+/* =========================================================
+   BOTÃƒO
+========================================================= */
+
+.detailButton {
+  min-width: 165px;
+
+  min-height: 36px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding:
+    7px
+    13px
+    7px
+    9px;
+
+  border: 0;
+
+  border-radius: 999px;
+
+  background: #f5f5f7;
+
+  color: #1d1d1f;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background .2s ease;
+}
+
+
+.detailButton:hover,
+.detailButtonActive {
+  background: #eaeaec;
+}
+
+
+/* =========================================================
+   + / -
+========================================================= */
+
+.detailPlus {
+  width: 20px;
+  height: 20px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+
+  border:
+    1px solid
+    #9a9a9f;
+
+  border-radius: 50%;
+
+  color: #515154;
+
+  font-size: 14px;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   DESCRIÃ‡ÃƒO
+
+   Abre exatamente abaixo do botÃ£o.
+========================================================= */
+
+.detailDescription {
+  max-width: 225px;
+
+  margin:
+    
+    0
+    2px;
+
+  padding:
+    9px
+    11px;
+
+  border-radius: 12px;
+
+  background: #f5f5f7;
+
+  color: #6e6e73;
+
+  font-size: 9px;
+
+  line-height: 1.45;
+
+  animation:
+    detailOpen
+    .22s
+    ease;
+}
+
+
+@keyframes detailOpen {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   IMAGEM DETALHES
+========================================================= */
+
+.detailsVisual {
+  position: relative;
+
+  min-width: 0;
+
+  height: 570px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   IMAGEM DOS DETALHES
+========================================================= */
+
+.detailsVisual {
+  position: relative;
+
+  min-width: 0;
+
+  height: 570px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   CONFIGURAÃ‡ÃƒO BASE
+========================================================= */
+
+.detailImage {
+  display: block;
+
+  max-width: none;
+
+  object-fit: contain;
+
+  object-position: center;
+
+  animation:
+    detailImageIn
+    .4s
+    cubic-bezier(.22, .8, .2, 1);
+}
+
+
+/* =========================================================
+   QUALIDADE DE SOM
+========================================================= */
+
+.detailImageSom {
+  width: 90%;
+  height: 510px;
+
+  transform:
+    translateX(0)
+    translateY(30px);
+}
+
+
+/* =========================================================
+   AJUSTE E CONFORTO
+========================================================= */
+
+.detailImageConforto {
+  width: 84%;
+  height: 455px;
+
+  transform:
+    translateX(10px)
+    translateY(0);
+}
+
+
+/* =========================================================
+   FREQUÃŠNCIA CARDÃACA
+========================================================= */
+
+.detailImageFrequencia {
+  width: 95%;
+  height: 490px;
+
+  transform:
+    translateX(5px)
+    translateY(39px);
+}
+
+
+/* =========================================================
+   RESISTÃŠNCIA
+========================================================= */
+
+.detailImageResistencia {
+  width: 88%;
+  height: 550px;
+
+  transform:
+    translateX(100px)
+    translateY(10px);
+}
+
+
+/* =========================================================
+   CONTROLES POR TOQUE
+========================================================= */
+
+.detailImageControles {
+  width: 92%;
+  height: 520px;
+
+  transform:
+    translateX(5px)
+    translateY(-28px);
+}
+
+
+/* =========================================================
+   ESTOJO DE RECARGA
+========================================================= */
+
+.detailImageEstojo {
+  width: 78%;
+  height: 500px;
+
+  transform:
+    translateX(0)
+    translateY(5px);
+}
+
+
+/* =========================================================
+   ANIMAÃ‡ÃƒO
+========================================================= */
+
+@keyframes detailImageIn {
+
+  from {
+    opacity: .25;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+
+@keyframes detailImageIn {
+
+  from {
+    opacity: .25;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+/* =========================================================
+   EXPERIÃŠNCIA
+========================================================= */
+
+.magic {
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+
+
+.magicContainer {
+  width:
+    min(
+      1040px,
+      calc(100% - 70px)
+    );
+
+  height: 100svh;
+  margin: 0 auto;
+  padding: clamp(30px, 5vh, 54px) 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: auto minmax(210px, 1fr) auto auto;
+  align-content: center;
+  gap: clamp(12px, 2vh, 20px);
+}
+
+
+/* =========================================================
+   CABEÃ‡ALHO
+========================================================= */
+
+.magicHeader {
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+.magicHeader > span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #86868b;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+
+.magicHeader h2 {
+  margin: 0;
+
+  color: #1d1d1f;
+
+  font-size:
+    clamp(
+      42px,
+      5.5vw,
+      66px
+    );
+
+  line-height: .9;
+
+  letter-spacing: -5px;
+
+  font-weight: 650;
+}
+
+
+.magicHeader p {
+  max-width: 570px;
+
+  margin:
+    14px
+    auto
+    0;
+
+  color: #6e6e73;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   IMAGEM EXPERIÃŠNCIA
+========================================================= */
+
+.magicVisual {
+  position: relative;
+
+  width: 100%;
+  height: auto;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 32px;
+
+  background: #f5f5f7;
+}
+
+
+.magicVisual img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  animation:
+    magicImageIn
+    .45s
+    cubic-bezier(.22, .8, .2, 1);
+}
+
+
+@keyframes magicImageIn {
+
+  from {
+    opacity: .3;
+
+    transform:
+      scale(.99);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      scale(1);
+  }
+
+}
+
+
+/* =========================================================
+   NAVEGAÃ‡ÃƒO LOCAL
+========================================================= */
+
+.localNavigation {
+  width: max-content;
+
+  max-width: 100%;
+
+  margin: 0 auto;
+
+  padding: 5px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 2px;
+
+  border-radius: 999px;
+
+  background: #eeeeef;
+}
+
+
+.localNavigation button {
+  height: 39px;
+
+  padding:
+    0
+    20px;
+
+  border: 0;
+
+  border-radius: 999px;
+
+  background: transparent;
+
+  color: #6e6e73;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition:
+    background .25s ease,
+    color .25s ease;
+}
+
+
+.localNavigation button:hover {
+  color: #1d1d1f;
+}
+
+
+.localNavigation
+.localNavigationActive {
+  background: #1d1d1f;
+
+  color: #fff;
+}
+
+
+/* =========================================================
+   TEXTO EXPERIÃŠNCIA
+========================================================= */
+
+.magicDescription {
+  max-width: 680px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+.magicDescription > span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #86868b;
+
+  font-size: 12px;
+
+  font-weight: 500;
+}
+
+
+.magicDescription h3 {
+  margin: 0;
+
+  color: #1d1d1f;
+
+  font-size:
+    clamp(
+      32px,
+      4vw,
+      46px
+    );
+
+  line-height: .98;
+
+  letter-spacing: -2.4px;
+}
+
+
+.magicDescription p {
+  max-width: 580px;
+
+  margin:
+    10px
+    auto
+    0;
+
+  color: #6e6e73;
+
+  font-size: 13px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   BARRA DE COMPRA
+========================================================= */
+
+.buyBar {
+  position: fixed;
+
+  z-index: 1200;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  min-height: 68px;
+
+  display: flex;
+
+  align-items: center;
+
+  border-top:
+    1px solid
+    rgba(0, 0, 0, .07);
+
+  background:
+    rgba(250, 250, 252, .9);
+
+  backdrop-filter:
+    blur(22px);
+
+  -webkit-backdrop-filter:
+    blur(22px);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform:
+    translateY(110%);
+
+  pointer-events: none;
+
+  transition:
+    opacity .3s ease,
+    visibility .3s ease,
+    transform .4s
+      cubic-bezier(.2, .8, .2, 1);
+}
+
+
+.buyBarVisible {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform:
+    translateY(0);
+
+  pointer-events: auto;
+}
+
+
+.buyBarContainer {
+  width:
+    min(
+      1120px,
+      calc(100% - 44px)
+    );
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+
+.buyBarInfo strong {
+  display: block;
+
+  color: #1d1d1f;
+
+  font-size: 14px;
+
+  font-weight: 650;
+}
+
+
+.buyBarInfo span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #86868b;
+
+  font-size: 10px;
+}
+
+
+.buyBarActions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+
+.buyBarPrice {
+  margin-right: 10px;
+
+  color: #515154;
+
+  font-size: 12px;
+
+  font-weight: 500;
+}
+
+
+.addCartButton,
+.buyNowButton {
+  height: 36px;
+
+  padding:
+    0
+    17px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background .2s ease,
+    transform .2s ease;
+}
+
+
+.addCartButton:active,
+.buyNowButton:active {
+  transform:
+    scale(.97);
+}
+
+
+.addCartButton {
+  border:
+    1px solid
+    #d2d2d7;
+
+  background: #fff;
+
+  color: #1d1d1f;
+}
+
+
+.addCartButton:hover {
+  background: #f5f5f7;
+}
+
+
+.buyNowButton {
+  border: 0;
+
+  background: #1d1d1f;
+
+  color: #fff;
+}
+
+
+.buyNowButton:hover {
+  background: #333336;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .detailsCard {
+    grid-template-columns:
+      250px
+      1fr;
+  }
+
+
+  .detailsMenu {
+    padding-left: 28px;
+  }
+
+
+  .detailsVisual img {
+    width: 100%;
+
+    height: 430px;
+  }
+
+
+  .magicVisual {
+    height: auto;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .magic {
+    min-height: 0;
+    display: block;
+  }
+
+  .magicContainer {
+    height: auto;
+    min-height: 0;
+    display: block;
+  }
+
+  .page {
+    padding-bottom: 68px;
+  }
+
+
+  /* VOLTAR */
+
+  .backButton {
+    top: 67px;
+    left: 13px;
+
+    width: 36px;
+
+    padding: 0;
+
+    justify-content: center;
+  }
+
+
+  .backButton span {
+    display: none;
+  }
+
+
+  /* HERO */
+
+  .hero {
+    width: 100%;
+
+    height:
+      calc(100vh - 52px);
+
+    min-height: 0;
+
+    padding: 0;
+  }
+
+
+  .heroVideo {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .heroVideo video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position:
+      center center;
+  }
+
+
+  /* DESTAQUES */
+
+  .highlightsContainer {
+    padding:
+      75px
+      0;
+  }
+
+
+  .highlightsTop {
+    width:
+      calc(100% - 28px);
+
+    margin-bottom: 28px;
+  }
+
+
+  .highlightsTop h2 {
+    font-size: 35px;
+
+    letter-spacing: -2px;
+  }
+
+
+  .carouselButtons button {
+    width: 34px;
+    height: 34px;
+
+    font-size: 21px;
+  }
+
+
+  .highlightTrack {
+    padding:
+      0
+      14px;
+  }
+
+
+  .highlightCard {
+    width:
+      calc(100vw - 42px);
+
+    height: 430px;
+
+    border-radius: 22px;
+  }
+
+
+  .highlightCopy {
+    padding:
+      28px
+      25px;
+  }
+
+
+  .highlightCopy h3 {
+    font-size: 34px;
+  }
+
+
+  /* DETALHES */
+
+  .detailsContainer {
+    width:
+      calc(100% - 28px);
+
+    padding:
+      75px
+      0;
+  }
+
+
+  .detailsIntro h2 {
+    font-size: 41px;
+
+    letter-spacing: -2.5px;
+  }
+
+
+  .detailsIntro p {
+    font-size: 13px;
+  }
+
+
+  .detailsCard {
+    min-height: 0;
+
+    grid-template-columns: 1fr;
+
+    border-radius: 28px;
+  }
+
+
+  .detailsMenu {
+    padding:
+      30px
+      24px
+      8px;
+  }
+
+
+  .detailDescription {
+    max-width: 245px;
+  }
+
+
+  .detailsVisual {
+    height: 360px;
+  }
+
+
+  .detailsVisual img {
+    width: 100%;
+
+    height: 340px;
+  }
+
+
+  /* EXPERIÃŠNCIA */
+
+  .magicContainer {
+    width:
+      calc(100% - 28px);
+
+    padding:
+      80px
+      0
+      110px;
+  }
+
+
+  .magicHeader h2 {
+    font-size: 50px;
+
+    letter-spacing: -3px;
+  }
+
+
+  .magicHeader p {
+    font-size: 13px;
+  }
+
+
+  .magicVisual {
+    height: 390px;
+
+    border-radius: 25px;
+  }
+
+
+  .localNavigation {
+    width: 100%;
+
+    justify-content: flex-start;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+  }
+
+
+  .localNavigation::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  .localNavigation button {
+    flex: 0 0 auto;
+  }
+
+
+  .magicDescription h3 {
+    font-size: 36px;
+
+    letter-spacing: -2px;
+  }
+
+
+  /* BARRA COMPRA */
+
+  .buyBar {
+    min-height: 68px;
+  }
+
+
+  .buyBarContainer {
+    width:
+      calc(100% - 26px);
+  }
+
+
+  .buyBarInfo span,
+  .buyBarPrice {
+    display: none;
+  }
+
+
+  .buyBarActions {
+    margin-left: auto;
+
+    gap: 7px;
+  }
+
+
+  .addCartButton {
+    display: none;
+  }
+
+
+  .buyNowButton {
+    height: 35px;
+
+    padding:
+      0
+      15px;
+
+    font-size: 10px;
+  }
+
+}
+
+/* Resumo editorial exibido logo apÃ³s o vÃ­deo principal */
+.productIntro {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 58px 6% 66px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  background: #fff;
+  box-sizing: border-box;
+}
+.productIntro > div { width: min(720px, 100%); display: flex; align-items: flex-start; flex-direction: column; text-align: left; }
+.productIntro span { width: 100%; display: block; margin: 0 0 10px; color: #85858a; font-size: 12px; font-weight: 650; text-align: left; }
+.productIntro h1 { width: 100%; margin: 0; color: #1d1d1f; font-size: clamp(36px, 5vw, 64px); line-height: .98; letter-spacing: -2.5px; text-align: left; }
+.productIntro p { width: 100%; max-width: 650px; margin: 18px 0 0; color: #68686d; font-size: 15px; line-height: 1.65; text-align: left; }
+.productIntro > strong { flex-shrink: 0; max-width: 330px; color: #1d1d1f; font-size: clamp(25px, 3vw, 38px); line-height: 1.05; font-weight: 750; letter-spacing: -1.2px; text-align: right; }
+@media (max-width: 700px) {
+  .productIntro { padding: 38px 24px 46px; align-items: flex-start; flex-direction: column; gap: 24px; }
+  .productIntro h1 { font-size: 39px; letter-spacing: -1.7px; }
+  .productIntro p { font-size: 13px; }
+  .productIntro > strong { max-width: none; font-size: 28px; text-align: left; }
+}
+

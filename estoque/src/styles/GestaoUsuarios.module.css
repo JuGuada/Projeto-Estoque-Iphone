@@ -1,0 +1,96 @@
+.area,
+.area * {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+}
+
+.area {
+  min-height: calc(100vh - 64px);
+  padding-top: 66px;
+  background: #f5f6f8;
+}
+
+.segmentedControl {
+  position: fixed;
+  top: 64px;
+  left: 275px;
+  right: 0;
+  z-index: 950;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 58px;
+  width: auto;
+  margin: 0;
+  padding: 0 18px;
+  border-bottom: 1px solid #e1e3e6;
+  background: rgba(245, 246, 248, .96);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .025);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.segmentedControl::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 12px;
+  width: 226px;
+  height: 44px;
+  z-index: 0;
+  border: 1px solid #e1e3e6;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, .04);
+}
+
+.segmentedControl button {
+  position: relative;
+  z-index: 1;
+  min-width: 105px;
+  height: 34px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #70757b;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+  transition: background .2s ease, color .2s ease, box-shadow .2s ease;
+}
+
+.segmentedControl button:hover {
+  color: #1d1d1f;
+}
+
+.segmentedControl .active {
+  background: #1d1d1f;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .16);
+}
+
+.content {
+  animation: enter .22s ease;
+}
+
+@keyframes enter {
+  from { opacity: 0; transform: translateY(3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .segmentedControl {
+    left: 275px;
+    width: calc(100% - 275px);
+    padding: 0 14px;
+  }
+
+  .segmentedControl button { flex: 1; }
+
+  .segmentedControl::before {
+    left: 8px;
+    width: calc(100% - 16px);
+  }
+}
+

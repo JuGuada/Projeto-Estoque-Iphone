@@ -1,0 +1,585 @@
+.header {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+  width: 100%;
+  height: 58px;
+
+  background:
+    rgba(255, 255, 255, .88);
+
+  border-bottom:
+    1px solid
+    rgba(0, 0, 0, .055);
+
+  backdrop-filter:
+    blur(20px);
+
+  -webkit-backdrop-filter:
+    blur(20px);
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+  position: relative;
+
+  width:
+    min(
+      1120px,
+      calc(100% - 44px)
+    );
+
+  height: 100%;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color: #1d1d1f;
+
+  text-decoration: none;
+
+  letter-spacing: -.3px;
+}
+
+
+.logoMark {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+}
+
+.logoTitle {
+  color: #1d1d1f;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.logoSubtitle {
+  margin-top: 3px;
+  color: #86868b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   NAVEGAÃ‡ÃƒO
+========================================================= */
+
+.navigation {
+  position: absolute;
+
+  left: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 31px;
+
+  transform:
+    translateX(-50%);
+}
+
+
+.link {
+  position: relative;
+
+  color: #6e6e73;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  letter-spacing: -.15px;
+
+  transition:
+    color .2s ease;
+}
+
+.cartBadge {
+  position: absolute;
+  top: -10px;
+  right: -14px;
+  min-width: 16px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  border: 1.5px solid rgba(255, 255, 255, .96);
+  border-radius: 999px;
+  background: #ff3b30;
+  color: #fff;
+  font-size: 8.5px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -.15px;
+  box-sizing: border-box;
+  box-shadow: 0 1px 4px rgba(255, 59, 48, .28);
+  pointer-events: none;
+}
+
+
+.link:hover {
+  color: #1d1d1f;
+}
+
+
+.active {
+  color: #1d1d1f;
+}
+
+
+/* barrinha bem discreta no ativo */
+
+.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -8px;
+
+  width: 14px;
+  height: 1.5px;
+
+  border-radius: 999px;
+
+  background: #1d1d1f;
+
+  transform:
+    translateX(-50%);
+
+  animation: activeLinkIn .28s cubic-bezier(.2, .8, .2, 1);
+}
+
+@keyframes activeLinkIn {
+  from { opacity: 0; transform: translateX(-50%) scaleX(.25); }
+  to { opacity: 1; transform: translateX(-50%) scaleX(1); }
+}
+
+
+/* =========================================================
+   AÃ‡Ã•ES
+========================================================= */
+
+.actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+}
+
+/* Busca e sacola foram removidas: a navegaÃ§Ã£o principal jÃ¡ possui Carrinho. */
+.actions > .iconButton,
+.actions > .cart {
+  display: none;
+}
+
+
+/* botÃ£o base */
+
+.iconButton {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: #6e6e73;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    color .2s ease,
+    background .2s ease,
+    transform .2s ease;
+}
+
+
+.iconButton:hover {
+  color: #1d1d1f;
+
+  background: #f3f3f5;
+}
+
+
+.iconButton:active {
+  transform:
+    scale(.93);
+}
+
+
+.actions svg {
+  width: 16px;
+  height: 16px;
+
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-width: 1.5;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   CARRINHO
+========================================================= */
+
+.cart {
+  color: #6e6e73;
+}
+
+
+/* =========================================================
+   USUÃRIO
+========================================================= */
+
+.userArea {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+}
+
+
+.userButton {
+  color: #6e6e73;
+}
+
+
+/* =========================================================
+   MENU DO USUÃRIO
+========================================================= */
+
+.userMenu {
+  position: absolute;
+
+  z-index: 1100;
+
+  top: calc(100% + 10px);
+  right: 0;
+
+  width: 200px;
+
+  padding: 8px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(0, 0, 0, .055);
+
+  border-radius: 14px;
+
+  background:
+    rgba(255, 255, 255, .97);
+
+  box-shadow:
+    0 16px 38px
+    rgba(0, 0, 0, .12);
+
+  backdrop-filter:
+    blur(20px);
+
+  -webkit-backdrop-filter:
+    blur(20px);
+
+  transform-origin:
+    top right;
+
+  animation:
+    userMenuIn
+    .22s
+    cubic-bezier(.2, .8, .2, 1);
+}
+
+
+@keyframes userMenuIn {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(-5px)
+      scale(.97);
+  }
+
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+
+/* =========================================================
+   CABEÃ‡ALHO DO MENU
+========================================================= */
+
+.userMenuHeader {
+  padding:
+    9px
+    10px
+    11px;
+}
+
+
+.userMenuHeader span {
+  display: block;
+
+  color: #1d1d1f;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  letter-spacing: -.15px;
+}
+
+
+.userMenuHeader small {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #86868b;
+
+  font-size: 11px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   DIVISOR
+========================================================= */
+
+.userMenuDivider {
+  height: 1px;
+
+  margin:
+    0
+    6px
+    5px;
+
+  background: #ededee;
+}
+
+.profileLink {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 10px;
+  border-radius: 9px;
+  color: #1d1d1f;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background .2s ease;
+}
+
+.profileLink:hover {
+  background: #f5f5f7;
+}
+
+.profileLink svg {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   DESCONECTAR
+========================================================= */
+
+.logoutButton {
+  width: 100%;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding:
+    0
+    10px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #d70015;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background .2s ease;
+}
+
+
+.logoutButton:hover {
+  background: #f5f5f7;
+}
+
+
+.logoutButton svg {
+  width: 16px;
+  height: 16px;
+
+  flex: 0 0 auto;
+
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-width: 1.6;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .header {
+    height: 56px;
+  }
+
+
+  .container {
+    width:
+      calc(100% - 26px);
+  }
+
+
+  .logo {
+    gap: 4px;
+  }
+
+
+  .logoMark {
+    width: 23px;
+    height: 23px;
+  }
+
+  .logoTitle {
+    font-size: 14px;
+  }
+
+  .logoSubtitle {
+    font-size: 10px;
+  }
+
+
+  .navigation {
+    gap: 15px;
+  }
+
+
+  .link {
+    font-size: 10px;
+  }
+
+  .cartBadge {
+    top: -10px;
+    right: -12px;
+  }
+
+
+  .actions {
+    gap: 5px;
+  }
+
+
+  .iconButton {
+    width: 27px;
+    height: 27px;
+  }
+
+
+  .actions svg {
+    width: 15px;
+    height: 15px;
+  }
+
+
+  .userMenu {
+    width: 185px;
+
+    top: calc(100% + 8px);
+  }
+
+}
+

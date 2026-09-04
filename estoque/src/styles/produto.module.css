@@ -1,0 +1,1451 @@
+.page {
+  min-height: 100vh;
+  background: #f5f5f7;
+  color: #1d1d1f;
+  padding: 55px 6%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: 1500px;
+  margin: 0 auto 55px;
+}
+
+.pageHeader > div:first-child > span {
+  color: #777;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.pageHeader h1 {
+  font-size: 58px;
+  line-height: .95;
+  margin: 14px 0;
+  letter-spacing: -2px;
+}
+
+.pageHeader p {
+  color: #737373;
+  font-size: 17px;
+  max-width: 520px;
+  line-height: 1.5;
+}
+
+.saveIndicator {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #777;
+  font-size: 13px;
+}
+
+.saveIndicator span,
+.liveBadge span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #20b26b;
+}
+
+/* =========================
+   PRODUTOS
+========================= */
+
+.produtosCard {
+  max-width: 1500px;
+  margin: 0 auto 65px;
+  background: #fff;
+  border: 1px solid #d7d7d7;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, .05);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.cardTop span {
+  color: #777;
+  font-size: 13px;
+}
+
+.cardTop h2 {
+  font-size: 22px;
+  margin-top: 5px;
+}
+
+.searchFake {
+  background: #f3f3f3;
+  color: #999;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+  width: 220px;
+}
+
+.produtosTabela {
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.tabelaHeader,
+.produtoLinha {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1fr 1fr 40px;
+  align-items: center;
+  gap: 20px;
+}
+
+.tabelaHeader {
+  padding: 15px 20px;
+  background: #f1f1f1;
+  font-size: 12px;
+  font-weight: 700;
+  color: #555;
+}
+
+.produtoLinha {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid #eee;
+  padding: 15px 20px;
+  background: white;
+  text-align: left;
+  cursor: pointer;
+  color: #333;
+  transition: .2s;
+}
+
+.produtoLinha:hover {
+  background: #fafafa;
+}
+
+.produtoSelecionado {
+  background: #f7faff;
+  box-shadow: inset 3px 0 0 #007aff;
+}
+
+.nomeProduto {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.nomeProduto strong {
+  display: block;
+  font-size: 14px;
+}
+
+.nomeProduto small {
+  display: block;
+  color: #999;
+  margin-top: 3px;
+}
+
+.produtoIcon {
+  width: 48px;
+  height: 48px;
+  padding: 5px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background: #f5f5f7;
+  border: 1px solid #ececef;
+  overflow: hidden;
+}
+
+.produtoIcon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.status {
+  background: #e8f8ef;
+  color: #16834b;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+}
+
+.arrow {
+  font-size: 20px;
+  color: #999;
+}
+
+/* =========================
+   MONITOR
+========================= */
+
+.monitorSection {
+  max-width: 1500px;
+  margin: 0 auto 80px;
+}
+
+.monitorTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.monitorTitle > div:first-child span {
+  color: #777;
+  font-size: 13px;
+}
+
+.monitorTitle h2 {
+  margin-top: 4px;
+  font-size: 26px;
+}
+
+.liveBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  padding: 10px 15px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* =========================
+   MONITOR EXTERNO
+========================= */
+
+.monitorSection {
+  max-width: 1500px;
+  margin: 0 auto 80px;
+}
+
+.monitorTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.monitorTitle > div:first-child span {
+  color: #777;
+  font-size: 13px;
+}
+
+.monitorTitle h2 {
+  margin-top: 4px;
+  font-size: 26px;
+}
+
+.liveBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  padding: 10px 15px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.liveBadge span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #20b26b;
+}
+
+
+/* =========================
+   CORPO DO MONITOR
+========================= */
+
+/* ========================================
+   MONITOR EXTERNO
+======================================== */
+
+.monitor {
+  position: relative;
+
+  width: 94%;
+  margin: 0 auto;
+
+  /* CINZA METÃLICO */
+  background: linear-gradient(
+    180deg,
+    #c9c9c9 0%,
+    #b8b8b8 45%,
+    #a9a9a9 100%
+  );
+
+  border-radius: 22px;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 28px 55px rgba(0, 0, 0, 0.18),
+    0 10px 20px rgba(0, 0, 0, 0.10);
+
+  /* espaÃ§o para o pÃ© */
+  margin-bottom: 125px;
+}
+
+
+/* ========================================
+   PARTE SUPERIOR
+======================================== */
+
+.monitorTop {
+  position: relative;
+
+  width: 100%;
+
+  /* BEM MENOR QUE ANTES */
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: linear-gradient(
+    180deg,
+    #cfcfcf 0%,
+    #c3c3c3 100%
+  );
+
+  border-radius: 22px 22px 0 0;
+
+  box-sizing: border-box;
+}
+
+
+/* ========================================
+   BOLINHAS
+======================================== */
+
+.monitorDots {
+  position: absolute;
+
+  left: 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+.monitorDots i {
+  display: block;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #858585;
+
+  box-shadow:
+    inset 0 1px 1px rgba(255,255,255,.4);
+}
+
+
+/* ========================================
+   BARRA DO NAVEGADOR
+======================================== */
+
+.monitorUrl {
+  min-width: 280px;
+
+  text-align: center;
+
+  background: rgba(255,255,255,.35);
+
+  color: #707070;
+
+  padding: 6px 28px;
+
+  border-radius: 7px;
+
+  font-size: 9px;
+
+  line-height: 1;
+
+  box-shadow:
+    inset 0 1px 2px rgba(0,0,0,.04);
+}
+
+
+/* ========================================
+   TELA
+======================================== */
+
+.monitorScreen {
+  position: relative;
+
+  width: 100%;
+
+  /*
+    DIMINUI A ALTURA DO MONITOR
+    PARA CABER MELHOR NA TELA
+  */
+  height: 620px;
+
+  background: #fff;
+
+  overflow: hidden;
+
+  /*
+    borda muito fina entre
+    a moldura e a tela
+  */
+  border-left: 19px solid #bdbdbd;
+  border-right: 19px solid #bdbdbd;
+
+  box-sizing: border-box;
+}
+
+
+/* ========================================
+   PARTE INFERIOR DO MONITOR
+======================================== */
+
+.monitorBottom {
+  position: relative;
+
+  width: 100%;
+
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: linear-gradient(
+    180deg,
+    #bcbcbc 0%,
+    #b2b2b2 50%,
+    #a6a6a6 100%
+  );
+
+  border-radius: 0 0 22px 22px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.35);
+}
+
+
+/* ========================================
+   LOGO
+======================================== */
+
+.monitorLogo {
+  width: 28px;
+
+  height: 32px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  opacity: .65;
+}
+
+.monitorLogo img {
+  width: 24px;
+
+  height: 24px;
+
+  object-fit: contain;
+
+  display: block;
+
+  filter: grayscale(100%);
+
+  opacity: .75;
+}
+
+
+/* ========================================
+   PÃ‰ DO MONITOR
+======================================== */
+
+.monitorStand {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: -100px;
+
+  transform: translateX(-50%);
+
+  width: 220px;
+
+  height: 100px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   HASTE DO PÃ‰
+======================================== */
+
+.monitorStandNeck {
+  width: 82px;
+
+  height: 70px;
+
+  background: linear-gradient(
+    90deg,
+    #999999 0%,
+    #cfcfcf 20%,
+    #e0e0e0 50%,
+    #b8b8b8 75%,
+    #8f8f8f 100%
+  );
+
+  clip-path: polygon(
+    20% 0,
+    80% 0,
+    72% 100%,
+    28% 100%
+  );
+
+  box-shadow:
+    inset 0 0 8px rgba(0,0,0,.18);
+}
+
+
+/* ========================================
+   BASE DO PÃ‰
+======================================== */
+
+.monitorStandBase {
+  position: absolute;
+
+  bottom: 0;
+
+  width: 220px;
+
+  height: 27px;
+
+  background: linear-gradient(
+    180deg,
+    #d5d5d5 0%,
+    #bdbdbd 35%,
+    #999999 70%,
+    #858585 100%
+  );
+
+  border-radius: 50% 50% 12px 12px;
+
+  transform: perspective(180px) rotateX(12deg);
+
+  box-shadow:
+    0 8px 12px rgba(0,0,0,.18),
+    inset 0 2px 2px rgba(255,255,255,.55);
+}
+
+
+/* ========================================
+   PEQUENA SOMBRA DO MONITOR
+======================================== */
+
+.monitorStand::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: -13px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 260px;
+
+  height: 16px;
+
+  border-radius: 50%;
+
+  background: rgba(0,0,0,.13);
+
+  filter: blur(8px);
+
+  z-index: -1;
+}
+/* =========================
+   PREVIEW
+========================= */
+
+.clearTemplateButton { border: 1px solid #dedee3 !important; background: #fff !important; color: #555 !important; }
+.emptyMedia { width: 100%; min-height: 150px; display: grid; place-items: center; padding: 20px; border: 1px dashed #cfd0d5; border-radius: 14px; background: #f5f5f7; color: #85858a; font-size: 11px; text-align: center; }
+.removeMediaButton { width: max-content; padding: 7px 10px; border: 1px solid #eccaca; border-radius: 8px; background: #fff7f7; color: #b8323c; cursor: pointer; font-size: 10px; font-weight: 650; }
+.emptyEditor { margin: 12px 0 0; padding: 16px; border: 1px dashed #d8d8dc; border-radius: 10px; color: #85858a; font-size: 10px; text-align: center; }
+
+.previewPage {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  background: #fff;
+  color: #1d1d1f;
+}
+
+.previewIphone {
+  --preview-background: #f7f7f8;
+}
+
+.previewMac {
+  --preview-background: #eef5f7;
+}
+
+.previewIpad {
+  --preview-background: #f2f0ec;
+}
+
+.previewAirpods {
+  --preview-background: #f7f1eb;
+}
+
+.previewPage .previewHero {
+  background: var(--preview-background, #f7f7f8);
+}
+
+.previewMac .previewDestaques {
+  background: #edf5f6;
+}
+
+.previewIpad .previewDestaques {
+  background: #f5f1e9;
+}
+
+.previewAirpods .previewDestaques {
+  background: #f8f0e9;
+}
+
+.previewPage::-webkit-scrollbar {
+  width: 7px;
+}
+
+.previewPage::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 10px;
+}
+
+/* NAV */
+
+.previewNav {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 35px;
+  background: rgba(255, 255, 255, .88);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid #eee;
+}
+
+.previewBrand {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.previewLinks {
+  display: flex;
+  gap: 28px;
+}
+
+.previewLinks a {
+  text-decoration: none;
+  color: #555;
+  font-size: 11px;
+}
+
+.previewLinks a:hover {
+  color: var(--produto-cor);
+}
+
+.previewBuy,
+.heroBottom button {
+  border: 0;
+  background: var(--produto-cor);
+  color: white;
+  border-radius: 20px;
+  padding: 8px 18px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* HERO */
+
+.previewHero {
+  min-height: 570px;
+  position: relative;
+  overflow: hidden;
+  background: #f7f7f8;
+}
+
+
+.heroVideo {
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  height: 420px;
+}
+
+.heroVideo video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.videoGradient {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 180px;
+  background: linear-gradient(
+    to bottom,
+    rgba(247, 247, 248, 0) 0%,
+    rgba(247, 247, 248, 0.25) 25%,
+    rgba(247, 247, 248, 0.65) 55%,
+    #f7f7f8 100%
+  );
+  z-index: 2;
+}
+
+.heroInfo {
+  position: relative;
+  z-index: 2;
+  min-height: 570px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 45px 60px 15px;
+}
+
+.heroInfo > span {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.heroInfo h1 {
+  font-size: 48px;
+  line-height: .95;
+  margin: 8px 0 12px;
+  letter-spacing: -2px;
+}
+
+.heroInfo h1 strong {
+  color: var(--produto-cor);
+  font-weight: 700;
+}
+
+.heroInfo p {
+  max-width: 480px;
+  color: #555;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.heroBottom {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+}
+
+.heroBottom strong {
+  font-size: 18px;
+}
+
+/* =========================
+   DETALHES DO PRODUTO
+========================= */
+
+.previewDetalhes { padding: 65px 55px 75px; background: #f7f7f8; }
+.detalhesIntro { margin-bottom: 32px; }
+.detalhesIntro > span { font-size: 13px; font-weight: 700; }
+.detalhesIntro h2, .detalhesIntro h3 { font-size: 40px; line-height: .98; letter-spacing: -2px; margin: 10px 0 0; background: linear-gradient(90deg, #9b6bd4, #6087bb, #5e9a68); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.detalhesIntro h3 { margin-top: 0; }
+.detalhesIntro p { max-width: 620px; margin: 16px 0 0; color: #666; font-size: 13px; line-height: 1.5; }
+.detalhesCard { min-height: 430px; position: relative; display: grid; grid-template-columns: 1fr 1.25fr; align-items: center; gap: 25px; overflow: hidden; background: #fff; border-radius: 24px; padding: 35px 45px; }
+.detalhesMenu { width: 100%; max-width: 255px; display: flex; flex-direction: column; gap: 9px; z-index: 2; }
+.coresBox { background: #f0f0f4; border-radius: 19px; padding: 17px; margin-bottom: 2px; }
+.coresBox strong { display: block; font-size: 11px; margin-bottom: 4px; }
+.coresBox > span { display: block; color: #666; font-size: 10px; line-height: 1.35; }
+.coresLista { display: flex; align-items: center; gap: 9px; margin-top: 13px; }
+.corBolinha { width: 18px; height: 18px; padding: 0; border: 1px solid #c9c9c9; border-radius: 50%; cursor: pointer; }
+.corBolinha:hover { transform: scale(1.08); }
+.corSelecionada { outline: 1px solid #333; outline-offset: 2px; }
+.detalheItemInfo { display: flex; flex-direction: column; align-items: flex-start; }
+.detalheBotaoInfo { width: auto; min-width: 150px; display: inline-flex; align-items: center; gap: 8px; padding: 10px 13px; border: 0; border-radius: 20px; background: #f0f0f4; color: #444; cursor: pointer; font: inherit; font-size: 10px; text-align: left; }
+.detalheBotaoInfo strong { display: block; }
+.detalheDescricaoInfo { max-width: 250px; margin: 3px 2px 0; padding: 9px 11px; border-radius: 12px; background: #f5f5f7; color: #6e6e73; font-size: 9px; line-height: 1.4; }
+.detalheMais { width: 15px; height: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid #888; border-radius: 50%; font-size: 11px; }
+.detalhesImagem { min-height: 390px; display: flex; align-items: center; justify-content: center; overflow: visible; }
+.detalhesProdutoImagem {
+  width: 100%;
+  max-width: 360px;
+  height: 390px;
+  object-fit: contain;
+  display: block;
+  transform: translateX(-120px) scale(2.4);
+  transition: opacity .2s ease;
+}
+
+.storePreviewFrame {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+  background: #fff;
+}
+
+.previewEmpty {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-size: 13px;
+  background: #f7f7f8;
+}
+
+.loadMessage {
+  margin: 0 0 12px;
+  padding: 11px 14px;
+  border-radius: 9px;
+  background: #f5f5f7;
+  color: #666;
+  font-size: 12px;
+}
+
+/* Cada famÃ­lia tem uma silhueta diferente. Estes ajustes usam os assets
+   reais do projeto sem forÃ§ar Mac, iPad e AirPods no recorte do iPhone. */
+.detalhesImagem_mac .detalhesProdutoImagem {
+  max-width: 540px;
+  height: 330px;
+  transform: translateX(-35px) scale(1.35);
+}
+
+.detalhesImagem_ipad .detalhesProdutoImagem {
+  max-width: 390px;
+  height: 370px;
+  transform: translateX(-55px) scale(1.45);
+}
+
+.detalhesImagem_airpods .detalhesProdutoImagem {
+  max-width: 350px;
+  height: 340px;
+  transform: translateX(-35px) scale(1.25);
+}
+/* =========================
+   DESTAQUES
+========================= */
+
+.previewDestaques {
+  padding: 70px 55px;
+}
+
+.sectionLabel {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+.destaqueImagem {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.destaqueItem {
+  min-height: 330px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 70px;
+}
+
+.destaqueReverse .destaqueText {
+  order: 2;
+}
+
+.destaqueReverse .destaqueVisual {
+  order: 1;
+}
+
+.destaqueText {
+  padding: 30px;
+}
+
+.destaqueText span {
+  font-size: 12px;
+  color: #888;
+}
+
+.destaqueText h2 {
+  font-size: 37px;
+  line-height: 1;
+  margin: 10px 0 18px;
+}
+
+.destaqueText p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 350px;
+}
+
+.destaqueVisual {
+  height: 320px;
+  border-radius: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.fakePhone {
+  width: 125px;
+  height: 245px;
+  border-radius: 27px;
+  background: linear-gradient(135deg, #1b1b1b, #444);
+  border: 5px solid #111;
+  position: relative;
+  box-shadow: 0 25px 45px rgba(0,0,0,.3);
+}
+
+.fakeDynamicIsland {
+  position: absolute;
+  width: 48px;
+  height: 13px;
+  background: #000;
+  border-radius: 20px;
+  left: 50%;
+  top: 9px;
+  transform: translateX(-50%);
+}
+
+/* =========================
+   CAMERA
+========================= */
+
+.previewCamera { padding: 70px 55px 80px; background: #fff; text-align: center; }
+.cameraHeader > span { font-size: 13px; font-weight: 700; }
+.cameraHeader h2 { font-size: 48px; line-height: .98; margin: 15px auto; max-width: 700px; letter-spacing: -2px; }
+.cameraHeader h2 strong { background: linear-gradient(90deg, #9b6bd4, #6087bb, #5e9a68); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.cameraHeader p { max-width: 610px; margin: auto; color: #666; font-size: 13px; line-height: 1.5; }
+.cameraVisual { height: 380px; margin: 30px auto 0; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #fff; }
+.cameraPhoneImage { max-width: 330px; width: 100%; height: 360px; object-fit: contain; display: block; transition: opacity .2s ease; }
+.cameraNavigation { display: flex; justify-content: center; gap: 5px; margin: 10px auto 28px; background: #eee; width: fit-content; max-width: 100%; padding: 5px; border-radius: 14px; }
+.cameraNavigation button { border: 0; background: transparent; padding: 10px 17px; border-radius: 10px; cursor: pointer; font-size: 11px; color: #777; }
+.cameraNavigation button:hover { color: #222; }
+.cameraNavigation .cameraActive { background: #1d1d1f; color: white; }
+.cameraDescription { max-width: 650px; margin: auto; }
+.cameraDescription span { color: #999; font-size: 12px; }
+.cameraDescription h3 { font-size: 27px; line-height: 1.05; margin: 10px 0; }
+.cameraDescription p { color: #666; font-size: 13px; line-height: 1.6; margin: 0 auto; }
+
+/* FOOTER */
+
+.previewFooter {
+  padding: 50px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.previewFooter span {
+  color: #888;
+}
+
+/* =========================
+   EDITOR
+========================= */
+
+.editorSection {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.editorHeader {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.editorHeader span {
+  color: #777;
+  font-size: 13px;
+}
+
+.editorHeader h2 {
+  font-size: 30px;
+  margin: 5px 0;
+}
+
+.editorHeader p {
+  color: #777;
+  font-size: 14px;
+}
+
+.publishArea { display: flex; align-items: center; gap: 12px; }
+.publishArea span { color: #5f6368; font-size: 11px; }
+.publishArea button {
+  height: 38px; padding: 0 18px; border: 0; border-radius: 9px; background: #1d1d1f;
+  color: #fff; font-size: 11px; font-weight: 700; cursor: pointer; transition: .2s ease;
+}
+.publishArea button:hover { background: #000; transform: translateY(-1px); }
+.publishArea button:disabled { opacity: .55; cursor: wait; transform: none; }
+
+.editorLayout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  height: min(78vh, 780px);
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+.editorMenu {
+  background: #f1f1f3;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.editorMenu button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.editorMenu button span {
+  font-size: 11px;
+  color: #999;
+}
+
+.editorMenu .menuActive {
+  background: white;
+  color: #111;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(0,0,0,.06);
+}
+
+.editorContent {
+  padding: 40px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+
+.editorContent::-webkit-scrollbar,
+.editorMenu::-webkit-scrollbar {
+  width: 8px;
+}
+
+.editorContent::-webkit-scrollbar-thumb,
+.editorMenu::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: #c5c7cc;
+  background-clip: padding-box;
+}
+
+.editorBlock {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 35px;
+  margin-bottom: 35px;
+}
+
+.blockTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.blockTitle h3 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.blockTitle span {
+  display: block;
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.editorContent label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 12px;
+  color: #555;
+  font-weight: 600;
+}
+
+.editorContent input,
+.editorContent textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  background: #fafafa;
+  border-radius: 9px;
+  padding: 12px;
+  font-family: inherit;
+  font-size: 13px;
+  color: #222;
+  outline: none;
+  resize: vertical;
+}
+
+.editorContent input:focus,
+.editorContent textarea:focus {
+  border-color: #007aff;
+  background: white;
+}
+
+.editorContent textarea {
+  min-height: 100px;
+}
+
+.fullInput {
+  margin-top: 20px;
+}
+
+.colorInput {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #ddd;
+  border-radius: 9px;
+  padding: 5px 10px;
+  background: #fafafa;
+}
+
+.colorInput input {
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  border: 0;
+}
+
+.colorInput span {
+  font-size: 12px;
+  color: #777;
+}
+
+.videoHelp {
+  background: #f5f5f7;
+  border-radius: 10px;
+  padding: 13px;
+  margin-top: 15px;
+  color: #777;
+  font-size: 12px;
+}
+
+.videoHelp strong {
+  color: #333;
+}
+
+.addButton {
+  border: 0;
+  background: #007aff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.destaquesEditor {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.destaqueEditor {
+  display: grid;
+  grid-template-columns: 45px 1fr 35px;
+  gap: 15px;
+  border: 1px solid #e1e1e1;
+  padding: 20px;
+  border-radius: 14px;
+  background: #fafafa;
+}
+
+.destaqueNumber {
+  font-size: 13px;
+  color: #999;
+  font-weight: 700;
+}
+
+.destaqueFields {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.deleteButton {
+  border: 0;
+  background: #eee;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  color: #777;
+}
+
+.deleteButton:hover {
+  background: #ffdddd;
+  color: #d00;
+}
+
+.cameraNotice {
+  margin-top: 25px;
+  padding: 20px;
+  background: #f5f5f7;
+  border-radius: 12px;
+}
+
+.cameraNotice strong {
+  font-size: 13px;
+}
+
+.cameraNotice p {
+  margin-top: 7px;
+  color: #777;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.cameraTabsEditor { display: flex; flex-direction: column; gap: 15px; margin-top: 30px; }
+.cameraTabEditor { display: grid; grid-template-columns: 45px 1fr; gap: 15px; border: 1px solid #e1e1e1; padding: 20px; border-radius: 14px; background: #fafafa; }
+.cameraTabNumber { font-size: 13px; color: #999; font-weight: 700; }
+.cameraTabFields { display: flex; flex-direction: column; gap: 15px; }
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 1000px) {
+
+  .page {
+    padding: 35px 4%;
+  }
+
+  .pageHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .pageHeader h1 {
+    font-size: 45px;
+  }
+
+  .monitorScreen {
+    height: 600px;
+  }
+
+  .editorLayout {
+    grid-template-columns: 1fr;
+    height: auto;
+    max-height: none;
+  }
+
+  .editorMenu {
+    display: flex;
+    gap: 5px;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .editorMenu button {
+    margin: 0;
+  }
+
+  .tabelaHeader,
+  .produtoLinha {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  .tabelaHeader span:nth-child(2),
+  .produtoLinha > span:nth-child(2),
+  .tabelaHeader span:nth-child(4),
+  .produtoLinha > span:nth-child(4) {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .editorHeader { align-items: flex-start; flex-direction: column; }
+  .publishArea { width: 100%; justify-content: space-between; }
+
+  .pageHeader h1 {
+    font-size: 38px;
+  }
+
+  .cardTop {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .searchFake {
+    width: 100%;
+  }
+
+  .monitor {
+    padding: 7px;
+  }
+
+  .monitorTop {
+    height: 30px;
+  }
+
+  .monitorUrl {
+    padding: 5px 15px;
+  }
+
+  .monitorScreen {
+    height: 520px;
+  }
+
+  .previewLinks {
+    display: none;
+  }
+
+  .previewNav {
+    padding: 0 15px;
+  }
+
+  .heroInfo {
+    padding: 30px;
+  }
+
+  .heroInfo h1 {
+    font-size: 35px;
+  }
+
+  .destaqueItem {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .destaqueReverse .destaqueText {
+    order: 1;
+  }
+
+  .destaqueReverse .destaqueVisual {
+    order: 2;
+  }
+
+  .cameraVisual { height: 330px; }
+  .cameraPhoneImage { height: 320px; }
+  .cameraNavigation { flex-wrap: wrap; }
+  .cameraTabEditor { grid-template-columns: 1fr; }
+
+  .previewDetalhes { padding: 45px 24px 55px; }
+  .detalhesIntro h2, .detalhesIntro h3 { font-size: 31px; }
+  .detalhesCard { grid-template-columns: 1fr; padding: 25px; }
+  .detalhesMenu { max-width: none; }
+  .detalhesImagem { min-height: 280px; }
+  .detalhesProdutoImagem,
+  .detalhesImagem_mac .detalhesProdutoImagem,
+  .detalhesImagem_ipad .detalhesProdutoImagem,
+  .detalhesImagem_airpods .detalhesProdutoImagem {
+    height: 280px;
+    max-width: 100%;
+    transform: none;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .editorContent {
+    padding: 25px;
+    overflow: visible;
+  }
+}
+
+.openVitrine {
+  padding: 6px 12px;
+  border: 0;
+  border-radius: 7px;
+  color: #fff;
+  background: #1d1d1f;
+  cursor: pointer;
+  font: inherit;
+  font-size: 9px;
+}
+
+.openVitrine:hover {
+  background: #3974cc;
+}
+
